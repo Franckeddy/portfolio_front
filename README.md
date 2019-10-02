@@ -1,4 +1,4 @@
-# PortfolioFront
+# Protfolio_Back-end
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.6.
 
@@ -22,6 +22,10 @@ Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.
 
 Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
 
-## Further help
+## Versioning
+[<img src='https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Octicons-mark-github.svg/1200px-Octicons-mark-github.svg.png' width='30' />
+](https://github.com/) - **Github**, Web-based version-control and collaboration platform for software developers.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+## Authors
+
+* [**Franck GARCON**](https://github.com/Franckeddy)

@@ -1,6 +1,6 @@
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/0ec64b81a7c94525bd0686e9c6269aff)](https://www.codacy.com/manual/Franckeddy/portfolio_front?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=Franckeddy/portfolio_front&amp;utm_campaign=Badge_Grade)
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/Franckeddy/portfolio_front/badges/quality-score.png?b=front-1)](https://scrutinizer-ci.com/g/Franckeddy/portfolio_front/?branch=front-1)
-# Protfolio_Back-end
+# Protfolio_Front-end
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.6.
 

@@ -5,7 +5,9 @@
 @import'./app/login/login/login.component.scss';
 @import'./app/register/register/register.component.scss';
 // global
-// mixins
+@import'./main/global';
+@import'./main/mixins';
+@import'./main/normalize';
+@import'./main/variables';
 // pages
-// secrtions
-// variables
+// sections

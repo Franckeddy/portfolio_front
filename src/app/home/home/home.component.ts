@@ -5,7 +5,10 @@ import { User } from '../../_models/user';
 import { UserService } from '../../_services/user.service';
 import { AuthenticationService } from '../../_services/authentication.service';
 
-@Component({ templateUrl: 'home.component.html' })
+@Component({ 
+    templateUrl: 'home.component.html',
+    styleUrls: ['home.component.scss']
+})
 export class HomeComponent implements OnInit {
     currentUser: User;
     users = [];

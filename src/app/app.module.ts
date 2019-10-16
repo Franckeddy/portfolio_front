@@ -14,6 +14,8 @@ import { HomeComponent } from './home/home/home.component';
 import { LoginComponent } from './login/login/login.component';
 import { RegisterComponent } from './register/register/register.component';
 import { AlertComponent } from './_components/alert/alert.component';
+import { FooterComponent } from './_components/footer/footer.component';
+import { FourofourComponent } from './_models/fourofour/fourofour.component';
 
 @NgModule({
     imports: [
@@ -27,7 +29,9 @@ import { AlertComponent } from './_components/alert/alert.component';
         HomeComponent,
         LoginComponent,
         RegisterComponent,
-        AlertComponent
+        AlertComponent,
+        FooterComponent,
+        FourofourComponent,
     ],
     providers: [
         { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },

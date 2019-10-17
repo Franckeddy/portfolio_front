@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { first } from 'rxjs/operators';
 
-import { User } from '../../_models/user';
+import { User } from '../../_models';
 import { UserService } from '../../_services/user.service';
 import { AuthenticationService } from '../../_services/authentication.service';
 
-@Component({ 
+@Component({
     templateUrl: 'home.component.html',
     styleUrls: ['home.component.scss']
 })

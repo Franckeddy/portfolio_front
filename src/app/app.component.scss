@@ -284,3 +284,18 @@ svg#clouds {
 a {
     cursor: pointer;
 }
+.left{
+  display: flex;
+  right: 0;
+  position: absolute;
+  margin-top: -15px;
+  padding-right: 10px;
+}
+
+.right{
+  display: flex;
+  left: 0;
+  position: absolute;
+  margin-top: -15px;
+  padding-left: 10px;
+}

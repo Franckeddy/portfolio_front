@@ -1,11 +1,15 @@
 <router-outlet></router-outlet>
 <nav class="navbar navbar-expand navbar-dark bg-dark toolbar" *ngIf="currentUser">
     <div class="navbar-nav">
-        <a class="nav-item nav-link" routerLink="/">Home</a>
+      <div class="left">
         <a class="nav-item nav-link" (click)="logout()">Deconnexion</a>
+      </div>
+      <div class="right">
+        <a class="nav-item nav-link" routerLink="/">Créer mon CV</a>
+        <a class="nav-item nav-link" routerLink="/">Visualiser mon CV</a>
+      </div>
     </div>
 </nav>
-
 <!-- main app container -->
 <div class="jumbotron">
     <div class="container">

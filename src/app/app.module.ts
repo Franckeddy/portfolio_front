@@ -4,18 +4,21 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 
 // used to create fake backend
-import { fakeBackendProvider } from './_helpers /fake-backend';
+import { fakeBackendProvider } from './_helpers ';
 
 import { appRoutingModule } from './app-routing.module';
-import { ErrorInterceptor } from './_helpers /error.interceptor';
-import { JwtInterceptor } from './_helpers /jwt.interceptor';
+import { ErrorInterceptor } from './_helpers ';
+import { JwtInterceptor } from './_helpers ';
 import { AppComponent } from './app.component';
-import { HomeComponent } from './home/home/home.component';
-import { LoginComponent } from './login/login/login.component';
-import { RegisterComponent } from './register/register/register.component';
-import { AlertComponent } from './_components/alert/alert.component';
-import { FooterComponent } from './_components/footer/footer.component';
-import { FourofourComponent } from './_models/fourofour/fourofour.component';
+import { HomeComponent } from './home/home';
+import { LoginComponent } from './login/login';
+import { RegisterComponent } from './register/register';
+import { AlertComponent } from './_components/alert';
+import { FooterComponent } from './_components/footer';
+import { FourofourComponent } from './_models/fourofour';
+import { CandidatFormComponent } from './candidat-list/candidat-form/candidat-form.component';
+import { SingleCandidatComponent } from './candidat-list/single-candidat/single-candidat.component';
+import { CandidatListComponent } from './candidat-list/candidat-list.component';
 
 @NgModule({
     imports: [
@@ -32,6 +35,9 @@ import { FourofourComponent } from './_models/fourofour/fourofour.component';
         AlertComponent,
         FooterComponent,
         FourofourComponent,
+        CandidatFormComponent,
+        SingleCandidatComponent,
+        CandidatListComponent,
     ],
     providers: [
         { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },

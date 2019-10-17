@@ -1,5 +1,5 @@
-// L'intercepteur d'erreur intercepte les réponses http de l'API pour vérifier s'il y a eu des erreurs. 
-// S'il y a une réponse 401 non autorisée, 
+// L'intercepteur d'erreur intercepte les réponses http de l'API pour vérifier s'il y a eu des erreurs.
+// S'il y a une réponse 401 non autorisée,
 // l'utilisateur est automatiquement déconnecté de l'application, toutes les autres erreurs sont renvoyées au service appelant afin qu'une alerte puisse être affichée à l'utilisateur.
 
 import { Injectable } from '@angular/core';
@@ -18,9 +18,9 @@ export class ErrorInterceptor implements HttpInterceptor {
             if (err.status === 401) {
                 // auto logout if 401 response returned from api
                 this.authenticationService.logout();
-                location.reload(true);
+                location.reload();
             }
-            
+
             const error = err.error.message || err.statusText;
             return throwError(error);
         }))

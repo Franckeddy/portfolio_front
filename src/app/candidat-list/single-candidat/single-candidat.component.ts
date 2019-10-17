@@ -33,11 +33,11 @@ export class SingleCandidatComponent implements OnInit {
       ''
     );
     const id = this.route.snapshot.params['id'];
-    this.candidatsService.getSingleCandidat(+id).then(
-      (candidat: Candidat) => {
-        this.candidat = candidat;
-      }
-    );
+    // this.candidatsService.getSingleCandidat(+id).then(
+    //   (candidat: Candidat) => {
+    //     this.candidat = candidat;
+    //   }
+    // );
   }
   onBack() {
     this.router.navigate(['/candidats'])

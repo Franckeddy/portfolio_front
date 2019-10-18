@@ -19,6 +19,13 @@ import { FourofourComponent } from './_models/fourofour';
 import { CandidatFormComponent } from './candidat-list/candidat-form/candidat-form.component';
 import { SingleCandidatComponent } from './candidat-list/single-candidat/single-candidat.component';
 import { CandidatListComponent } from './candidat-list/candidat-list.component';
+import { SchoolListComponent } from './Entity-list/school-list/school-list.component';
+import { DiplomeListComponent } from './Entity-list/diplome-list/diplome-list.component';
+import { LangueListComponent } from './Entity-list/langue-list/langue-list.component';
+import { LicenseListComponent } from './Entity-list/license-list/license-list.component';
+import { FormationListComponent } from './Entity-list/formation-list/formation-list.component';
+import { CompanyListComponent } from './Entity-list/company-list/company-list.component';
+import { ActivityAreaListComponent } from './Entity-list/activity-area-list/activity-area-list.component';
 
 @NgModule({
     imports: [
@@ -38,6 +45,13 @@ import { CandidatListComponent } from './candidat-list/candidat-list.component';
         CandidatFormComponent,
         SingleCandidatComponent,
         CandidatListComponent,
+        SchoolListComponent,
+        DiplomeListComponent,
+        LangueListComponent,
+        LicenseListComponent,
+        FormationListComponent,
+        CompanyListComponent,
+        ActivityAreaListComponent,
     ],
     providers: [
         { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },

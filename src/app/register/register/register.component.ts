@@ -1,3 +1,9 @@
+// Le composant d'enregistrement crée un nouvel utilisateur avec le service utilisateur lors de l'envoi du formulaire de registre. 
+// Si l'utilisateur est déjà connecté, il est automatiquement redirigé vers la page d'accueil.
+// L'objet registerForm: FormGroup définit les contrôles de formulaire et les validateurs. 
+// Il est utilisé pour accéder aux données entrées dans le formulaire. 
+// FormGroup fait partie du module Angular Reactive Forms et est lié au modèle de connexion ci-dessus avec la directive [formGroup]="registerForm".
+
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';

@@ -1,13 +1,18 @@
+<!-- Le modèle de composant d'application est le modèle de composant racine de l'application. 
+Il contient la barre de navigation principale qui s'affiche uniquement pour les utilisateurs authentifiés, 
+une directive router-outlet pour afficher le contenu de chaque vue en fonction de l'itinéraire actuel 
+et un composant d'alerte pour l'affichage des messages d'alerte de n'importe où dans l'application. -->
+
 <router-outlet></router-outlet>
 <nav class="navbar navbar-expand navbar-dark bg-dark toolbar" *ngIf="currentUser">
     <div class="navbar-nav">
-      <div class="left">
-        <a class="nav-item nav-link" (click)="logout()">Deconnexion</a>
-      </div>
-      <div class="right">
-        <a class="nav-item nav-link" routerLink="/">Créer mon CV</a>
-        <a class="nav-item nav-link" routerLink="/">Visualiser mon CV</a>
-      </div>
+        <div class="left">
+            <a class="nav-item nav-link" (click)="logout()">Deconnexion</a>
+        </div>
+        <div class="right">
+            <a class="nav-item nav-link" routerLink="/">Créer mon CV</a>
+            <a class="nav-item nav-link" routerLink="/">Visualiser mon CV</a>
+        </div>
     </div>
 </nav>
 <!-- main app container -->

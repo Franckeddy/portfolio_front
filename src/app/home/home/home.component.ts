@@ -1,3 +1,6 @@
+// Le composant home contient la logique permettant d'afficher l'utilisateur actuel, 
+// d'afficher une liste de tous les utilisateurs et de supprimer des utilisateurs.
+
 import { Component, OnInit } from '@angular/core';
 import { first } from 'rxjs/operators';
 

@@ -1,3 +1,7 @@
+// Le service d'alerte permet à n'importe quel composant de l'application d'afficher des messages d'alerte en haut de la page via le composant d'alerte.
+// Il a des méthodes pour afficher les messages d'erreur et de succès, et a d'une méthode getMessage() 
+// qui renvoie un Observable utilisé par le composant d'alerte pour s'abonner aux notifications chaque fois qu'un message doit être affiché.
+
 import { Injectable } from '@angular/core';
 import { Router, NavigationStart } from '@angular/router';
 import { Observable, Subject } from 'rxjs';

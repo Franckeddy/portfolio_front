@@ -1,3 +1,9 @@
+// Le module d'application définit le module racine de l'application ainsi que les métadonnées relatives au module. 
+// Pour plus d'informations sur les modules angulaires, consultez cette page sur le site officiel de la documentation.
+
+// C’est là que le faux fournisseur d’API backend est ajouté à l’application. 
+// Pour passer à une véritable API, supprimez simplement les fournisseurs situés en dessous du commentaire // providers used to create fake backend.
+
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { ReactiveFormsModule } from '@angular/forms';

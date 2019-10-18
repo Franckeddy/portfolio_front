@@ -1,8 +1,8 @@
 export class School {
     constructor(
         public name: string,
-        public start_date: string,
-        public end_date: string,
+        public start_date: Date,
+        public end_date: Date,
         public candidat: string,
         public formation: string,
     ) {}

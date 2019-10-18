@@ -4,10 +4,24 @@
 @import'./app/home/home/home.component.scss';
 @import'./app/login/login/login.component.scss';
 @import'./app/register/register/register.component.scss';
+@import'../../app/_components/alert/alert.component.scss';
+@import'../../app/_components/footer/footer.component.scss';
 // global
 @import'./main/global';
 @import'./main/mixins';
 @import'./main/normalize';
 @import'./main/variables';
-// pages
-// sections
+// models
+@import'../../app/_models/fourofour/fourofour.component.scss';
+// Entity-list
+@import'../../app/Entity-list/activity-area-list/activity-area-list.component.scss';
+@import'../../app/Entity-list/company-list/company-list.component.scss';
+@import'../../app/Entity-list/diplome-list/diplome-list.component.scss';
+@import'../../app/Entity-list/formation-list/formation-list.component.scss';
+@import'../../app/Entity-list/langue-list/langue-list.component.scss';
+@import'../../app/Entity-list/license-list/license-list.component.scss';
+@import'../../app/Entity-list/school-list/school-list.component.scss';
+// Candidat-list
+@import'../../app/candidat-list/candidat-list.component.scss';
+@import'../../app/candidat-list/single-candidat/single-candidat.component.scss';
+@import'../../app/candidat-list/candidat-form/candidat-form.component.scss';

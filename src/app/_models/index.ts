@@ -7,4 +7,5 @@ export * from './Diplome.model';
 export * from './Formation.model';
 export * from './Langue.model';
 export * from './License.model';
-export * from './School.model'
+export * from './School.model';
+export *from './ActivityArea.model';

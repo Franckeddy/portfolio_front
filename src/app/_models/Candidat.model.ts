@@ -1,6 +1,5 @@
 export class Candidat {
   media: string;
-
   constructor(
     public firstname: string,
     public lastname: string,
@@ -14,5 +13,4 @@ export class Candidat {
     public schools: string,
     public companies: string,
   ) {}
-
 }

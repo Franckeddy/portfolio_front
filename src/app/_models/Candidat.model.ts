@@ -1,18 +1,30 @@
+import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
 // TODO change type
 
-export class Candidat {
+export interface Candidat {
   media: string;
-  constructor(
-    public firstname: string,
-    public lastname: string,
-    public adress: string,
-    public town: string,
-    public zipcode: string,
-    public email: string,
-    public date_of_birth: string,
-    public langues: string,
-    public licenses: string,
-    public schools: string,
-    public companies: string,
-  ) {}
+  firstname: string,
+  lastname: string,
+  adress: string,
+  town: string,
+  zipcode: string,
+  email: string,
+  date_of_birth: string,
+  langues: string[];
+  licenses: string[];
+  schools: string[];
+  companies: string[];
+}
+
+@Injectable({ providedIn: 'root' })
+export class ProductService {
+  private productsUrl = 'api/candidats';
+
+  constructor(private http: HttpClient) { }
+
+  getProducts(): Observable<Candidat[]> {
+    return this.http.get<Candidat[]>(this.productsUrl);
+  }
 }

@@ -53,19 +53,19 @@ export class CandidatFormComponent implements OnInit {
     const schools = this.candidatForm.get('schools').value;
     const companies = this.candidatForm.get('companies').value;
 
-    const newCandidat = new Candidat(
-      firstname,
-      lastname,
-      adress,
-      town,
-      zipcode,
-      email,
-      date_of_birth,
-      langues,
-      licenses,
-      schools,
-      companies,)
-    this.candidatsService.createNewCandidat(newCandidat);
-    this.router.navigate(['/candidats']);
+    // const newCandidat = new Candidat(
+    //   firstname,
+    //   lastname,
+    //   adress,
+    //   town,
+    //   zipcode,
+    //   email,
+    //   date_of_birth,
+    //   langues,
+    //   licenses,
+    //   schools,
+    //   companies,)
+    // this.candidatsService.createNewCandidat(newCandidat);
+    // this.router.navigate(['/candidats']);
   }
 }

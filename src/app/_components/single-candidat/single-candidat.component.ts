@@ -19,20 +19,20 @@ export class SingleCandidatComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    this.candidat = new Candidat(
-      '',
-      '',
-      '',
-      '',
-      '',
-      '',
-      '',
-      '',
-      '',
-      '',
-      ''
-    );
-    const id = this.route.snapshot.params['id'];
+    // this.candidat = new Candidat(
+    //   '',
+    //   '',
+    //   '',
+    //   '',
+    //   '',
+    //   '',
+    //   '',
+    //   '',
+    //   '',
+    //   '',
+    //   ''
+    // );
+    // const id = this.route.snapshot.params['id'];
     // this.candidatsService.getSingleCandidat(+id).then(
     //   (candidat: Candidat) => {
     //     this.candidat = candidat;

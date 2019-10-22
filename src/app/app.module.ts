@@ -32,6 +32,12 @@ import { LicenseListComponent } from './_components/license-list/license-list.co
 import { FormationListComponent } from './_components/formation-list/formation-list.component';
 import { CompanyListComponent } from './_components/company-list/company-list.component';
 import { ActivityAreaListComponent } from './_components/activity-area-list/activity-area-list.component';
+import { FormationFormComponent } from './_forms/formation-form/formation-form.component';
+import { SchoolFormComponent } from './_forms/school-form/school-form.component';
+import { LangueFormComponent } from './_forms/langue-form/langue-form.component';
+import { LicenseFormComponent } from './_forms/license-form/license-form.component';
+import { ActivityAreaFormComponent } from './_forms/activity-area-form/activity-area-form.component';
+import { CompanyFormComponent } from './_forms/company-form/company-form.component';
 
 @NgModule({
     imports: [
@@ -58,6 +64,12 @@ import { ActivityAreaListComponent } from './_components/activity-area-list/acti
         FormationListComponent,
         CompanyListComponent,
         ActivityAreaListComponent,
+        FormationFormComponent,
+        SchoolFormComponent,
+        LangueFormComponent,
+        LicenseFormComponent,
+        ActivityAreaFormComponent,
+        CompanyFormComponent,
     ],
     providers: [
         { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },

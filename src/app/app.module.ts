@@ -22,16 +22,16 @@ import { RegisterComponent } from './register/register';
 import { AlertComponent } from './_components/alert';
 import { FooterComponent } from './_components/footer';
 import { FourofourComponent } from './_models/fourofour';
-import { CandidatFormComponent } from './candidat-list/candidat-form/candidat-form.component';
-import { SingleCandidatComponent } from './candidat-list/single-candidat/single-candidat.component';
-import { CandidatListComponent } from './candidat-list/candidat-list.component';
-import { SchoolListComponent } from './Entity-list/school-list/school-list.component';
-import { DiplomeListComponent } from './Entity-list/diplome-list/diplome-list.component';
-import { LangueListComponent } from './Entity-list/langue-list/langue-list.component';
-import { LicenseListComponent } from './Entity-list/license-list/license-list.component';
-import { FormationListComponent } from './Entity-list/formation-list/formation-list.component';
-import { CompanyListComponent } from './Entity-list/company-list/company-list.component';
-import { ActivityAreaListComponent } from './Entity-list/activity-area-list/activity-area-list.component';
+import { CandidatFormComponent } from './_forms/candidat-form/candidat-form.component';
+import { SingleCandidatComponent } from './_components/single-candidat/single-candidat.component';
+import { CandidatListComponent } from './_components/candidat-list/candidat-list.component';
+import { SchoolListComponent } from './_components/school-list/school-list.component';
+import { DiplomeListComponent } from './_components/diplome-list/diplome-list.component';
+import { LangueListComponent } from './_components/langue-list/langue-list.component';
+import { LicenseListComponent } from './_components/license-list/license-list.component';
+import { FormationListComponent } from './_components/formation-list/formation-list.component';
+import { CompanyListComponent } from './_components/company-list/company-list.component';
+import { ActivityAreaListComponent } from './_components/activity-area-list/activity-area-list.component';
 
 @NgModule({
     imports: [

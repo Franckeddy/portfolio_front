@@ -1,5 +1,3 @@
-import { EmailValidator } from '@angular/forms';
-
 // TODO change type
 
 export class Candidat {

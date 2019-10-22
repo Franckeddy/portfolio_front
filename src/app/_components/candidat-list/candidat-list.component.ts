@@ -1,7 +1,7 @@
 import {Component, OnDestroy, OnInit} from '@angular/core';
-import {Candidat} from "../_models/Candidat.model";
+import {Candidat} from "../../_models/Candidat.model";
 import {Subscription} from "rxjs";
-import {CandidatsService} from "../_services/candidats.service";
+import {CandidatsService} from "../../_services/candidats.service";
 import {Router} from "@angular/router";
 import {identifierName} from "@angular/compiler";
 

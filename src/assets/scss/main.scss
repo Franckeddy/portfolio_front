@@ -6,6 +6,15 @@
 @import'./app/register/register/register.component.scss';
 @import'../../app/_components/alert/alert.component.scss';
 @import'../../app/_components/footer/footer.component.scss';
+@import'../../app/_components/activity-area-list/activity-area-list.component.scss';
+@import'../../app/_components/candidat-list/candidat-list.component.scss';
+@import'../../app/_components/company-list/company-list.component.scss';
+@import'../../app/_components/diplome-list/diplome-list.component.scss';
+@import'../../app/_components/formation-list/formation-list.component.scss';
+@import'../../app/_components/langue-list/langue-list.component.scss';
+@import'../../app/_components/license-list/license-list.component.scss';
+@import'../../app/_components/school-list/school-list.component.scss';
+@import'../../app/_components/single-candidat/single-candidat.component.scss';
 // global
 @import'./main/global';
 @import'./main/mixins';
@@ -13,15 +22,11 @@
 @import'./main/variables';
 // models
 @import'../../app/_models/fourofour/fourofour.component.scss';
-// Entity-list
-@import'../../app/Entity-list/activity-area-list/activity-area-list.component.scss';
-@import'../../app/Entity-list/company-list/company-list.component.scss';
-@import'../../app/Entity-list/diplome-list/diplome-list.component.scss';
-@import'../../app/Entity-list/formation-list/formation-list.component.scss';
-@import'../../app/Entity-list/langue-list/langue-list.component.scss';
-@import'../../app/Entity-list/license-list/license-list.component.scss';
-@import'../../app/Entity-list/school-list/school-list.component.scss';
-// Candidat-list
-@import'../../app/candidat-list/candidat-list.component.scss';
-@import'../../app/candidat-list/single-candidat/single-candidat.component.scss';
-@import'../../app/candidat-list/candidat-form/candidat-form.component.scss';
+// fomrs
+@import'../../app/_forms/activity-area-form/activity-area-form.component.scss';
+@import'../../app/_forms/candidat-form/candidat-form.component.scss';
+@import'../../app/_forms/company-form/company-form.component.scss';
+@import'../../app/_forms/formation-form/formation-form.component.scss';
+@import'../../app/_forms/langue-form/langue-form.component.scss';
+@import'../../app/_forms/license-form/license-form.component.scss';
+@import'../../app/_forms/school-form/school-form.component.scss';

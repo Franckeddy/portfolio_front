@@ -1,9 +1,22 @@
-export class School {
-    constructor(
-        public name: string,
-        public start_date: Date,
-        public end_date: Date,
-        public candidat: string,
-        public formation: string,
-    ) {}
+import { HttpClient } from '@angular/common/http';
+import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
+
+export interface School {
+    name: string;
+    start_date: Date;
+    end_date: Date;
+    candidat: string[];
+    formation: string[];
+}
+
+@Injectable({ providedIn: 'root' })
+export class SchoolService {
+    private schoolsUrl = 'api/schools';
+
+    constructor(private http: HttpClient) { }
+
+    getSchools(): Observable<School[]> {
+        return this.http.get<School[]>(this.schoolsUrl);
+    }
 }

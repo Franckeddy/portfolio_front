@@ -19,12 +19,12 @@ export interface Candidat {
 }
 
 @Injectable({ providedIn: 'root' })
-export class ProductService {
-  private productsUrl = 'api/candidats';
+export class CandidatService {
+  private candidatsUrl = 'api/candidats';
 
   constructor(private http: HttpClient) { }
 
-  getProducts(): Observable<Candidat[]> {
-    return this.http.get<Candidat[]>(this.productsUrl);
+  getCandidats(): Observable<Candidat[]> {
+    return this.http.get<Candidat[]>(this.candidatsUrl);
   }
 }

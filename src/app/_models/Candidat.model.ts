@@ -17,14 +17,3 @@ export interface Candidat {
   schools: string[];
   companies: string[];
 }
-
-@Injectable({ providedIn: 'root' })
-export class CandidatService {
-  private candidatsUrl = 'api/candidats';
-
-  constructor(private http: HttpClient) { }
-
-  getCandidats(): Observable<Candidat[]> {
-    return this.http.get<Candidat[]>(this.candidatsUrl);
-  }
-}

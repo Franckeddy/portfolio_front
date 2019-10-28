@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {FormBuilder, FormGroup, Validators} from "@angular/forms";
-import {CandidatsService} from "../../_services/candidats.service";
+import { CandidatService } from "../../_services/candidats.service";
 import {Router} from "@angular/router";
-import {Candidat} from "../../_models/Candidat.model";
 
 @Component({
   selector: 'app-candidat-form',
@@ -15,7 +14,7 @@ export class CandidatFormComponent implements OnInit {
 
   constructor(
     private formBuilder: FormBuilder,
-    private candidatsService: CandidatsService,
+    private candidatService: CandidatService,
     private router: Router
   ) { }
 

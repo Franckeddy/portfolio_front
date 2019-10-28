@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import {Candidat} from "../../_models/Candidat.model";
+import {Candidat} from "../../_models";
 import {ActivatedRoute, Router} from "@angular/router";
-import {CandidatsService} from "../../_services/candidats.service";
+import {CandidatService} from "../../_services/candidats.service";
 
 @Component({
   selector: 'app-single-candidat',
@@ -14,7 +14,7 @@ export class SingleCandidatComponent implements OnInit {
 
   constructor(
     private route: ActivatedRoute,
-    private candidatsService: CandidatsService,
+    private candidatService: CandidatService,
     private router: Router
   ) { }
 

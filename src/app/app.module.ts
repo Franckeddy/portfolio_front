@@ -1,7 +1,6 @@
-// Le module d'application définit le module racine de l'application ainsi que les métadonnées relatives au module. 
+// Le module d'application définit le module racine de l'application ainsi que les métadonnées relatives au module.
 // Pour plus d'informations sur les modules angulaires, consultez cette page sur le site officiel de la documentation.
-
-// C’est là que le faux fournisseur d’API backend est ajouté à l’application. 
+// C’est là que le faux fournisseur d’API backend est ajouté à l’application.
 // Pour passer à une véritable API, supprimez simplement les fournisseurs situés en dessous du commentaire // providers used to create fake backend.
 
 import { NgModule } from '@angular/core';
@@ -11,6 +10,7 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 
 // used to create fake backend
 import { fakeBackendProvider } from './_helpers ';
+import { CandidatService } from './_services/candidats.service';
 
 import { appRoutingModule } from './app-routing.module';
 import { ErrorInterceptor } from './_helpers ';
@@ -22,22 +22,23 @@ import { RegisterComponent } from './register/register';
 import { AlertComponent } from './_components/alert';
 import { FooterComponent } from './_components/footer';
 import { FourofourComponent } from './_models/fourofour';
-import { CandidatFormComponent } from './_forms/candidat-form/candidat-form.component';
-import { SingleCandidatComponent } from './_components/single-candidat/single-candidat.component';
-import { CandidatListComponent } from './_components/candidat-list/candidat-list.component';
-import { SchoolListComponent } from './_components/school-list/school-list.component';
-import { DiplomeListComponent } from './_components/diplome-list/diplome-list.component';
-import { LangueListComponent } from './_components/langue-list/langue-list.component';
-import { LicenseListComponent } from './_components/license-list/license-list.component';
-import { FormationListComponent } from './_components/formation-list/formation-list.component';
-import { CompanyListComponent } from './_components/company-list/company-list.component';
-import { ActivityAreaListComponent } from './_components/activity-area-list/activity-area-list.component';
-import { FormationFormComponent } from './_forms/formation-form/formation-form.component';
-import { SchoolFormComponent } from './_forms/school-form/school-form.component';
-import { LangueFormComponent } from './_forms/langue-form/langue-form.component';
-import { LicenseFormComponent } from './_forms/license-form/license-form.component';
-import { ActivityAreaFormComponent } from './_forms/activity-area-form/activity-area-form.component';
-import { CompanyFormComponent } from './_forms/company-form/company-form.component';
+import { CandidatFormComponent } from './_forms/candidat-form';
+import { SingleCandidatComponent } from './_components/single-candidat';
+import { CandidatListComponent } from './_components/candidat-list';
+import { SchoolListComponent } from './_components/school-list';
+import { DiplomeListComponent } from './_components/diplome-list';
+import { LangueListComponent } from './_components/langue-list';
+import { LicenseListComponent } from './_components/license-list';
+import { FormationListComponent } from './_components/formation-list';
+import { CompanyListComponent } from './_components/company-list';
+import { ActivityAreaListComponent } from './_components/activity-area-list';
+import { FormationFormComponent } from './_forms/formation-form';
+import { SchoolFormComponent } from './_forms/school-form';
+import { LangueFormComponent } from './_forms/langue-form';
+import { LicenseFormComponent } from './_forms/license-form';
+import { ActivityAreaFormComponent } from './_forms/activity-area-form';
+import { CompanyFormComponent } from './_forms/company-form';
+import { CandidatAddComponent } from './_components/candidat-add';
 
 @NgModule({
     imports: [
@@ -70,10 +71,13 @@ import { CompanyFormComponent } from './_forms/company-form/company-form.compone
         LicenseFormComponent,
         ActivityAreaFormComponent,
         CompanyFormComponent,
+        CandidatAddComponent,
     ],
     providers: [
         { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
         { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true },
+
+        CandidatService,
 
         // provider used to create fake backend
         fakeBackendProvider

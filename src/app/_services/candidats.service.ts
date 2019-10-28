@@ -1,33 +1,87 @@
 import { Injectable } from '@angular/core';
-import {Subject} from "rxjs";
-import {Candidat} from "../_models/Candidat.model";
+import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { Observable, throwError } from 'rxjs';
+import { Candidat } from '../_models';
+import { retry, catchError } from 'rxjs/operators';
 
-@Injectable()
-export class CandidatsService {
-  createNewCandidat(newCandidat: Candidat) {
-    throw new Error("Method not implemented.");
-  }
-  removeCandidat(candidat: Candidat) {
-    throw new Error("Method not implemented.");
-  }
-  emitCandidats() {
-    throw new Error("Method not implemented.");
+@Injectable({
+  providedIn: 'root'
+})
+
+export class CandidatService {
+
+  // Base url
+  baseurl = 'http://localhost:82/api/candidats';
+
+  constructor(private http: HttpClient) { }
+
+  // Http Headers
+  httpOptions = {
+    headers: new HttpHeaders({
+      'Content-Type': 'application/json',
+      'Accept': 'application/json',
+      'Access-Control-Allow-Origin': 'http://localhost:82/api/candidats'
+      // 'Access-Control-Allow-Origin': '*',
+      // 'Access-Control-Allow-Methods': 'GET, POST, PATCH, PUT, DELETE, OPTIONS',
+    })
+  };
+
+  // POST
+  CreateCandidat(data): Observable<Candidat> {
+    return this.http.post<Candidat>(this.baseurl , JSON.stringify(data), this.httpOptions)
+      .pipe(
+        retry(1),
+        catchError(this.errorHandl)
+      )
   }
 
-  candidats:Candidat[] = [];
-  candidatsSubject = new Subject<Candidat[]>();
+  // GET
+  GetCandidat(id): Observable<Candidat> {
+    return this.http.get<Candidat>(this.baseurl + id)
+      .pipe(
+        retry(1),
+        catchError(this.errorHandl)
+      )
+  }
 
-  constructor() { }
+  // GET
+  GetCandidats(): Observable<Candidat> {
+    return this.http.get<Candidat>(this.baseurl)
+      .pipe(
+        retry(1),
+        catchError(this.errorHandl)
+      )
+  }
 
-  public updateCandidat(candidat: Candidat){
-  
+  // PUT
+  UpdateCandidat(id, data): Observable<Candidat> {
+    return this.http.put<Candidat>(this.baseurl + id, JSON.stringify(data), this.httpOptions)
+      .pipe(
+        retry(1),
+        catchError(this.errorHandl)
+      )
   }
-  
-  public getCandidatById(id: number){
-  
+
+  // DELETE
+  DeleteCandidat(id){
+    return this.http.delete<Candidat>(this.baseurl + id, this.httpOptions)
+      .pipe(
+        retry(1),
+        catchError(this.errorHandl)
+      )
   }
-  
-  public getCandidats(url?: string){
-  
+
+  // Error handling
+  errorHandl(error) {
+    let errorMessage = '';
+    if(error.error instanceof ErrorEvent) {
+      // Get client-side error
+      errorMessage = error.error.message;
+    } else {
+      // Get server-side error
+      errorMessage = `Error Code: ${error.status}\nMessage: ${error.message}`;
+    }
+    return throwError(errorMessage);
   }
+
 }

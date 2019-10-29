@@ -1,9 +1,8 @@
 <div class="container wrapper wrapper2">
     <div class="row">
-        <!-- Form -->
         <div class="col-md-12">
             <h3>Add Candidat</h3>
-            <form [formGroup]="candidatForm" (ngSubmit)="submitForm()" novalidate>
+            <form [formGroup]="updateIssueForm" (ngSubmit)="submitForm()" novalidate>
                 <div class="form-group">
                     <label>Candidat</label>
                     <input type="text" formControlName="issue_name" class="form-control" maxlength="20">
@@ -12,7 +11,7 @@
                     <label>Candidat Details</label>
                     <textarea class="form-control" formControlName="issue_message" rows="3" maxlength="50"></textarea>
                 </div>
-                <button type="submit" class="btn btn-primary">Submit</button>
+                <button type="submit" class="btn btn-primary">Update</button>
             </form>
         </div>
     </div>

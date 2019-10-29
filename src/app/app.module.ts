@@ -53,6 +53,9 @@ import { CompanyFormComponent } from './_forms/company-form';
 // _add
 import { CandidatAddComponent } from './_components/_add/candidat-add';
 
+// _edit
+import { EditCandidatComponent } from './_components/_edit/edit-candidat/edit-candidat.component';
+
 @NgModule({
     imports: [
         BrowserModule,
@@ -85,6 +88,7 @@ import { CandidatAddComponent } from './_components/_add/candidat-add';
         ActivityAreaFormComponent,
         CompanyFormComponent,
         CandidatAddComponent,
+        EditCandidatComponent,
     ],
     providers: [
         { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },

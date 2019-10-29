@@ -9,6 +9,10 @@
                             <th scope="col">#</th>
                             <th scope="col">Nom du Candidat</th>
                             <th scope="col">Prénom du Candidat</th>
+                            <th scope="col">Email du Candidat</th>
+                            <th scope="col">Adresse du Candidat</th>
+                            <th scope="col">Ville</th>
+                            <th scope="col">Code postal</th>
                             <th scope="col">Action</th>
                         </tr>
                     </thead>
@@ -17,6 +21,10 @@
                             <th scope="row">{{candidats.id}}</th>
                             <td>{{candidats.firstname}}</td>
                             <td>{{candidats.lastname}}</td>
+                            <td>{{candidats.email}}</td>
+                            <td>{{candidats.adress}}</td>
+                            <td>{{candidats.town}}</td>
+                            <td>{{candidats.zipcode}}</td>
                             <td>
                                 <button type="button" class="btn btn-success btn-sm move-right" [routerLink]="['/edit-issue/', candidats.id]">Edit</button>
                                 <button type="button" class="btn btn-danger btn-sm" (click)="deleteCandidat(candidats)">Remove</button>

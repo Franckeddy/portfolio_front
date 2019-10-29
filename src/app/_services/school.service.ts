@@ -1,34 +1,34 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable, throwError } from 'rxjs';
-import { Candidat } from '../_models';
+import { School } from '../_models';
 import { retry, catchError } from 'rxjs/operators';
 
 @Injectable({
-  providedIn: 'root'
+    providedIn: 'root'
 })
 
-export class CandidatService {
+export class SchoolService {
 
   // Base url
-  baseurl = 'http://localhost:82/api/candidats';
+  baseurl = 'http://localhost:82/api/schools';
 
   constructor(private http: HttpClient) { }
 
   // Http Headers
-  httpOptions = {
+    httpOptions = {
     headers: new HttpHeaders({
       'Content-Type': 'application/json',
       'Accept': 'application/json',
-      'Access-Control-Allow-Origin': 'http://localhost:82/api/candidats'
+      'Access-Control-Allow-Origin': 'http://localhost:82/api/schools'
       // 'Access-Control-Allow-Origin': '*',
       // 'Access-Control-Allow-Methods': 'GET, POST, PATCH, PUT, DELETE, OPTIONS',
     })
   };
 
   // POST
-  CreateCandidat(data): Observable<Candidat> {
-    return this.http.post<Candidat>(this.baseurl , JSON.stringify(data), this.httpOptions)
+  CreateSchool(data): Observable<School> {
+    return this.http.post<School>(this.baseurl , JSON.stringify(data), this.httpOptions)
       .pipe(
         retry(1),
         catchError(this.errorHandl)
@@ -36,8 +36,8 @@ export class CandidatService {
   }
 
   // GET Single
-  GetCandidat(id): Observable<Candidat> {
-    return this.http.get<Candidat>(this.baseurl + id)
+  GetSchool(id): Observable<School> {
+    return this.http.get<School>(this.baseurl + id)
       .pipe(
         retry(1),
         catchError(this.errorHandl)
@@ -45,8 +45,8 @@ export class CandidatService {
   }
 
   // GET All
-  GetCandidats(): Observable<Candidat> {
-    return this.http.get<Candidat>(this.baseurl)
+  GetSchools(): Observable<School> {
+    return this.http.get<School>(this.baseurl)
       .pipe(
         retry(1),
         catchError(this.errorHandl)
@@ -54,8 +54,8 @@ export class CandidatService {
   }
 
   // PUT
-  UpdateCandidat(id, data): Observable<Candidat> {
-    return this.http.put<Candidat>(this.baseurl + id, JSON.stringify(data), this.httpOptions)
+  UpdateSchool(id, data): Observable<School> {
+    return this.http.put<School>(this.baseurl + id, JSON.stringify(data), this.httpOptions)
       .pipe(
         retry(1),
         catchError(this.errorHandl)
@@ -63,8 +63,8 @@ export class CandidatService {
   }
 
   // DELETE
-  DeleteCandidat(id){
-    return this.http.delete<Candidat>(this.baseurl + id, this.httpOptions)
+  DeleteSchool(id){
+    return this.http.delete<School>(this.baseurl + id, this.httpOptions)
       .pipe(
         retry(1),
         catchError(this.errorHandl)

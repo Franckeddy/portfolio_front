@@ -1,3 +1,12 @@
+import { from } from 'rxjs';
 export * from './alert.service';
 export * from './authentication.service';
 export * from './user.service';
+export * from './candidats.service';
+export * from  './school.service';
+export * from './formation.service';
+export * from './diplome.service';
+export * from './langue.service';
+export * from './license.service';
+export * from './company.service';
+export * from './activity.service';

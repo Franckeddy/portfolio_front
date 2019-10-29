@@ -11,6 +11,13 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 // used to create fake backend
 import { fakeBackendProvider } from './_helpers ';
 import { CandidatService } from './_services/candidats.service';
+import { SchoolService } from './_services/school.service';
+import { LangueService } from './_services/langue.service';
+import { CompanyService } from './_services/company.service';
+import { FormationService } from './_services/formation.service';
+import { LicenseService } from './_services/license.service';
+import { ActivityService } from './_services/activity.service';
+import { DiplomeService } from './_services/diplome.service';
 
 import { appRoutingModule } from './app-routing.module';
 import { ErrorInterceptor } from './_helpers ';
@@ -22,8 +29,9 @@ import { RegisterComponent } from './register/register';
 import { AlertComponent } from './_components/alert';
 import { FooterComponent } from './_components/footer';
 import { FourofourComponent } from './_models/fourofour';
-import { CandidatFormComponent } from './_forms/candidat-form';
 import { SingleCandidatComponent } from './_components/single-candidat';
+
+// _list
 import { CandidatListComponent } from './_components/_list/candidat-list';
 import { SchoolListComponent } from './_components/_list/school-list';
 import { DiplomeListComponent } from './_components/_list/diplome-list';
@@ -32,12 +40,17 @@ import { LicenseListComponent } from './_components/_list/license-list';
 import { FormationListComponent } from './_components/_list/formation-list';
 import { CompanyListComponent } from './_components/_list/company-list';
 import { ActivityAreaListComponent } from './_components/_list/activity-area-list';
+
+// _forms
+import { CandidatFormComponent } from './_forms/candidat-form';
 import { FormationFormComponent } from './_forms/formation-form';
 import { SchoolFormComponent } from './_forms/school-form';
 import { LangueFormComponent } from './_forms/langue-form';
 import { LicenseFormComponent } from './_forms/license-form';
 import { ActivityAreaFormComponent } from './_forms/activity-area-form';
 import { CompanyFormComponent } from './_forms/company-form';
+
+// _add
 import { CandidatAddComponent } from './_components/_add/candidat-add';
 
 @NgModule({
@@ -78,6 +91,13 @@ import { CandidatAddComponent } from './_components/_add/candidat-add';
         { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true },
 
         CandidatService,
+        SchoolService,
+        LangueService,
+        CompanyService,
+        FormationService,
+        LicenseService,
+        ActivityService,
+        DiplomeService,
 
         // provider used to create fake backend
         fakeBackendProvider

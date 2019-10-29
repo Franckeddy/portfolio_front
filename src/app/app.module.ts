@@ -24,21 +24,21 @@ import { FooterComponent } from './_components/footer';
 import { FourofourComponent } from './_models/fourofour';
 import { CandidatFormComponent } from './_forms/candidat-form';
 import { SingleCandidatComponent } from './_components/single-candidat';
-import { CandidatListComponent } from './_components/candidat-list';
-import { SchoolListComponent } from './_components/school-list';
-import { DiplomeListComponent } from './_components/diplome-list';
-import { LangueListComponent } from './_components/langue-list';
-import { LicenseListComponent } from './_components/license-list';
-import { FormationListComponent } from './_components/formation-list';
-import { CompanyListComponent } from './_components/company-list';
-import { ActivityAreaListComponent } from './_components/activity-area-list';
+import { CandidatListComponent } from './_components/_list/candidat-list';
+import { SchoolListComponent } from './_components/_list/school-list';
+import { DiplomeListComponent } from './_components/_list/diplome-list';
+import { LangueListComponent } from './_components/_list/langue-list';
+import { LicenseListComponent } from './_components/_list/license-list';
+import { FormationListComponent } from './_components/_list/formation-list';
+import { CompanyListComponent } from './_components/_list/company-list';
+import { ActivityAreaListComponent } from './_components/_list/activity-area-list';
 import { FormationFormComponent } from './_forms/formation-form';
 import { SchoolFormComponent } from './_forms/school-form';
 import { LangueFormComponent } from './_forms/langue-form';
 import { LicenseFormComponent } from './_forms/license-form';
 import { ActivityAreaFormComponent } from './_forms/activity-area-form';
 import { CompanyFormComponent } from './_forms/company-form';
-import { CandidatAddComponent } from './_components/candidat-add';
+import { CandidatAddComponent } from './_components/_add/candidat-add';
 
 @NgModule({
     imports: [

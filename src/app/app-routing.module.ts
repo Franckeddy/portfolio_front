@@ -3,7 +3,7 @@
 // Le tableau Routes est transmis à la méthode RouterModule.forRoot() qui crée un module de routage avec toutes les routes d'application configurées et inclut également tous les fournisseurs de routeurs angulaires et les directives telles que <router-outlet></router-outlet> directive.
 
 import { Routes, RouterModule } from '@angular/router';
-import {CandidatListComponent} from './_components/candidat-list';
+import {CandidatListComponent} from './_components/_list/candidat-list';
 
 import { HomeComponent } from './home/home';
 import { LoginComponent } from './login/login';

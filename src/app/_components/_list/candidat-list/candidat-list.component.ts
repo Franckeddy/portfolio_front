@@ -1,5 +1,5 @@
 import {Component, OnDestroy, OnInit} from '@angular/core';
-import {CandidatService} from "../../_services/candidats.service";
+import {CandidatService} from "../../../_services/candidats.service";
 
 @Component({
   selector: 'app-candidat-list',

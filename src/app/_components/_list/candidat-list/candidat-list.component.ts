@@ -26,8 +26,8 @@ export class CandidatListComponent implements OnInit {
   }
 
   // Delete candidat
-  deleteCandidat(data){
-    let index = this.CandidatsList.map(x => {return x.issue_name}).indexOf(data.issue_name);
+  deleteCandidat(data: { issue_name: any; id: any; }){
+    let index = this.CandidatsList.map((x: { issue_name: any; }) => {return x.issue_name}).indexOf(data.issue_name);
     return this.CandidatService.DeleteCandidat(data.id).subscribe(res => {
       this.CandidatsList.splice(index, 1)
       console.log('Candidat deleted!')

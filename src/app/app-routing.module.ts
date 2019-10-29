@@ -10,6 +10,8 @@ import { LoginComponent } from './login/login';
 import { RegisterComponent } from './register/register';
 import { AuthGuard } from './_helpers ';
 import { FourofourComponent } from './_models/fourofour';
+import { CandidatAddComponent } from './_components/_add/candidat-add/candidat-add.component';
+import { EditCandidatComponent } from './_components/_edit/edit-candidat/edit-candidat.component';
 
 const routes: Routes = [
     { path: '', component: HomeComponent, canActivate: [AuthGuard] },
@@ -17,6 +19,8 @@ const routes: Routes = [
     { path: 'register', component: RegisterComponent },
     { path: 'not-found', component: FourofourComponent },
     { path: 'candidats-list', component: CandidatListComponent },
+    { path: 'add-candidat', component: CandidatAddComponent },
+    { path: 'edit-candidat/:id', component: EditCandidatComponent },
 
     // otherwise redirect to home
     { path: '**', redirectTo: '/not-found' }

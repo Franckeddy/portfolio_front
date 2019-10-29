@@ -20,15 +20,14 @@ export class CandidatService {
     headers: new HttpHeaders({
       'Content-Type': 'application/json',
       'Accept': 'application/json',
-      'Access-Control-Allow-Origin': 'http://localhost:82/api/candidats'
-      // 'Access-Control-Allow-Origin': '*',
-      // 'Access-Control-Allow-Methods': 'GET, POST, PATCH, PUT, DELETE, OPTIONS',
+      'Access-Control-Allow-Origin': 'http://localhost:82/api/candidats',
+      'Access-Control-Allow-Methods': 'GET, POST, PATCH, PUT, DELETE, OPTIONS'
     })
   };
 
   // POST
-  CreateCandidat(data): Observable<Candidat> {
-    return this.http.post<Candidat>(this.baseurl , JSON.stringify(data), this.httpOptions)
+  CreateCandidat(data: any): Observable<Candidat> {
+    return this.http.post<Candidat>(this.baseurl + '/' , JSON.stringify(data), this.httpOptions)
       .pipe(
         retry(1),
         catchError(this.errorHandl)
@@ -36,8 +35,8 @@ export class CandidatService {
   }
 
   // GET Single
-  GetCandidat(id): Observable<Candidat> {
-    return this.http.get<Candidat>(this.baseurl + id)
+  GetCandidat(id: string): Observable<Candidat> {
+    return this.http.get<Candidat>(this.baseurl + '/' + id)
       .pipe(
         retry(1),
         catchError(this.errorHandl)
@@ -54,8 +53,8 @@ export class CandidatService {
   }
 
   // PUT
-  UpdateCandidat(id, data): Observable<Candidat> {
-    return this.http.put<Candidat>(this.baseurl + id, JSON.stringify(data), this.httpOptions)
+  UpdateCandidat(id: string, data: any): Observable<Candidat> {
+    return this.http.put<Candidat>(this.baseurl + '/' + id, JSON.stringify(data), this.httpOptions)
       .pipe(
         retry(1),
         catchError(this.errorHandl)
@@ -63,8 +62,8 @@ export class CandidatService {
   }
 
   // DELETE
-  DeleteCandidat(id){
-    return this.http.delete<Candidat>(this.baseurl + id, this.httpOptions)
+  DeleteCandidat(id: string){
+    return this.http.delete<Candidat>(this.baseurl + '/' + id, this.httpOptions)
       .pipe(
         retry(1),
         catchError(this.errorHandl)
@@ -72,7 +71,7 @@ export class CandidatService {
   }
 
   // Error handling
-  errorHandl(error) {
+  errorHandl(error: { error: { message: string; }; status: any; message: any; }) {
     let errorMessage = '';
     if(error.error instanceof ErrorEvent) {
       // Get client-side error

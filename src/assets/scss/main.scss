@@ -6,14 +6,14 @@
 @import'./app/register/register/register.component.scss';
 @import'../../app/_components/alert/alert.component.scss';
 @import'../../app/_components/footer/footer.component.scss';
-@import'../../app/_components/activity-area-list/activity-area-list.component.scss';
-@import'../../app/_components/candidat-list/candidat-list.component.scss';
-@import'../../app/_components/company-list/company-list.component.scss';
-@import'../../app/_components/diplome-list/diplome-list.component.scss';
-@import'../../app/_components/formation-list/formation-list.component.scss';
-@import'../../app/_components/langue-list/langue-list.component.scss';
-@import'../../app/_components/license-list/license-list.component.scss';
-@import'../../app/_components/school-list/school-list.component.scss';
+@import'../../app/_components/_list/activity-area-list/activity-area-list.component.scss';
+@import'../../app/_components/_list/candidat-list/candidat-list.component.scss';
+@import'../../app/_components/_list/company-list/company-list.component.scss';
+@import'../../app/_components/_list/diplome-list/diplome-list.component.scss';
+@import'../../app/_components/_list/formation-list/formation-list.component.scss';
+@import'../../app/_components/_list/langue-list/langue-list.component.scss';
+@import'../../app/_components/_list/license-list/license-list.component.scss';
+@import'../../app/_components/_list/school-list/school-list.component.scss';
 @import'../../app/_components/single-candidat/single-candidat.component.scss';
 // global
 @import'./main/global';
@@ -22,7 +22,7 @@
 @import'./main/variables';
 // models
 @import'../../app/_models/fourofour/fourofour.component.scss';
-// fomrs
+// forms
 @import'../../app/_forms/activity-area-form/activity-area-form.component.scss';
 @import'../../app/_forms/candidat-form/candidat-form.component.scss';
 @import'../../app/_forms/company-form/company-form.component.scss';

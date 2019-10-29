@@ -7,12 +7,19 @@
                     <thead>
                         <tr>
                             <th scope="col">#</th>
-                            <th scope="col">Nom du Candidat</th>
-                            <th scope="col">Prénom du Candidat</th>
-                            <th scope="col">Email du Candidat</th>
-                            <th scope="col">Adresse du Candidat</th>
+                            <th scope="col">Nom</th>
+                            <th scope="col">Prénom</th>
+                            <th scope="col">Email</th>
+                            <th scope="col">Adresse</th>
                             <th scope="col">Ville</th>
                             <th scope="col">Code postal</th>
+                            <th scope="col">Permis</th>
+                            <th scope="col">Entreprise</th>
+                            <th scope="col">Secteur d'activité</th>
+                            <th scope="col">Diplome</th>
+                            <th scope="col">Ecole</th>
+                            <th scope="col">Langue</th>
+                            <th scope="col">Formation</th>
                             <th scope="col">Action</th>
                         </tr>
                     </thead>
@@ -26,7 +33,28 @@
                             <td>{{candidats.town}}</td>
                             <td>{{candidats.zipcode}}</td>
                             <td>
-                                <button type="button" class="btn btn-success btn-sm move-right" [routerLink]="['/edit-issue/', candidats.id]">Edit</button>
+                                <app-license-list></app-license-list>
+                            </td>
+                            <td>
+                                <app-company-list></app-company-list>
+                            </td>
+                            <td>
+                                <app-activity-area-list></app-activity-area-list>
+                            </td>
+                            <td>
+                                <app-diplome-list></app-diplome-list>
+                            </td>
+                            <td>
+                                <app-school-list></app-school-list>
+                            </td>
+                            <td>
+                                <app-langue-list></app-langue-list>
+                            </td>
+                            <td>
+                                <app-formation-list></app-formation-list>
+                            </td>
+                            <td>
+                                <button type="button" class="btn btn-success btn-sm move-right" [routerLink]="['/edit-candidat/', candidats.id]">Edit</button>
                                 <button type="button" class="btn btn-danger btn-sm" (click)="deleteCandidat(candidats)">Remove</button>
                             </td>
                         </tr>

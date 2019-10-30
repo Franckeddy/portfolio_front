@@ -1,4 +1,4 @@
-<div class="container wrapper">
+<!-- <div class="container wrapper">
     <div class="row">
         <div class="col-md-12">
             <div class="inner">
@@ -60,6 +60,33 @@
                         </tr>
                     </tbody>
                 </table>
+            </div>
+        </div>
+    </div>
+</div> -->
+
+<div class="section-full p-t50 bg-white content-inner-2 compare-car">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h4 class="h4 m-t0">Liste des candidats</h4>
+                <div class="icon-bx-wraper bx-style-1 m-b30">
+                    <ul class="table-dl table-col4 clearfix ">
+                        <li class="table-head">
+                            <div class="leftview compare-list-1">Id</div>
+                            <div class="rightview compare-list-2"> Nom </div>
+                            <div class="rightview compare-list-3"> Prénom </div>
+                            <div class="rightview compare-list-4"> Email </div>
+                            <li class="datas-candidats" *ngFor="let candidats of CandidatsList">
+                                <div class="leftview compare-list-1" scope="row">{{candidats.id}}</div>
+                                <div class="rightview compare-list-2"> {{candidats.firstname}} </div>
+                                <div class="rightview compare-list-3"> {{candidats.lastname}}</div>
+                                <div class="rightview compare-list-4"> {{candidats.email}}</div>
+                                <button type="button" class="btn btn-success" [routerLink]="['/edit-candidat/', candidats.id]">Edit</button>
+                                <button type="button" class="btn btn-danger" (click)="deleteCandidat(candidats)">Remove</button>
+                            </li>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>

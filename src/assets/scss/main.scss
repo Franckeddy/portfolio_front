@@ -15,11 +15,6 @@
 @import'../../app/_components/_list/license-list/license-list.component.scss';
 @import'../../app/_components/_list/school-list/school-list.component.scss';
 @import'../../app/_components/single-candidat/single-candidat.component.scss';
-// global
-@import'./main/global';
-@import'./main/mixins';
-@import'./main/normalize';
-@import'./main/variables';
 // models
 @import'../../app/_models/fourofour/fourofour.component.scss';
 // forms
@@ -30,3 +25,5 @@
 @import'../../app/_forms/langue-form/langue-form.component.scss';
 @import'../../app/_forms/license-form/license-form.component.scss';
 @import'../../app/_forms/school-form/school-form.component.scss';
+// lists
+@import '../../app/_components/_list/candidat-list/candidat-list.component.scss';

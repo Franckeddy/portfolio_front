@@ -55,6 +55,8 @@ import { CandidatAddComponent } from './_components/_add/candidat-add';
 
 // _edit
 import { EditCandidatComponent } from './_components/_edit/edit-candidat/edit-candidat.component';
+import { HeaderComponent } from './_components/header/header.component';
+import { APP_BASE_HREF } from '@angular/common';
 
 @NgModule({
     imports: [
@@ -89,11 +91,12 @@ import { EditCandidatComponent } from './_components/_edit/edit-candidat/edit-ca
         CompanyFormComponent,
         CandidatAddComponent,
         EditCandidatComponent,
+        HeaderComponent,
     ],
     providers: [
         { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
         { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true },
-
+        { provide: APP_BASE_HREF, useValue: '/' },
         CandidatService,
         SchoolService,
         LangueService,

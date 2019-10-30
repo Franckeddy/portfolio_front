@@ -1,0 +1,113 @@
+	/*
+  	Flaticon icon font: Flaticon
+  	Creation date: 03/11/2017 10:31
+  	*/
+
+
+@font-face {
+  font-family: "Flaticon";
+  src: url("../font/Flaticon.eot");
+  src: url("../font/Flaticon.eot?#iefix") format("embedded-opentype"),
+       url("../font/Flaticon.woff") format("woff"),
+       url("../font/Flaticon.ttf") format("truetype"),
+       url("../font/Flaticon.svg#Flaticon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: "Flaticon";
+    src: url("../font/Flaticon.svg#Flaticon") format("svg");
+  }
+}
+
+[class^="flaticon-"]:before, 
+[class*=" flaticon-"]:before,
+[class^="flaticon-"]:after, 
+[class*=" flaticon-"]:after {   
+	font-family: Flaticon;
+	font-style: normal;
+}
+
+.flaticon-bench:before { content: "\f100"; }
+.flaticon-airbag:before { content: "\f101"; }
+.flaticon-transport-4:before { content: "\f102"; }
+.flaticon-transport-3:before { content: "\f103"; }
+.flaticon-transport-2:before { content: "\f104"; }
+.flaticon-car-3:before { content: "\f105"; }
+.flaticon-transport-1:before { content: "\f106"; }
+.flaticon-signs-1:before { content: "\f107"; }
+.flaticon-signs:before { content: "\f108"; }
+.flaticon-indicators:before { content: "\f109"; }
+.flaticon-engine:before { content: "\f10a"; }
+.flaticon-car-lights-2:before { content: "\f10b"; }
+.flaticon-mail:before { content: "\f10c"; }
+.flaticon-dashboard-2:before { content: "\f10d"; }
+.flaticon-dashboard-1:before { content: "\f10e"; }
+.flaticon-city-hall:before { content: "\f10f"; }
+.flaticon-monument-1:before { content: "\f110"; }
+.flaticon-office-1:before { content: "\f111"; }
+.flaticon-skyscraper:before { content: "\f112"; }
+.flaticon-monument:before { content: "\f113"; }
+.flaticon-holidays-1:before { content: "\f114"; }
+.flaticon-like:before { content: "\f115"; }
+.flaticon-seat-belt:before { content: "\f116"; }
+.flaticon-temperature:before { content: "\f117"; }
+.flaticon-gas-station:before { content: "\f118"; }
+.flaticon-dashboard:before { content: "\f119"; }
+.flaticon-windshield:before { content: "\f11a"; }
+.flaticon-vehicle:before { content: "\f11b"; }
+.flaticon-transport:before { content: "\f11c"; }
+.flaticon-piston:before { content: "\f11d"; }
+.flaticon-radiator:before { content: "\f11e"; }
+.flaticon-alloy-wheel:before { content: "\f11f"; }
+.flaticon-technology:before { content: "\f120"; }
+.flaticon-mechanic:before { content: "\f121"; }
+.flaticon-car-lights-1:before { content: "\f122"; }
+.flaticon-construction:before { content: "\f123"; }
+.flaticon-break-1:before { content: "\f124"; }
+.flaticon-tire:before { content: "\f125"; }
+.flaticon-seatbelt:before { content: "\f126"; }
+.flaticon-car-key:before { content: "\f127"; }
+.flaticon-oil:before { content: "\f128"; }
+.flaticon-steering-wheel:before { content: "\f129"; }
+.flaticon-gearshift:before { content: "\f12a"; }
+.flaticon-spark-plug:before { content: "\f12b"; }
+.flaticon-phone-call:before { content: "\f12c"; }
+.flaticon-break:before { content: "\f12d"; }
+.flaticon-car-lights:before { content: "\f12e"; }
+.flaticon-settings:before { content: "\f12f"; }
+.flaticon-search:before { content: "\f130"; }
+.flaticon-internet:before { content: "\f131"; }
+.flaticon-map:before { content: "\f132"; }
+.flaticon-share:before { content: "\f133"; }
+.flaticon-edit:before { content: "\f134"; }
+.flaticon-left-arrow:before { content: "\f135"; }
+.flaticon-right-arrow:before { content: "\f136"; }
+.flaticon-speech-bubble-1:before { content: "\f137"; }
+.flaticon-speech-bubble:before { content: "\f138"; }
+.flaticon-placeholder:before { content: "\f139"; }
+.flaticon-shopping-basket:before { content: "\f13a"; }
+.flaticon-customer-service:before { content: "\f13b"; }
+.flaticon-man:before { content: "\f13c"; }
+.flaticon-clock:before { content: "\f13d"; }
+.flaticon-list:before { content: "\f13e"; }
+.flaticon-calendar:before { content: "\f13f"; }
+.flaticon-van-1:before { content: "\f140"; }
+.flaticon-van:before { content: "\f141"; }
+.flaticon-jeep:before { content: "\f142"; }
+.flaticon-car-2:before { content: "\f143"; }
+.flaticon-pickup-truck:before { content: "\f144"; }
+.flaticon-car-1:before { content: "\f145"; }
+.flaticon-car:before { content: "\f146"; }
+.flaticon-office:before { content: "\f147"; }
+.flaticon-taxi:before { content: "\f148"; }
+.flaticon-holidays:before { content: "\f149"; }
+.flaticon-cityscape:before { content: "\f14a"; }
+.flaticon-building:before { content: "\f14b"; }
+.flaticon-university:before { content: "\f14c"; }
+.flaticon-school:before { content: "\f14d"; }
+.flaticon-users:before { content: "\f14e"; }
+.flaticon-smartphone:before { content: "\f14f"; }
+.flaticon-police-car:before { content: "\f150"; }

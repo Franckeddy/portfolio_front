@@ -1,55 +1,60 @@
-<div class="container wrapper wrapper2">
-    <div class="row">
-        <!-- Form -->
-        <div class="col-md-12">
-            <h3>Add Candidat</h3>
-            <form [formGroup]="candidatForm" (ngSubmit)="submitForm()" novalidate>
-                <div class="form-group">
-                    <label>Nom</label>
-                    <input type="text" formControlName="firstname" class="form-control" maxlength="20">
+<div class="section-full bg-white" style="background-image: url(images/background/about-us1.jpg); background-position: right bottom; background-repeat: no-repeat; background-size: 100% auto;">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="road-price">
+                    <form [formGroup]="candidatForm" (ngSubmit)="submitForm()" novalidate>
+                        <div class="form-head bg-primary text-white">
+                            <h3 class="m-a0">Inscription</h3>
+                        </div>
+                        <div class="form-group">
+                            <label>Nom</label>
+                            <input type="text" formControlName="firstname" class="form-control" maxlength="20">
+                        </div>
+                        <div class="form-group">
+                            <label>Prenom</label>
+                            <input type="text" formControlName="lastname" class="form-control" maxlength="20">
+                        </div>
+                        <div class="form-group">
+                            <label>Email</label>
+                            <input type="text" formControlName="email" class="form-control" maxlength="20">
+                        </div>
+                        <div class="form-group">
+                            <label>Adresse</label>
+                            <input type="text" formControlName="adress" class="form-control" maxlength="20">
+                        </div>
+                        <div class="form-group">
+                            <label>Ville</label>
+                            <input type="text" formControlName="town" class="form-control" maxlength="20">
+                        </div>
+                        <div class="form-group">
+                            <label>Code postal</label>
+                            <input type="text" formControlName="zipcode" class="form-control" maxlength="20">
+                        </div>
+                        <div class="form-group">
+                            <label>Date de naissance</label>
+                            <input type="text" formControlName="date_of_birth" class="form-control" maxlength="20">
+                        </div>
+                        <div class="form-group">
+                            <label>Permis</label>
+                            <input type="text" formControlName="license" class="form-control" maxlength="20">
+                        </div>
+                        <div class="form-group">
+                            <label>schools</label>
+                            <input type="text" formControlName="schools" class="form-control" maxlength="20">
+                        </div>
+                        <div class="form-group">
+                            <label>langues</label>
+                            <input type="text" formControlName="langues" class="form-control" maxlength="20">
+                        </div>
+                        <div class="form-group">
+                            <label>companies</label>
+                            <input type="text" formControlName="companies" class="form-control" maxlength="20">
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
                 </div>
-                <div class="form-group">
-                    <label>Prenom</label>
-                    <input type="text" formControlName="lastname" class="form-control" maxlength="20">
-                </div>
-                <div class="form-group">
-                    <label>Email</label>
-                    <input type="text" formControlName="email" class="form-control" maxlength="20">
-                </div>
-                <div class="form-group">
-                    <label>Adresse</label>
-                    <input type="text" formControlName="adress" class="form-control" maxlength="20">
-                </div>
-                <div class="form-group">
-                    <label>Ville</label>
-                    <input type="text" formControlName="town" class="form-control" maxlength="20">
-                </div>
-                <div class="form-group">
-                    <label>Code postal</label>
-                    <input type="text" formControlName="zipcode" class="form-control" maxlength="20">
-                </div>
-                <div class="form-group">
-                    <label>Date de naissance</label>
-                    <input type="text" formControlName="date_of_birth" class="form-control" maxlength="20">
-                </div>
-                <div class="form-group">
-                    <label>Permis</label>
-                    <input type="text" formControlName="license" class="form-control" maxlength="20">
-                </div>
-                <div class="form-group">
-                    <label>schools</label>
-                    <input type="text" formControlName="schools" class="form-control" maxlength="20">
-                </div>
-                <div class="form-group">
-                    <label>langues</label>
-                    <input type="text" formControlName="langues" class="form-control" maxlength="20">
-                </div>
-                <div class="form-group">
-                    <label>companies</label>
-                    <input type="text" formControlName="companies" class="form-control" maxlength="20">
-                </div>
-                <button type="submit" class="btn btn-primary">Submit</button>
-            </form>
+            </div>
         </div>
     </div>
 </div>

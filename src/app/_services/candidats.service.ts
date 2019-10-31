@@ -27,7 +27,7 @@ export class CandidatService {
 
   // POST
   CreateCandidat(data: any): Observable<Candidat> {
-    return this.http.post<Candidat>(this.baseurl + '/' , JSON.stringify(data), this.httpOptions)
+    return this.http.post<Candidat>(this.baseurl + '/' , this.httpOptions)
       .pipe(
         retry(1),
         catchError(this.errorHandl)
@@ -54,7 +54,7 @@ export class CandidatService {
 
   // PUT
   UpdateCandidat(id: string, data: any): Observable<Candidat> {
-    return this.http.put<Candidat>(this.baseurl + '/' + id, JSON.stringify(data), this.httpOptions)
+    return this.http.put<Candidat>(this.baseurl + '/' + id, this.httpOptions)
       .pipe(
         retry(1),
         catchError(this.errorHandl)

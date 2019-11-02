@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DiplomeService } from '../../../_services/diplome.service';
 
 @Component({
   selector: 'app-diplome-list',
@@ -7,9 +8,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DiplomeListComponent implements OnInit {
 
-  constructor() { }
+  DiplomeList: any = [];
 
   ngOnInit() {
+    this.loadDiplomes();
+  }
+
+  constructor(
+    public ActivityService: DiplomeService
+  ){ }
+
+  // Activities list
+  loadDiplomes() {
+    return this.ActivityService.GetDiplomes().subscribe((data: {}) => {
+      this.DiplomeList = data;
+    })
   }
 
 }

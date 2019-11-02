@@ -1,5 +1,6 @@
 import {Component, OnDestroy, OnInit} from '@angular/core';
 import {CandidatService} from "../../../_services/candidats.service";
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-candidat-list',
@@ -15,7 +16,8 @@ export class CandidatListComponent implements OnInit {
   }
 
   constructor(
-    public CandidatService: CandidatService
+    public CandidatService: CandidatService,
+    public route: ActivatedRoute
   ){ }
 
   // Candidats list

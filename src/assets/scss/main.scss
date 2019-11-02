@@ -6,15 +6,8 @@
 @import'./app/register/register/register.component.scss';
 @import'../../app/_components/alert/alert.component.scss';
 @import'../../app/_components/footer/footer.component.scss';
-@import'../../app/_components/_list/activity-area-list/activity-area-list.component.scss';
-@import'../../app/_components/_list/candidat-list/candidat-list.component.scss';
-@import'../../app/_components/_list/company-list/company-list.component.scss';
-@import'../../app/_components/_list/diplome-list/diplome-list.component.scss';
-@import'../../app/_components/_list/formation-list/formation-list.component.scss';
-@import'../../app/_components/_list/langue-list/langue-list.component.scss';
-@import'../../app/_components/_list/license-list/license-list.component.scss';
-@import'../../app/_components/_list/school-list/school-list.component.scss';
 @import'../../app/_components/single-candidat/single-candidat.component.scss';
+@import '../../app/_components/header/header.component.scss';
 // models
 @import'../../app/_models/fourofour/fourofour.component.scss';
 // forms
@@ -27,3 +20,11 @@
 @import'../../app/_forms/school-form/school-form.component.scss';
 // lists
 @import '../../app/_components/_list/candidat-list/candidat-list.component.scss';
+@import'../../app/_components/_list/activity-area-list/activity-area-list.component.scss';
+@import'../../app/_components/_list/candidat-list/candidat-list.component.scss';
+@import'../../app/_components/_list/company-list/company-list.component.scss';
+@import'../../app/_components/_list/diplome-list/diplome-list.component.scss';
+@import'../../app/_components/_list/formation-list/formation-list.component.scss';
+@import'../../app/_components/_list/langue-list/langue-list.component.scss';
+@import'../../app/_components/_list/license-list/license-list.component.scss';
+@import'../../app/_components/_list/school-list/school-list.component.scss';

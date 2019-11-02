@@ -1,8 +1,11 @@
-<h1>Bonjour {{currentUser.firstName}}!</h1>
-<p>Vous etes connecté</p>
-<!-- <h3>All registered users:</h3> -->
-<!-- <ul>
-    <li *ngFor="let user of users">
-        {{user.username}} ({{user.firstName}} {{user.lastName}}) - <a (click)="deleteUser(user.id)" class="text-danger">Delete</a>
-    </li>
-</ul> -->
+<div class="section-full bg-white">
+    <div class="container">
+        <div class="section-head text-center head-1">
+            <h3 class="h3 text-uppercase">Liste des Candidats</h3>
+            <div class="dlab-separator bg-gray-dark"></div>
+        </div>
+        <div class="row">
+            <app-single-candidat></app-single-candidat>
+        </div>
+    </div>
+</div>

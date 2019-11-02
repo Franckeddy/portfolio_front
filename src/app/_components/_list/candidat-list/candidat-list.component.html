@@ -1,93 +1,93 @@
-<!-- <div class="container wrapper">
-    <div class="row">
-        <div class="col-md-12">
-            <div class="inner">
-                <h3>Liste des candidats</h3>
-                <table class="table table-bordered">
-                    <thead>
-                        <tr>
-                            <th scope="col">#</th>
-                            <th scope="col">Nom</th>
-                            <th scope="col">Prénom</th>
-                            <th scope="col">Email</th>
-                            <th scope="col">Adresse</th>
-                            <th scope="col">Ville</th>
-                            <th scope="col">Code postal</th>
-                            <th scope="col">Permis</th>
-                            <th scope="col">Entreprise</th>
-                            <th scope="col">Secteur d'activité</th>
-                            <th scope="col">Diplome</th>
-                            <th scope="col">Ecole</th>
-                            <th scope="col">Langue</th>
-                            <th scope="col">Formation</th>
-                            <th scope="col">Action</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr *ngFor="let candidats of CandidatsList">
-                            <th scope="row">{{candidats.id}}</th>
-                            <td>{{candidats.firstname}}</td>
-                            <td>{{candidats.lastname}}</td>
-                            <td>{{candidats.email}}</td>
-                            <td>{{candidats.adress}}</td>
-                            <td>{{candidats.town}}</td>
-                            <td>{{candidats.zipcode}}</td>
-                            <td>
-                                <app-license-list></app-license-list>
-                            </td>
-                            <td>
-                                <app-company-list></app-company-list>
-                            </td>
-                            <td>
-                                <app-activity-area-list></app-activity-area-list>
-                            </td>
-                            <td>
-                                <app-diplome-list></app-diplome-list>
-                            </td>
-                            <td>
-                                <app-school-list></app-school-list>
-                            </td>
-                            <td>
-                                <app-langue-list></app-langue-list>
-                            </td>
-                            <td>
-                                <app-formation-list></app-formation-list>
-                            </td>
-                            <td>
-                                <button type="button" class="btn btn-success btn-sm move-right" [routerLink]="['/edit-candidat/', candidats.id]">Edit</button>
-                                <button type="button" class="btn btn-danger btn-sm" (click)="deleteCandidat(candidats)">Remove</button>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-    </div>
-</div> -->
-
-<div class="section-full p-t50 bg-white content-inner-2 compare-car">
+<div class="content-area">
+    <!-- Career -->
     <div class="container">
         <div class="row">
-            <div class="col-md-12">
-                <h4 class="h4 m-t0">Liste des candidats</h4>
-                <div class="icon-bx-wraper bx-style-1 m-b30">
-                    <ul class="table-dl table-col4 clearfix ">
-                        <li class="table-head">
-                            <div class="leftview compare-list-1">Id</div>
-                            <div class="rightview compare-list-2"> Nom </div>
-                            <div class="rightview compare-list-3"> Prénom </div>
-                            <div class="rightview compare-list-4"> Email </div>
-                            <li class="datas-candidats" *ngFor="let candidats of CandidatsList">
-                                <div class="leftview compare-list-1" scope="row">{{candidats.id}}</div>
-                                <div class="rightview compare-list-2"> {{candidats.firstname}} </div>
-                                <div class="rightview compare-list-3"> {{candidats.lastname}}</div>
-                                <div class="rightview compare-list-4"> {{candidats.email}}</div>
-                                <button type="button" class="btn btn-success" [routerLink]="['/edit-candidat/', candidats.id]">Edit</button>
-                                <button type="button" class="btn btn-danger" (click)="deleteCandidat(candidats)">Remove</button>
-                            </li>
-                    </ul>
+            <!-- Left part start -->
+            <div class="col-sm-8 col-md-8 col-lg-9 m-b30">
+                <h1 class="m-b20 m-t0">Car Dealer</h1>
+                <div class="dlab-separator bg-primary"></div>
+                <p><strong>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's 
+                        standard dummy text ever since the  when an unknown printer took a galley of type and scrambled it to make a 
+                        type specimen book. </strong></p>
+                <h2 class="m-t30 m-b10 ">Car Buy and Sale Services</h2>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the when an unknown printer took a galley of type and scrambled it to make a type specimen
+                    book. </p>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                </p>
+                <h3>Tips </h3>
+                <ul class="list-check-circle primary">
+                    <li>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry.</li>
+                    <li>Dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy</li>
+                    <li>Printer took a galley of type and scrambled it to make a type specimen book. </li>
+                    <li>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard.</li>
+                    <li>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the dummy book. </li>
+                    <li>Eorem ipsum dolor sit amete printing and typesetting industry. </li>
+                </ul>
+                <h2 class="m-t30 m-b10 ">Transport Manager</h2>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the when an unknown printer took a galley of type and scrambled it to make a type specimen
+                    book. </p>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                </p>
+                <h3>Our Help </h3>
+                <ul class="list-check-circle primary">
+                    <li>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry.</li>
+                    <li>Dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy</li>
+                    <li>Printer took a galley of type and scrambled it to make a type specimen book. </li>
+                    <li>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard.</li>
+                    <li>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the dummy book. </li>
+                    <li>Eorem ipsum dolor sit amete printing and typesetting industry. </li>
+                </ul>
+            </div>
+            <div class="row">
+                <div class="col-md-3 col-sm-6 m-b30">
+                    <div class="icon-bx-wraper bx-style-1 p-a30 center">
+                        <div class="icon-xl text-primary m-b20"> <a href="#" class="icon-cell"><i class="fa fa-map-marker"></i></a> </div>
+                        <div class="icon-content">
+                            <h5 class="dlab-tilte text-uppercase">Address</h5>
+                            <p>123 West Street, Melbourne Victoria 3000 Australia</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 m-b30">
+                    <div class="icon-bx-wraper bx-style-1 p-a30 center">
+                        <div class="icon-xl text-primary m-b20"> <a href="#" class="icon-cell"><i class="fa fa-envelope"></i></a> </div>
+                        <div class="icon-content">
+                            <h5 class="dlab-tilte text-uppercase">Email</h5>
+                            <p>info@company.com <br/> info@industrycompany.com</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 m-b30">
+                    <div class="icon-bx-wraper bx-style-1 p-a30 center">
+                        <div class="icon-xl text-primary m-b20"> <a href="#" class="icon-cell"><i class="fa fa-phone"></i></a> </div>
+                        <div class="icon-content">
+                            <h5 class="dlab-tilte text-uppercase">Phone</h5>
+                            <p>+61 3 8376 6284 <br/> +23 123 456 7890</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 m-b30">
+                    <div class="icon-bx-wraper bx-style-1 p-a30 center">
+                        <div class="icon-xl text-primary m-b20"> <a href="#" class="icon-cell"><i class="fa fa-fax"></i></a> </div>
+                        <div class="icon-content">
+                            <h5 class="dlab-tilte text-uppercase">Content title</h5>
+                            <p>+61 3 8376 6284 <br/> +23 123 456 7890</p>
+                        </div>
+                    </div>
                 </div>
             </div>
+            <!-- Left part start END -->
+        </div>
+        <div class="testimonial-detail clearfix" *ngFor="let candidats of CandidatsList; let index = index; let isFirst = first; let isOdd = odd;">
+            <span>{{ index }}</span>
+            <span>:</span>
+            <span>{{ candidats.firstname }}</span>
+            <span>( isFirst: {{ isFirst }}, isOdd: {{ isOdd }} )</span>
+            <button type="button" class="btn btn-success" [routerLink]="['/edit-candidat/', candidats.id]">Edit</button>
+            <button type="button" class="btn btn-danger" (click)="deleteCandidat(candidats)">Remove</button>
         </div>
     </div>
+    <!-- Career END -->
 </div>

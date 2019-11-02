@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable, throwError } from 'rxjs';
-import { School } from '../_models';
+import { School } from '../_models/School.model';
 import { retry, catchError } from 'rxjs/operators';
 
 @Injectable({
@@ -20,12 +20,13 @@ export class SchoolService {
     headers: new HttpHeaders({
       'Content-Type': 'application/json',
       'Accept': 'application/json',
-      'Access-Control-Allow-Origin': 'http://localhost:82/api/schools'
+      'Access-Control-Allow-Origin': 'http://localhost:82/api/schools',
+      'Access-Control-Allow-Methods': 'GET, POST, PATCH, PUT, DELETE, OPTIONS'
     })
   };
 
   // POST
-  CreateSchool(data): Observable<School> {
+  CreateSchool(data: any): Observable<School> {
     return this.http.post<School>(this.baseurl , JSON.stringify(data), this.httpOptions)
       .pipe(
         retry(1),
@@ -34,7 +35,7 @@ export class SchoolService {
   }
 
   // GET Single
-  GetSchool(id): Observable<School> {
+  GetSchool(id: string): Observable<School> {
     return this.http.get<School>(this.baseurl + id)
       .pipe(
         retry(1),
@@ -51,17 +52,8 @@ export class SchoolService {
       )
   }
 
-  // PUT
-  UpdateSchool(id, data): Observable<School> {
-    return this.http.put<School>(this.baseurl + id, JSON.stringify(data), this.httpOptions)
-      .pipe(
-        retry(1),
-        catchError(this.errorHandl)
-      )
-  }
-
   // DELETE
-  DeleteSchool(id){
+  DeleteSchool(id: string){
     return this.http.delete<School>(this.baseurl + id, this.httpOptions)
       .pipe(
         retry(1),

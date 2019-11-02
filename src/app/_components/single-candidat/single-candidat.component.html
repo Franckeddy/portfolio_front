@@ -1,1 +1,16 @@
-<p>single-candidat works!</p>
+<div class="col-md-3 col-sm-6 col-xs-6" *ngFor="let candidats of CandidatsList">
+    <div class="dlab-box-bg m-b30 box-hover active">
+        <div class="icon-bx-wraper center p-lr20 p-tb30">
+            <div class="text-primary m-b20">
+                <span class="icon-cell"><i class="fa fa-user"></i></span>
+            </div>
+            <div class="icon-content">
+                <h4 class="dlab-tilte text-uppercase">{{candidats.lastname}} {{candidats.firstname}}</h4>
+                <p>{{candidats.short_description}}</p>
+            </div>
+        </div>
+        <div class="icon-box-btn text-center">
+            <a class="site-button btn-block" [routerLink]="['candidats',candidats.id]">Profil Complet</a>
+        </div>
+    </div>
+</div>

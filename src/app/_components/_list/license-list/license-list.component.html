@@ -1,1 +1,27 @@
-<p>license-list works!</p>
+<!-- Accordion Bg Primary END -->
+<div class="section-full bg-gray content-inner">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="sort-title clearfix text-center">
+                    <h3>Liste des permis. </h3>
+                </div>
+                <!-- BG Primary Color -->
+                <!-- Accordion Bg Primary -->
+                <div class="box-sort-in m-b30">
+                    <div class="dlab-accordion toggle bg-title gradient-2">
+                        <div class="panel" *ngFor="let license of LicenseList">
+                            <div class="acod-head">
+                                <h5 class="acod-title"> <a class="collapsed"><i class="fa fa-globe"></i>Permis {{license.name}}</a> </h5>
+                            </div>
+                            <!-- <div id="collapseOne3" class="acod-body collapse">
+                                <div class="acod-content">Web design lorem ipsum dolor sit amet, adipiscing elit, sed diam nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Claritas est etiam processus. ipsum dolor sit amet, consectetuer adipiscing elit, sed
+                                    diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.Claritas est etiam processus.</div>
+                            </div> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

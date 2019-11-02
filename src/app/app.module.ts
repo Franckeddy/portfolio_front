@@ -57,6 +57,7 @@ import { CandidatAddComponent } from './_components/_add/candidat-add';
 import { EditCandidatComponent } from './_components/_edit/edit-candidat/edit-candidat.component';
 import { HeaderComponent } from './_components/header/header.component';
 import { APP_BASE_HREF } from '@angular/common';
+import { FooterTopComponent } from './_components/footer/footer-top/footer-top.component';
 
 @NgModule({
     imports: [
@@ -92,6 +93,7 @@ import { APP_BASE_HREF } from '@angular/common';
         CandidatAddComponent,
         EditCandidatComponent,
         HeaderComponent,
+        FooterTopComponent,
     ],
     providers: [
         { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },

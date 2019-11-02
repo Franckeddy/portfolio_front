@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { SchoolService } from '../../../_services/school.service';
 
 @Component({
   selector: 'app-school-list',
@@ -7,9 +8,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SchoolListComponent implements OnInit {
 
-  constructor() { }
+  SchoolList: any = [];
 
   ngOnInit() {
+    this.loadSchools();
+  }
+
+  constructor(
+    public LicenseService: SchoolService
+  ){ }
+
+  // Licenses list
+  loadSchools() {
+    return this.LicenseService.GetSchools().subscribe((data: {}) => {
+      this.SchoolList = data;
+    })
   }
 
 }

@@ -1,5 +1,5 @@
 import {Component, NgZone, OnInit} from '@angular/core';
-import {FormBuilder, FormGroup} from '@angular/forms';
+import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 import {Router} from '@angular/router';
 import {CandidatService} from '../../../_services/candidats.service';
 
@@ -26,8 +26,13 @@ export class CandidatAddComponent implements OnInit {
 
   addCandidat() {
     this.candidatForm = this.fb.group({
-      firstname: [''],
-      lastname: ['']
+      firstname: ['', [Validators.required, Validators.minLength(5)]],
+      lastname: [''],
+      email: [''],
+      adress: [''],
+      town: [''],
+      zipcode: [''],
+      date_of_birth: ['']
     })
   }
 

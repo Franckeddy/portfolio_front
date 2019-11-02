@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { LicenseService } from '../../../_services/license.service';
 
 @Component({
   selector: 'app-license-list',
@@ -7,9 +8,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LicenseListComponent implements OnInit {
 
-  constructor() { }
+  LicenseList: any = [];
 
   ngOnInit() {
+    this.loadLicenses();
+  }
+
+  constructor(
+    public LicenseService: LicenseService
+  ){ }
+
+  // Licenses list
+  loadLicenses() {
+    return this.LicenseService.GetLicenses().subscribe((data: {}) => {
+      this.LicenseList = data;
+    })
   }
 
 }

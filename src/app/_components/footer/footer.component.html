@@ -1,24 +1,20 @@
-<!-- Footer -->
-<footer class="site-footer footer-full">
-    <div class="p-tb60 bg-black">
-        <div class="container-fluid">
+<footer class="site-footer" *ngIf="router.url !== '/login'">
+    <div class="footer-top">
+        <div class="container">
+            <!-- <app-footer-top></app-footer-top> -->
+        </div>
+    </div>
+    <!-- footer bottom part -->
+    <div class="footer-bottom">
+        <div class="container">
             <div class="row">
-                <div class="col-md-4 text-left footer-logo">
-                    <img/>
-                </div>
-                <div class="col-md-4 text-center">
-                    <ul class="list-inline m-a0">
-                        <li><a class="site-button white outline circle"><i class="fa fa-facebook"></i></a></li>
-                        <li><a class="site-button white outline circle"><i class="fa fa-google-plus"></i></a></li>
-                        <li><a class="site-button white outline circle"><i class="fa fa-linkedin"></i></a></li>
-                        <li><a class="site-button white outline circle"><i class="fa fa-twitter"></i></a></li>
-                    </ul>
-                </div>
-                <div class="col-md-4 text-right">
-                    <p class="max-w600 m-auto m-t10">Copyright © 2019</p>
+                <div class="col-md-10 col-sm-10 text-left"> © Copyright 2019 <span class="text-primary"> Franck Garcon</span> </div>
+                <div class="col-md-2 col-sm-2 text-right ">
+                    <span class="text-center">
+                            <button class="site-button radius-xl outline" (click)="logout()">Deconnexion</button>
+                        </span>
                 </div>
             </div>
         </div>
     </div>
 </footer>
-<!-- Footer END-->

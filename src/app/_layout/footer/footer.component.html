@@ -1,0 +1,20 @@
+<footer class="site-footer" *ngIf="router.url !== '/login'">
+    <div class="footer-top">
+        <div class="container">
+            <!-- <app-footer-top></app-footer-top> -->
+        </div>
+    </div>
+    <!-- footer bottom part -->
+    <div class="footer-bottom">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-10 col-sm-10 text-left"> © Copyright 2019 <span class="text-primary"> Franck Garcon</span> </div>
+                <div class="col-md-2 col-sm-2 text-right ">
+                    <span class="text-center">
+                            <button class="site-button radius-xl outline" (click)="logout()">Deconnexion</button>
+                        </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>

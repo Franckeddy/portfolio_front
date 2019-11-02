@@ -7,6 +7,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { APP_BASE_HREF } from '@angular/common';
 
 // used to create fake backend
 import { fakeBackendProvider } from './_helpers ';
@@ -27,7 +28,6 @@ import { HomeComponent } from './home/home';
 import { LoginComponent } from './login/login';
 import { RegisterComponent } from './register/register';
 import { AlertComponent } from './_components/alert';
-import { FooterComponent } from './_components/footer';
 import { FourofourComponent } from './_models/fourofour';
 import { SingleCandidatComponent } from './_components/single-candidat';
 
@@ -55,9 +55,12 @@ import { CandidatAddComponent } from './_components/_add/candidat-add';
 
 // _edit
 import { EditCandidatComponent } from './_components/_edit/edit-candidat/edit-candidat.component';
-import { HeaderComponent } from './_components/header/header.component';
-import { APP_BASE_HREF } from '@angular/common';
-import { FooterTopComponent } from './_components/footer/footer-top/footer-top.component';
+
+// _layout
+import { HeaderComponent } from './_layout/header/header.component';
+import { FooterTopComponent } from './_layout/footer/footer-top/footer-top.component';
+import { FooterComponent } from './_layout/footer';
+
 
 @NgModule({
     imports: [

@@ -60,6 +60,8 @@ import { EditCandidatComponent } from './_components/_edit/edit-candidat/edit-ca
 import { HeaderComponent } from './_layout/header/header.component';
 import { FooterTopComponent } from './_layout/footer/footer-top/footer-top.component';
 import { FooterComponent } from './_layout/footer';
+import { ExtranavMenuComponent } from './_layout/header/_header-component/extranav-menu/extranav-menu.component';
+import { HeaderNavComponent } from './_layout/header/_header-component/header-nav/header-nav.component';
 
 
 @NgModule({
@@ -97,6 +99,8 @@ import { FooterComponent } from './_layout/footer';
         EditCandidatComponent,
         HeaderComponent,
         FooterTopComponent,
+        ExtranavMenuComponent,
+        HeaderNavComponent,
     ],
     providers: [
         { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },

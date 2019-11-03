@@ -15,12 +15,12 @@ export class SchoolListComponent implements OnInit {
   }
 
   constructor(
-    public LicenseService: SchoolService
+    public SchoolService: SchoolService
   ){ }
 
-  // Licenses list
+  // School list
   loadSchools() {
-    return this.LicenseService.GetSchools().subscribe((data: {}) => {
+    return this.SchoolService.GetSchools().subscribe((data: {}) => {
       this.SchoolList = data;
     })
   }

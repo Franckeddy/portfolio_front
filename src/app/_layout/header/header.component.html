@@ -42,78 +42,13 @@
                             <button type="button" class="site-button-link cart-btn">
                                     <i class="fa fa-adjust"></i><span class="badge bg-primary"></span>
                                                         </button>
-                            <ul class="dropdown-menu cart-list">
-                                <li class="cart-item" routerLinkActive="active">
-                                    <div class="media">
-                                        <div class="media-left">
-                                            <i class="fa fa-graduation-cap"></i>
-                                        </div>
-                                        <div class="media-body">
-                                            <h6><a routerLink="school-list">Ecoles</a></h6>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="cart-item" routerLinkActive="active">
-                                    <div class="media">
-                                        <div class="media-left">
-                                            <i class="fa fa-building"></i>
-                                        </div>
-                                        <div class="media-body">
-                                            <h6><a routerLink="company-list">Entreprises</a></h6>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="cart-item" routerLinkActive="active">
-                                    <div class="media">
-                                        <div class="media-left">
-                                            <i class="fa fa-align-center"></i>
-                                        </div>
-                                        <div class="media-body">
-                                            <h6><a routerLink="activity-list">Secteur d'activité</a></h6>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="cart-item" routerLinkActive="active">
-                                    <div class="media">
-                                        <div class="media-left">
-                                            <i class="fa fa-address-card"></i>
-                                        </div>
-                                        <div class="media-body">
-                                            <h6><a routerLink="licence-list">Permis</a></h6>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="cart-item" routerLinkActive="active">
-                                    <div class="media">
-                                        <div class="media-left">
-                                            <i class="fa fa-certificate"></i>
-                                        </div>
-                                        <div class="media-body">
-                                            <h6><a routerLink="diplome-list">Diplome</a></h6>
-                                        </div>
-                                    </div>
-                                </li>
-                            </ul>
+                            <app-extranav-menu></app-extranav-menu>
                         </div>
                     </div>
                 </div>
                 <!-- main nav -->
                 <div class="header-nav navbar-collapse collapse">
-                    <ul class="nav navbar-nav">
-                        <li> <a href="javascript:;">Mon espace candidature <i class="fa fa-chevron-down"></i></a>
-                            <ul class="sub-menu">
-                                <li><a routerLink="">Créer mon CV</a></li>
-                                <li><a routerLink="['/edit-candidat/',candidats.id]">Modifier mon CV</a></li>
-                                <li><a routerLink="['/show-candidat/',candidats.id]">Visualiser mon CV</a></li>
-                            </ul>
-                        </li>
-                        <li> <a href="javascript:;">Admin <i class="fa fa-chevron-down"></i></a>
-                            <ul class="sub-menu">
-                                <li><a [routerLink]="">Admin</a></li>
-                                <li><a routerLink="[/add-candidat]">Ajout</a>
-                                </li>
-                            </ul>
-                    </ul>
+                    <app-header-nav></app-header-nav>
                 </div>
             </div>
         </div>

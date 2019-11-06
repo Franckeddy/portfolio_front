@@ -1,8 +1,8 @@
 export interface School {
-    media: string;
+    // media: string;
     name: string,
-    start_date: string,
-    end_date: string,
-    candidat: string[];
-    formations: string[];
+    // start_date: string,
+    // end_date: string,
+    // candidat: string[];
+    // formations: string[];
 }  

@@ -1,5 +1,5 @@
 export interface ActivityArea {
-    media: string;
+    // media: string;
     name: string,
-    companies: string[];
+    // companies: string[];
 }

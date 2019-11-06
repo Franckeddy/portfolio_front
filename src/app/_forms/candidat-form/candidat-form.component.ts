@@ -25,8 +25,8 @@ export class CandidatFormComponent implements OnInit {
   initForm() {
     this.candidatForm = this.formBuilder.group(
       {
-        firstname: ['', Validators.required],
-        lastname: ['', Validators.required],
+        firstname: ['', Validators],
+        lastname: ['', Validators],
         adress: ['', Validators],
         town: ['', Validators],
         zipcode:['', Validators],
@@ -51,20 +51,5 @@ export class CandidatFormComponent implements OnInit {
     const licenses = this.candidatForm.get('licenses').value;
     const schools = this.candidatForm.get('schools').value;
     const companies = this.candidatForm.get('companies').value;
-
-    // const newCandidat = new Candidat(
-    //   firstname,
-    //   lastname,
-    //   adress,
-    //   town,
-    //   zipcode,
-    //   email,
-    //   date_of_birth,
-    //   langues,
-    //   licenses,
-    //   schools,
-    //   companies,)
-    // this.candidatsService.createNewCandidat(newCandidat);
-    // this.router.navigate(['/candidats']);
-  }
+}
 }

@@ -62,14 +62,17 @@ import { FooterTopComponent } from './_layout/footer/footer-top/footer-top.compo
 import { FooterComponent } from './_layout/footer';
 import { ExtranavMenuComponent } from './_layout/header/_header-component/extranav-menu/extranav-menu.component';
 import { HeaderNavComponent } from './_layout/header/_header-component/header-nav/header-nav.component';
-
-
+import { SchoolAddComponent } from './_components/_add/school-add/school-add.component';
+import { FormationAddComponent } from './_components/_add/formation-add/formation-add.component';
+import { LicenseAddComponent } from './_components/_add/license-add/license-add.component';
+import { CompanyAddComponent } from './_components/_add/company-add/company-add.component';
+import { AvtivityAddComponent } from './_components/_add/avtivity-add/avtivity-add.component';
 @NgModule({
     imports: [
         BrowserModule,
         ReactiveFormsModule,
         HttpClientModule,
-        appRoutingModule
+        appRoutingModule,
     ],
     declarations: [
         AppComponent,
@@ -101,6 +104,11 @@ import { HeaderNavComponent } from './_layout/header/_header-component/header-na
         FooterTopComponent,
         ExtranavMenuComponent,
         HeaderNavComponent,
+        SchoolAddComponent,
+        FormationAddComponent,
+        LicenseAddComponent,
+        CompanyAddComponent,
+        AvtivityAddComponent,
     ],
     providers: [
         { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },

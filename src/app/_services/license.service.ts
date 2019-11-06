@@ -25,6 +25,15 @@ export class LicenseService {
     })
   };
 
+    // POST
+    CreateLicense(data: any): Observable<License> {
+      return this.http.post<License>(this.baseurl , JSON.stringify(data), this.httpOptions)
+        .pipe(
+          retry(1),
+          catchError(this.errorHandl)
+        )
+    }
+
   // GET Single
   GetLicense(id: string): Observable<License> {
     return this.http.get<License>(this.baseurl + '/' + id)

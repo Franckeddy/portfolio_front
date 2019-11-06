@@ -8,36 +8,4 @@ import { CandidatListComponent } from '../_list/candidat-list/candidat-list.comp
 })
 export class SingleCandidatComponent extends CandidatListComponent {
 
-  // candidat: Candidat;
-
-  // constructor(
-  //   private route: ActivatedRoute,
-  //   private candidatService: CandidatService,
-  //   private router: Router
-  // ) { }
-
-  // ngOnInit() {
-  //   // this.candidat = new Candidat(
-  //   //   '',
-  //   //   '',
-  //   //   '',
-  //   //   '',
-  //   //   '',
-  //   //   '',
-  //   //   '',
-  //   //   '',
-  //   //   '',
-  //   //   '',
-  //   //   ''
-  //   // );
-  //   // const id = this.route.snapshot.params['id'];
-  //   // this.candidatsService.getSingleCandidat(+id).then(
-  //   //   (candidat: Candidat) => {
-  //   //     this.candidat = candidat;
-  //   //   }
-  //   // );
-  // }
-  // onBack() {
-  //   this.router.navigate(['/candidats'])
-  // }
 }

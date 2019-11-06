@@ -1,6 +1,6 @@
 export interface Diplome {
-    media: string;
+    // media: string;
     name: string,
-    level: string,
-    date_obtention: string,
+    // level: string,
+    // date_obtention: string,
 }

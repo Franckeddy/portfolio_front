@@ -1,87 +1,20 @@
 <div class="page-content">
-    <!-- About -->
-    <div class="section-full p-t50 bg-white content-inner-1">
+    <div class="section-full p-t50 bg-white content-inner">
         <div class="container">
             <div class="section-head text-center head-1">
-                <h3 class="h3 text-uppercase">Liste des Ecoles. </h3>
+                <h3 class="h3 text-uppercase">Liste des Ecoles D'activitées. </h3>
                 <div class="dlab-separator bg-gray-dark"></div>
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry has been the industry's standard dummy text ever since the been when an unknown printer.</p>
             </div>
             <div class="row">
-                <div class="col-md-6" *ngFor="let school of SchoolList">
-                    <h2 class="m-b10">{{school.name}}</h2>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the.</p>
-                    <div class="dlab-accordion space" id="accordion1">
-                        <div class="panel">
-                            <div class="acod-head">
-                                <h6 class="acod-title">
-                                    <a data-toggle="collapse" href="#collapseOne1" data-parent="#accordion1">
-                                        <i class="fa fa-question-circle"></i> Can I Get A Refund?
-                                    </a>
-                                </h6>
-                            </div>
-                            <div id="collapseOne1" class="acod-body collapse in">
-                                <div class="acod-content">Web design aorem apsum dolor sit amet, adipiscing elit, sed diam nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Claritas est etiam processus. ipsum dolor sit amet, consectetuer adipiscing elit, sed
-                                    diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.Claritas est etiam processu</div>
-                            </div>
-                        </div>
-                        <div class="panel">
-                            <div class="acod-head">
-                                <h6 class="acod-title">
-                                    <a data-toggle="collapse" href="#collapseTwo1" class="collapsed" data-parent="#accordion1">
-                                        <i class="fa fa-question-circle"></i> Showcase Items with a Referral Widget
-                                    </a>
-                                </h6>
-                            </div>
-                            <div id="collapseTwo1" class="acod-body collapse">
-                                <div class="acod-content">Graphic design aorem apsum dolor sit amet, adipiscing elit, sed diam nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Claritas est etiam processus. ipsum dolor sit amet, consectetuer adipiscing elit,
-                                    sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.Claritas est etiam processus.</div>
-                            </div>
-                        </div>
-                        <div class="panel">
-                            <div class="acod-head">
-                                <h6 class="acod-title">
-                                    <a data-toggle="collapse" href="#collapseThree1" class="collapsed" data-parent="#accordion1">
-                                        <i class="fa fa-question-circle"></i> Where Can I Find my Purchase Code?
-                                    </a>
-                                </h6>
-                            </div>
-                            <div id="collapseThree1" class="acod-body collapse">
-                                <div class="acod-content">Developement aorem apsum dolor sit amet, adipiscing elit, sed diam nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Claritas est etiam processus. ipsum dolor sit amet, consectetuer adipiscing elit,
-                                    sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.Claritas est etiam processus.</div>
-                            </div>
-                        </div>
-                        <div class="panel">
-                            <div class="acod-head">
-                                <h6 class="acod-title">
-                                    <a data-toggle="collapse" href="#collapseFor1" class="collapsed" data-parent="#accordion1">
-                                        <i class="fa fa-question-circle"></i> Showcase Items with a Referral Widget
-                                    </a>
-                                </h6>
-                            </div>
-                            <div id="collapseFor1" class="acod-body collapse">
-                                <div class="acod-content">Graphic design aorem apsum dolor sit amet, adipiscing elit, sed diam nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Claritas est etiam processus. ipsum dolor sit amet, consectetuer adipiscing elit,
-                                    sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.Claritas est etiam processus.</div>
-                            </div>
-                        </div>
-                        <div class="panel">
-                            <div class="acod-head">
-                                <h6 class="acod-title">
-                                    <a data-toggle="collapse" href="#collapseFive1" class="collapsed" data-parent="#accordion1">
-                                        <i class="fa fa-question-circle"></i> Where Can I Find my Purchase Code?
-                                    </a>
-                                </h6>
-                            </div>
-                            <div id="collapseFive1" class="acod-body collapse">
-                                <div class="acod-content">Developement aorem apsum dolor sit amet, adipiscing elit, sed diam nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Claritas est etiam processus. ipsum dolor sit amet, consectetuer adipiscing elit,
-                                    sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.Claritas est etiam processus.</div>
-                            </div>
+                <div class="col-md-4 col-sm-6 m-b30" *ngFor="let school of SchoolList">
+                    <div class="icon-bx-wraper bx-style-1 p-a30 center">
+                        <div class="icon-bx-sm radius bg-primary m-b20"> <a href="#" class="icon-cell"><i class="flaticon-dashboard"></i></a> </div>
+                        <div class="icon-content">
+                            <h5 class="dlab-tilte text-uppercase">{{school.name}}</h5>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- About End -->
-    <!-- Testimonial -->
 </div>

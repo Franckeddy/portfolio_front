@@ -15,12 +15,12 @@ export class DiplomeListComponent implements OnInit {
   }
 
   constructor(
-    public ActivityService: DiplomeService
+    public DiplomeService: DiplomeService
   ){ }
 
   // Activities list
   loadDiplomes() {
-    return this.ActivityService.GetDiplomes().subscribe((data: {}) => {
+    return this.DiplomeService.GetDiplomes().subscribe((data: {}) => {
       this.DiplomeList = data;
     })
   }

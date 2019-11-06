@@ -1,18 +1,17 @@
-<!-- Accordion Bg Primary END -->
-<div class="section-full bg-gray content-inner">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <div class="sort-title clearfix text-center">
-                    <h3>Liste des permis. </h3>
-                </div>
-                <!-- BG Primary Color -->
-                <!-- Accordion Bg Primary -->
-                <div class="box-sort-in m-b30">
-                    <div class="dlab-accordion toggle bg-title gradient-2">
-                        <div class="panel" *ngFor="let license of LicenseList">
-                            <div class="acod-head">
-                                <h5 class="acod-title"> <a class="collapsed"><i class="fa fa-globe"></i>Permis {{license.name}}</a> </h5>
+<div class="page-content">
+    <div class="section-full p-t50 bg-white content-inner">
+        <div class="container">
+            <div class="section-head text-center head-1">
+                <h3 class="h3 text-uppercase">Diplomes. </h3>
+                <div class="dlab-separator bg-gray-dark"></div>
+            </div>
+            <div class="row">
+                <div class="row">
+                    <div class="col-md-4 col-sm-6" *ngFor="let license of LicenseList">
+                        <div class="icon-bx-wraper bx-style-2 m-l40 m-b30 p-a30 left">
+                            <div class="icon-bx-sm bg-primary m-b20"> <a href="#" class="icon-cell"><i class="flaticon-rocket-ship"></i></a> </div>
+                            <div class="icon-content p-l40">
+                                <h5 class="dlab-tilte text-uppercase">{{license.name}}</h5>
                             </div>
                         </div>
                     </div>

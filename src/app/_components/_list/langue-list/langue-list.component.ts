@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { LangueService } from '../../../_services/langue.service';
 
 @Component({
   selector: 'app-langue-list',
@@ -7,9 +8,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LangueListComponent implements OnInit {
 
-  constructor() { }
+  langueList: any = [];
 
   ngOnInit() {
+    this.loadLangues();
+  }
+
+  constructor(
+    public langueService: LangueService
+  ){ }
+
+  // Langues list
+  loadLangues() {
+    return this.langueService.GetLangues().subscribe((data: {}) => {
+      this.langueList = data;
+    })
   }
 
 }

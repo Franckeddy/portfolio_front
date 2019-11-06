@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormationService } from '../../../_services/formation.service';
 
 @Component({
   selector: 'app-formation-list',
@@ -7,9 +8,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FormationListComponent implements OnInit {
 
-  constructor() { }
+  FormationList: any = [];
 
   ngOnInit() {
+    this.loadFormations();
+  }
+
+  constructor(
+    public FormationService: FormationService
+  ){ }
+
+  // Formations list
+  loadFormations() {
+    return this.FormationService.GetFormations().subscribe((data: {}) => {
+      this.FormationList = data;
+    })
   }
 
 }

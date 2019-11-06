@@ -1,43 +1,16 @@
 <div class="page-content">
-    <div class="section-full p-t50 p-b50 bg-white brand-logo-area car-valuation">
+    <div class="section-full p-t50 bg-white content-inner">
         <div class="container">
             <div class="section-head text-center head-1">
-                <span class="text-primary">Why trust our valuation?</span>
-                <h3 class="h3 text-uppercase">Car Valuation</h3>
+                <h3 class="h3 text-uppercase">Langues. </h3>
                 <div class="dlab-separator bg-gray-dark"></div>
-                <p>CarZone uses its extensive data insights to provide accurate market price </p>
             </div>
             <div class="row">
-                <div class="col-md-4 col-sm-4 m-b30">
-                    <div class="icon-bx-wraper left">
-                        <div class="icon-lg text-primary radius">
-                            <a href="#" class="icon-cell text-primary"><i class="flaticon-car-3"></i></a>
-                        </div>
+                <div class="col-md-4 col-sm-6 m-b30" *ngFor="let langue of langueList">
+                    <div class="icon-bx-wraper bx-style-1 p-a30 center">
+                        <div class="icon-bx-sm radius bg-primary m-b20"> <a href="#" class="icon-cell"><i class="flaticon-dashboard"></i></a> </div>
                         <div class="icon-content">
-                            <h2 class="dlab-tilte m-a0"> 5.0 Million+</h2>
-                            <p>Cars analysed</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-4 m-b30">
-                    <div class="icon-bx-wraper left">
-                        <div class="icon-lg text-primary radius">
-                            <a href="#" class="icon-cell text-primary"><i class="flaticon-list"></i></a>
-                        </div>
-                        <div class="icon-content">
-                            <h2 class="dlab-tilte m-a0"> 500+</h2>
-                            <p>Dealers data analysed</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-4 m-b30">
-                    <div class="icon-bx-wraper left">
-                        <div class="icon-lg text-primary radius">
-                            <a href="#" class="icon-cell text-primary"><i class="flaticon-calendar"></i></a>
-                        </div>
-                        <div class="icon-content">
-                            <h2 class="dlab-tilte m-a0"> 20 Million+</h2>
-                            <p>Valuations in a year </p>
+                            <h5 class="dlab-tilte text-uppercase">{{langue.name}}</h5>
                         </div>
                     </div>
                 </div>

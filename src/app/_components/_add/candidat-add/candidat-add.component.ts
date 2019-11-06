@@ -26,7 +26,7 @@ export class CandidatAddComponent implements OnInit {
 
   addCandidat() {
     this.candidatForm = this.fb.group({
-      firstname: ['', [Validators.required, Validators.minLength(5)]],
+      firstname: [''],
       lastname: [''],
       email: [''],
       adress: [''],
@@ -35,7 +35,7 @@ export class CandidatAddComponent implements OnInit {
       date_of_birth: ['']
     })
   }
-
+  
   submitForm() {
     this.candidatService.CreateCandidat(this.candidatForm.value).subscribe(res => {
       console.log('Candidat added!')

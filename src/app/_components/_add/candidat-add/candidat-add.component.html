@@ -1,11 +1,11 @@
 <div class="section-full bg-white">
     <div class="container">
         <div class="row">
-            <div class="col-md-12">
+            <div class="col-md-4">
                 <div class="road-price">
                     <form [formGroup]="candidatForm" (ngSubmit)="submitForm()" novalidate>
                         <div class="form-head bg-primary text-white">
-                            <h3 class="m-a0">Inscription</h3>
+                            <h3 class="m-a0">Informations</h3>
                         </div>
                         <div class="form-group">
                             <label>Nom</label>
@@ -35,50 +35,15 @@
                             <label>Date de naissance</label>
                             <input type="text" formControlName="date_of_birth" class="form-control" maxlength="20">
                         </div>
-                        <!-- <div class="form-group">
-                            <label>Permis</label>
-                            <input type="text" formControlName="license" class="form-control" maxlength="20">
-                        </div>
-                        <div class="form-group">
-                            <label>schools</label>
-                            <input type="text" formControlName="schools" class="form-control" maxlength="20">
-                        </div>
-                        <div class="form-group">
-                            <label>langues</label>
-                            <input type="text" formControlName="langues" class="form-control" maxlength="20">
-                        </div>
-                        <div class="form-group">
-                            <label>companies</label>
-                            <input type="text" formControlName="companies" class="form-control" maxlength="20">
-                        </div> -->
-                        <button type="submit" class="btn btn-primary" (click)="addCandidat(candidat)">Submit</button>
+                        <button type="submit" class="btn btn-primary" (click)="submitForm()" [routerLink]="['/']" routerLinkActive="router-link-active">Submit</button>
                     </form>
                 </div>
             </div>
+            <app-formation-add></app-formation-add>
+            <app-company-add></app-company-add>
         </div>
+        <!-- <div class="row">
+            <app-school-add></app-school-add>
+        </div> -->
     </div>
 </div>
-<!-- <div class="comment-respond" id="respond">
-    <h3 class="comment-reply-title" id="reply-title">Leave a Reply <small> <a style="display:none;" href="#" id="cancel-comment-reply-link" rel="nofollow">Cancel reply</a> </small> </h3>
-    <form class="comment-form" id="commentform" method="post" action="http://sedatelab.com/developer/donate/wp-comments-post.php">
-        <p class="comment-form-author">
-            <label for="author">Name <span class="required">*</span></label>
-            <input type="text" value="author" name="author" placeholder="Author" id="author">
-        </p>
-        <p class="comment-form-email">
-            <label for="email">Email <span class="required">*</span></label>
-            <input type="text" value="email" placeholder="Email" name="email" id="email">
-        </p>
-        <p class="comment-form-url">
-            <label for="url">Website</label>
-            <input type="text" value="url" placeholder="Website" name="url" id="url">
-        </p>
-        <p class="comment-form-comment">
-            <label for="comment">Comment</label>
-            <textarea rows="8" name="comment" placeholder="Comment" id="comment"></textarea>
-        </p>
-        <p class="form-submit">
-            <input type="submit" value="Post Comment" class="submit" id="submit" name="submit">
-        </p>
-    </form>
-</div> -->

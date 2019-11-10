@@ -29,11 +29,11 @@ export class EditCandidatComponent implements OnInit {
       this.updateCandidatForm = this.fb.group({
         firstname: [data.firstname],
         lastname: [data.lastname],
-        adress: [data.adress],
-        town: [data.town],
-        zipcode: [data.zipcode],
-        email: [data.email],
-        date_of_birth: [data.date_of_birth],
+        // adress: [data.adress],
+        // town: [data.town],
+        // zipcode: [data.zipcode],
+        // email: [data.email],
+        // date_of_birth: [data.date_of_birth],
       })
     })
   }
@@ -42,11 +42,11 @@ export class EditCandidatComponent implements OnInit {
     this.updateCandidatForm = this.fb.group({
       firstname: [''],
       lastname: [''],
-      adress: [''],
-      town: [''],
-      zipcode: [''],
-      email: [''],
-      date_of_birth: [''],
+      // adress: [''],
+      // town: [''],
+      // zipcode: [''],
+      // email: [''],
+      // date_of_birth: [''],
     })    
   }
 

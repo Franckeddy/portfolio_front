@@ -51,6 +51,15 @@ export class ActivityService {
       )
   }
 
+    // DELETE
+    DeleteActivity(id: string){
+      return this.http.delete<ActivityArea>(this.baseurl + '/' + id, this.httpOptions)
+        .pipe(
+          retry(1),
+          catchError(this.errorHandl)
+        )
+    }
+
   // Error handling
   errorHandl(error) {
     let errorMessage = '';

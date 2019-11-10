@@ -15,14 +15,22 @@ export class ActivityAreaListComponent implements OnInit {
   }
 
   constructor(
-    public ActivityService: ActivityService
+    public activityService: ActivityService
   ){ }
 
   // Activities list
   loadActivities() {
-    return this.ActivityService.GetActivities().subscribe((data: {}) => {
+    return this.activityService.GetActivities().subscribe((data: {}) => {
       this.ActivityList = data;
     })
   }
 
+  // Delete issue
+  deleteActivity(data: { name: any; id: any; }){
+    var index = index = this.ActivityList.map(x => {return x.name}).indexOf(data.name);
+    return this.activityService.DeleteActivity(data.id).subscribe(res => {
+      this.ActivityList.splice(index, 1)
+      console.log('Activity deleted!')
+    })
+  }
 }

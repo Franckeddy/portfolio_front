@@ -28,11 +28,11 @@ export class CandidatAddComponent implements OnInit {
     this.candidatForm = this.fb.group({
       firstname: [''],
       lastname: [''],
-      email: [''],
-      adress: [''],
-      town: [''],
-      zipcode: [''],
-      date_of_birth: ['']
+      // email: [''],
+      // adress: [''],
+      // town: [''],
+      // zipcode: [''],
+      // date_of_birth: ['']
     })
   }
   

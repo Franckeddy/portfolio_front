@@ -4,40 +4,26 @@
         <div class="row">
             <!-- Left part start -->
             <div class="col-sm-8 col-md-8 col-lg-9 m-b30">
-                <h1 class="m-b20 m-t0">Car Dealer</h1>
+                <h1 class="m-b20 m-t0">{{candidat.firstname}} {{candidat.lastname}}</h1>
                 <div class="dlab-separator bg-primary"></div>
-                <p><strong>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's 
-                        standard dummy text ever since the  when an unknown printer took a galley of type and scrambled it to make a 
-                        type specimen book. </strong></p>
+                <p><strong>{{candidat.short_description}}</strong></p>
                 <h2 class="m-t30 m-b10 ">Car Buy and Sale Services</h2>
                 <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the when an unknown printer took a galley of type and scrambled it to make a type specimen book.
                     Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the when an unknown printer took a galley of type and scrambled it to make a type specimen
                     book. </p>
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-                </p>
                 <h3>Tips </h3>
                 <ul class="list-check-circle primary">
                     <li>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry.</li>
                     <li>Dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy</li>
-                    <li>Printer took a galley of type and scrambled it to make a type specimen book. </li>
-                    <li>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard.</li>
-                    <li>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the dummy book. </li>
-                    <li>Eorem ipsum dolor sit amete printing and typesetting industry. </li>
                 </ul>
                 <h2 class="m-t30 m-b10 ">Transport Manager</h2>
                 <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the when an unknown printer took a galley of type and scrambled it to make a type specimen book.
                     Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the when an unknown printer took a galley of type and scrambled it to make a type specimen
                     book. </p>
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-                </p>
                 <h3>Our Help </h3>
                 <ul class="list-check-circle primary">
                     <li>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry.</li>
                     <li>Dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy</li>
-                    <li>Printer took a galley of type and scrambled it to make a type specimen book. </li>
-                    <li>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard.</li>
-                    <li>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the dummy book. </li>
-                    <li>Eorem ipsum dolor sit amete printing and typesetting industry. </li>
                 </ul>
             </div>
             <div class="row">
@@ -46,7 +32,7 @@
                         <div class="icon-xl text-primary m-b20"> <a href="#" class="icon-cell"><i class="fa fa-map-marker"></i></a> </div>
                         <div class="icon-content">
                             <h5 class="dlab-tilte text-uppercase">Address</h5>
-                            <p>123 West Street, Melbourne Victoria 3000 Australia</p>
+                            <p>{{ candidat.adress }}</p>
                         </div>
                     </div>
                 </div>
@@ -55,7 +41,7 @@
                         <div class="icon-xl text-primary m-b20"> <a href="#" class="icon-cell"><i class="fa fa-envelope"></i></a> </div>
                         <div class="icon-content">
                             <h5 class="dlab-tilte text-uppercase">Email</h5>
-                            <p>info@company.com <br/> info@industrycompany.com</p>
+                            <p>{{ candidat.email }}/p>
                         </div>
                     </div>
                 </div>
@@ -64,16 +50,7 @@
                         <div class="icon-xl text-primary m-b20"> <a href="#" class="icon-cell"><i class="fa fa-phone"></i></a> </div>
                         <div class="icon-content">
                             <h5 class="dlab-tilte text-uppercase">Phone</h5>
-                            <p>+61 3 8376 6284 <br/> +23 123 456 7890</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-6 m-b30">
-                    <div class="icon-bx-wraper bx-style-1 p-a30 center">
-                        <div class="icon-xl text-primary m-b20"> <a href="#" class="icon-cell"><i class="fa fa-fax"></i></a> </div>
-                        <div class="icon-content">
-                            <h5 class="dlab-tilte text-uppercase">Content title</h5>
-                            <p>+61 3 8376 6284 <br/> +23 123 456 7890</p>
+                            <p>{{ candidat.phone }}</p>
                         </div>
                     </div>
                 </div>

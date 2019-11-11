@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { CandidatListComponent } from '../_list/candidat-list/candidat-list.component';
+import { CandidatListComponent } from '../_list/candidat-list';
 
 @Component({
   selector: 'app-single-candidat',

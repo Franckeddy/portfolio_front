@@ -4,10 +4,15 @@
 // Pour passer à une véritable API, supprimez simplement les fournisseurs situés en dessous du commentaire // providers used to create fake backend.
 
 import { NgModule } from '@angular/core';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatInputModule} from '@angular/material/input';
+import {MatSliderModule} from '@angular/material/slider';
 import { BrowserModule } from '@angular/platform-browser';
-import { ReactiveFormsModule } from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { APP_BASE_HREF } from '@angular/common';
+import {NgxPaginationModule} from 'ngx-pagination';
+import {MatDatepickerModule} from '@angular/material/datepicker'; 
 
 // used to create fake backend
 import { fakeBackendProvider } from './_helpers ';
@@ -54,26 +59,36 @@ import { CompanyFormComponent } from './_forms/company-form';
 import { CandidatAddComponent } from './_components/_add/candidat-add';
 
 // _edit
-import { EditCandidatComponent } from './_components/_edit/edit-candidat/edit-candidat.component';
+import { EditCandidatComponent } from './_components/_edit/edit-candidat';
 
 // _layout
-import { HeaderComponent } from './_layout/header/header.component';
-import { FooterTopComponent } from './_layout/footer/footer-top/footer-top.component';
+import { HeaderComponent } from './_layout/header';
+import { FooterTopComponent } from './_layout/footer/footer-top';
 import { FooterComponent } from './_layout/footer';
-import { ExtranavMenuComponent } from './_layout/header/_header-component/extranav-menu/extranav-menu.component';
+import { ExtranavMenuComponent } from './_layout/header/_header-component/extranav-menu';
 import { HeaderNavComponent } from './_layout/header/_header-component/header-nav/header-nav.component';
-import { SchoolAddComponent } from './_components/_add/school-add/school-add.component';
-import { FormationAddComponent } from './_components/_add/formation-add/formation-add.component';
-import { LicenseAddComponent } from './_components/_add/license-add/license-add.component';
-import { CompanyAddComponent } from './_components/_add/company-add/company-add.component';
-import { AvtivityAddComponent } from './_components/_add/avtivity-add/avtivity-add.component';
+import { SchoolAddComponent } from './_components/_add/school-add';
+import { FormationAddComponent } from './_components/_add/formation-add';
+import { LicenseAddComponent } from './_components/_add/license-add';
+import { CompanyAddComponent } from './_components/_add/company-add';
+import { AvtivityAddComponent } from './_components/_add/avtivity-add';
+import { MatNativeDateModule } from '@angular/material/core';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations'; 
 @NgModule({
-    imports: [
-        BrowserModule,
-        ReactiveFormsModule,
-        HttpClientModule,
-        appRoutingModule,
-    ],
+  imports: [
+    BrowserModule,
+    ReactiveFormsModule,
+    HttpClientModule,
+    appRoutingModule,
+    NgxPaginationModule,
+    MatSliderModule,
+    MatFormFieldModule,
+    MatInputModule,
+    FormsModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
+    BrowserAnimationsModule, 
+  ],
     declarations: [
         AppComponent,
         HomeComponent,

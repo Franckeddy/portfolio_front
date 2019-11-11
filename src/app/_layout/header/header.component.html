@@ -7,17 +7,6 @@
                         <span>Vous etes connecté.</span>
                     </div>
                 </div>
-                <div class="dlab-topbar-right topbar-social">
-                    <!-- <ul>
-                        <li>
-                            <a href="javascript:void(0);"><i class="fa fa-envelope-o"></i> Support@website.com</a>
-                        </li>
-                        <li><a href="#" class="site-button-link facebook hover"><i class="fa fa-facebook"></i></a></li>
-                        <li><a href="#" class="site-button-link google-plus hover"><i class="fa fa-google-plus"></i></a></li>
-                        <li><a href="#" class="site-button-link twitter hover"><i class="fa fa-twitter"></i></a></li>
-                        <li><a href="#" class="site-button-link linkedin hover"><i class="fa fa-linkedin"></i></a></li>
-                    </ul> -->
-                </div>
             </div>
         </div>
     </div>
@@ -27,6 +16,9 @@
             <div class="container clearfix">
                 <!-- website logo -->
                 <div class="logo-header mostion" *ngIf="router.url !== '/'">
+                    <a routerLink="/">
+                        <div class="owl-prev"><i class="fa fa-home"></i></div>
+                    </a>
                     <a href="javascript:window.history.go(-1)">
                         <div class="owl-prev"><i class="fa fa-angle-left"></i></div>
                     </a>
@@ -38,12 +30,12 @@
                 <!-- extra nav -->
                 <div class="extra-nav">
                     <div class="extra-cell ">
-                        <div class="shop-cart navbar-right">
+                        <!-- <div class="shop-cart navbar-right">
                             <button type="button" class="site-button-link cart-btn">
                                     <i class="fa fa-adjust"></i><span class="badge bg-primary"></span>
                                                         </button>
                             <app-extranav-menu></app-extranav-menu>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
                 <!-- main nav -->

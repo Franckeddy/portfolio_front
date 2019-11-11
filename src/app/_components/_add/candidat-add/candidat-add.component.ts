@@ -26,14 +26,34 @@ export class CandidatAddComponent implements OnInit {
 
   addCandidat() {
     this.candidatForm = this.fb.group({
-      firstname: [''],
-      lastname: [''],
-      // email: [''],
-      // adress: [''],
-      // town: [''],
-      // zipcode: [''],
-      // date_of_birth: ['']
-    })
+      firstname: ['', [Validators.required]],
+      lastname: ['', [Validators.required]],
+      email: ['', [Validators.required, Validators.email]],
+      adress: [''],
+      town: [''],
+      zipcode: [''],
+      date_of_birth: [''],
+          // langue: this._formBuilder.group({
+      //   name: [null, [Validators.required]],
+      //   level: [null, [Validators.required]],
+      // }),
+            // school: this._formBuilder.group({
+      //   name: [null, [Validators.required]],
+      //   level: [null, [Validators.required]],
+      // })
+            // license: this._formBuilder.group({
+      //   name: [null, [Validators.required]],
+      //   level: [null, [Validators.required]],
+      // }),
+            // langue: this._formBuilder.group({
+      //   name: [null, [Validators.required]],
+      //   level: [null, [Validators.required]],
+      // }),
+            // langue: this._formBuilder.group({
+      //   name: [null, [Validators.required]],
+      //   level: [null, [Validators.required]],
+      // })
+  })
   }
   
   submitForm() {

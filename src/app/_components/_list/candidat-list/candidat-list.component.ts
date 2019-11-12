@@ -1,6 +1,7 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {CandidatService} from "../../../_services/candidats.service";
 import { ActivatedRoute } from '@angular/router';
+import { Candidat } from '../../../_models/Candidat.model';
 
 @Component({
   selector: 'app-candidat-list',
@@ -13,9 +14,17 @@ export class CandidatListComponent implements OnInit {
   page: number = 1;
 
   CandidatsList: any = [];
+  candidat: Candidat;
+  id: string;
 
   ngOnInit() {
     this.loadCandidats();
+    this.id = this.route.snapshot.params['id'];
+    this.CandidatService.GetCandidat(this.id)
+      .subscribe((data: Candidat) => {
+        console.log(data)
+        this.candidat = data;
+      }, error => console.log(error));
   }
 
   constructor(

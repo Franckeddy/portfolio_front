@@ -1,33 +1,15 @@
 <div class="content-area">
     <!-- Career -->
-    <div class="container">
+    <div class="container" *ngIf="candidat">
         <div class="row">
             <!-- Left part start -->
-            <div class="col-sm-8 col-md-8 col-lg-9 m-b30">
+            <div class="col-sm-8 col-md-8 col-lg-12 m-b30">
                 <h1 class="m-b20 m-t0">{{candidat.firstname}} {{candidat.lastname}}</h1>
                 <div class="dlab-separator bg-primary"></div>
-                <p><strong>{{candidat.short_description}}</strong></p>
-                <h2 class="m-t30 m-b10 ">Car Buy and Sale Services</h2>
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the when an unknown printer took a galley of type and scrambled it to make a type specimen
-                    book. </p>
-                <h3>Tips </h3>
-                <ul class="list-check-circle primary">
-                    <li>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry.</li>
-                    <li>Dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy</li>
-                </ul>
-                <h2 class="m-t30 m-b10 ">Transport Manager</h2>
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the when an unknown printer took a galley of type and scrambled it to make a type specimen
-                    book. </p>
-                <h3>Our Help </h3>
-                <ul class="list-check-circle primary">
-                    <li>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry.</li>
-                    <li>Dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy</li>
-                </ul>
+                <p><strong>{{ candidat.short_description }}</strong></p>
             </div>
             <div class="row">
-                <div class="col-md-3 col-sm-6 m-b30">
+                <div class="col-md-3 col-sm-3 m-b30">
                     <div class="icon-bx-wraper bx-style-1 p-a30 center">
                         <div class="icon-xl text-primary m-b20"> <a href="#" class="icon-cell"><i class="fa fa-map-marker"></i></a> </div>
                         <div class="icon-content">
@@ -36,16 +18,16 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-3 col-sm-6 m-b30">
+                <div class="col-md-3 col-sm-3 m-b30">
                     <div class="icon-bx-wraper bx-style-1 p-a30 center">
                         <div class="icon-xl text-primary m-b20"> <a href="#" class="icon-cell"><i class="fa fa-envelope"></i></a> </div>
                         <div class="icon-content">
                             <h5 class="dlab-tilte text-uppercase">Email</h5>
-                            <p>{{ candidat.email }}/p>
+                            <p>{{ candidat.email }}</p>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-3 col-sm-6 m-b30">
+                <div class="col-md-3 col-sm-3 m-b30">
                     <div class="icon-bx-wraper bx-style-1 p-a30 center">
                         <div class="icon-xl text-primary m-b20"> <a href="#" class="icon-cell"><i class="fa fa-phone"></i></a> </div>
                         <div class="icon-content">
@@ -55,16 +37,16 @@
                     </div>
                 </div>
             </div>
-            <!-- Left part start END -->
-        </div>
-        <div class="testimonial-detail clearfix" *ngFor="let candidats of CandidatsList; let index = index; let isFirst = first; let isOdd = odd;">
-            <span>{{ index }}</span>
-            <span>:</span>
-            <span>{{ candidats.firstname }}</span>
-            <span>( isFirst: {{ isFirst }}, isOdd: {{ isOdd }} )</span>
-            <button type="button" class="btn btn-success" [routerLink]="['/edit-candidat/', candidats.id]">Edit</button>
-            <button type="button" class="btn btn-danger" (click)="deleteCandidat(candidats)">Remove</button>
+            <button type="button" class="btn btn-success" [routerLink]="['/edit-candidat/', candidat.id]">Edit</button>
+            <button type="button" class="btn btn-danger" (click)="deleteCandidat(candidat)">Remove</button>
         </div>
     </div>
-    <!-- Career END -->
+    <!-- <div class="testimonial-detail clearfix" *ngFor="let candidat of CandidatsList; let index = index; let isFirst = first; let isOdd = odd;">
+        <span>{{ index }}</span>
+        <span>:</span>
+        <span>{{ candidat.firstname }}</span>
+        <span>( isFirst: {{ isFirst }}, isOdd: {{ isOdd }} )</span>
+        <button type="button" class="btn btn-success" [routerLink]="['/edit-candidat/', candidat.id]">Edit</button>
+        <button type="button" class="btn btn-danger" (click)="deleteCandidat(candidat)">Remove</button>
+    </div> -->
 </div>

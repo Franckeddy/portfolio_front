@@ -18,13 +18,13 @@ export class EditCandidatComponent implements OnInit {
   }
 
   constructor(
-    private actRoute: ActivatedRoute,    
+    private actRoute: ActivatedRoute,
     public bugService: CandidatService,
     public fb: FormBuilder,
     private ngZone: NgZone,
     private router: Router
-  ) { 
-    var id = this.actRoute.snapshot.paramMap.get('id');
+  ) {
+    let id = this.actRoute.snapshot.paramMap.get('id');
     this.bugService.GetCandidat(id).subscribe((data) => {
       this.updateCandidatForm = this.fb.group({
         firstname: [data.firstname],
@@ -47,11 +47,11 @@ export class EditCandidatComponent implements OnInit {
       // zipcode: [''],
       // email: [''],
       // date_of_birth: [''],
-    })    
+    })
   }
 
-  submitForm(){ 
-    var id = this.actRoute.snapshot.paramMap.get('id');
+  submitForm(){
+    let id = this.actRoute.snapshot.paramMap.get('id');
     this.bugService.UpdateCandidat(id, this.updateCandidatForm.value).subscribe(res => {
       this.ngZone.run(() => this.router.navigateByUrl('/candidats-list'))
     })

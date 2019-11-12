@@ -1,54 +1,117 @@
-<div class="container wrapper wrapper2">
-    <div class="row">
-        <div class="col-md-12">
-            <h3>Edit Candidat</h3>
-            <form [formGroup]="updateCandidatForm" (ngSubmit)="submitForm()" novalidate>
-                <div class="form-group">
-                    <label>Nom</label>
-                    <input type="text" formControlName="firstname" class="form-control" maxlength="20">
+<div class="section-full bg-white">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="road-price">
+                    <form [formGroup]="updateCandidatForm" (ngSubmit)="submitForm()" novalidate>
+                        <div class="form-head bg-primary text-white">
+                            <h3>Edit Candidat</h3>
+                        </div>
+
+                        <!-- Section Personnelle -->
+                        <h4>Informations Personnel</h4>
+                        <div class="row">
+                            <div class="col-md-6 col-sm-6">
+                                <div class="input-group">
+                                    <input type="text" formControlName="firstname" placeholder="Votre Nom" class="form-control" />
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-sm-6">
+                                <div class="input-group">
+                                    <input type="text" formControlName="lastname" placeholder="Votre prénom" class="form-control" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 col-sm-6">
+                                <div class="input-group">
+                                    <input type="text" formControlName="email" placeholder="Votre E-mail" class="form-control" />
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-sm-6">
+                                <div class="input-group">
+                                    <mat-form-field class="example-full-width">
+                                        <input matInput [matDatepicker]="picker" placeholder="Date de naisssance" formControlName="date_of_birth">
+                                        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                                        <mat-datepicker touchUi #picker></mat-datepicker>
+                                    </mat-form-field>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 col-sm-6">
+                                <div class="input-group">
+                                    <input type="text" formControlName="town" placeholder="Votre ville" class="form-control" />
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-sm-6">
+                                <div class="input-group">
+                                    <input type="text" formControlName="zipcode" placeholder="Votre code postal" class="form-control" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12 col-sm-12">
+                                <div class="input-group">
+                                    <input type="text" formControlName="adress" placeholder="Votre Adresse" class="form-control" />
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Section Langues -->
+                        <h4>Langues</h4>
+                        <div class="row">
+                            <div class="col-md-6 col-sm-6">
+                                <div class="input-group">
+                                    <input type="text" formControlName="firstname" placeholder="Langue" class="form-control" />
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-sm-6">
+                                <div class="input-group">
+                                    <input type="text" formControlName="lastname" placeholder="Niveau" class="form-control" />
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Section Permis -->
+                        <h4>Permis</h4>
+                        <div class="row">
+                            <div class="col-md-6 col-sm-6">
+                                <div class="input-group">
+                                    <input type="text" formControlName="email" placeholder="Nom du permis" class="form-control" />
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Section Scolaire -->
+                        <h4>Parcours Scolaire</h4>
+                        <div class="row">
+                            <div class="col-md-6 col-sm-6">
+                                <div class="input-group">
+                                    <input type="text" formControlName="email" placeholder="Nom de l'école" class="form-control" />
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Section Entreprises -->
+                        <h4>Experiences professionnelles</h4>
+                        <div class="row">
+                            <div class="col-md-6 col-sm-6">
+                                <div class="input-group">
+                                    <input type="text" formControlName="email" placeholder="Nom de l'entreprise" class="form-control" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12 col-sm-12">
+                                <div class="text-center">
+                                    <button type="button" class="btn btn-primary" (click)="submitForm()" routerLink="/">Enregistrer</button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
                 </div>
-                <div class="form-group">
-                    <label>Prenom</label>
-                    <input type="text" formControlName="lastname" class="form-control" maxlength="20">
-                </div>
-                <!-- <div class="form-group">
-                    <label>Email</label>
-                    <input type="text" formControlName="email" class="form-control" maxlength="20">
-                </div>
-                <div class="form-group">
-                    <label>Adresse</label>
-                    <input type="text" formControlName="adress" class="form-control" maxlength="20">
-                </div>
-                <div class="form-group">
-                    <label>Ville</label>
-                    <input type="text" formControlName="town" class="form-control" maxlength="20">
-                </div>
-                <div class="form-group">
-                    <label>Code postal</label>
-                    <input type="text" formControlName="zipcode" class="form-control" maxlength="20">
-                </div>
-                <div class="form-group">
-                    <label>Date de naissance</label>
-                    <input type="text" formControlName="date_of_birth" class="form-control" maxlength="20">
-                </div> -->
-                <!-- <div class="form-group">
-                    <label>Permis</label>
-                    <input type="text" formControlName="license" class="form-control" maxlength="20">
-                </div>
-                <div class="form-group">
-                    <label>schools</label>
-                    <input type="text" formControlName="schools" class="form-control" maxlength="20">
-                </div>
-                <div class="form-group">
-                    <label>langues</label>
-                    <input type="text" formControlName="langues" class="form-control" maxlength="20">
-                </div>
-                <div class="form-group">
-                    <label>companies</label>
-                    <input type="text" formControlName="companies" class="form-control" maxlength="20">
-                </div> -->
-                <button type="button" class="btn btn-primary">Enregistrer</button>
-            </form>
+            </div>
         </div>
     </div>
 </div>

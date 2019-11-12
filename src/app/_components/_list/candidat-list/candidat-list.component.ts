@@ -1,4 +1,4 @@
-import {Component, OnDestroy, OnInit} from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import {CandidatService} from "../../../_services/candidats.service";
 import { ActivatedRoute } from '@angular/router';
 
@@ -8,6 +8,9 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['candidat-list.component.scss']
 })
 export class CandidatListComponent implements OnInit {
+
+  @Input('data') candidats: string[] = [];
+  page: number = 1;
 
   CandidatsList: any = [];
 

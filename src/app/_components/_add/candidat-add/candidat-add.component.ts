@@ -33,14 +33,14 @@ export class CandidatAddComponent implements OnInit {
       town: [''],
       zipcode: [''],
       date_of_birth: [''],
-          // langue: this._formBuilder.group({
-      //   name: [null, [Validators.required]],
-      //   level: [null, [Validators.required]],
-      // }),
-            // school: this._formBuilder.group({
-      //   name: [null, [Validators.required]],
-      //   level: [null, [Validators.required]],
-      // })
+          langue: this.fb.group({
+        name: [null, [Validators.required]],
+        level: [null, [Validators.required]],
+      }),
+            school: this.fb.group({
+        name: [null, [Validators.required]],
+        level: [null, [Validators.required]],
+      })
             // license: this._formBuilder.group({
       //   name: [null, [Validators.required]],
       //   level: [null, [Validators.required]],

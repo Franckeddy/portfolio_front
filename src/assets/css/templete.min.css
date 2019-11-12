@@ -2513,7 +2513,6 @@ input[type=radio]:checked+label:before {
     background: #fff;
     box-shadow: 0 4px 10px -3px rgba(0, 0, 0, .25);
     margin: 60px auto 90px;
-    max-width: 500px;
     overflow: hidden;
     padding: 30px;
     border-radius: 4px;

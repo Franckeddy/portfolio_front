@@ -87,7 +87,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     FormsModule,
     MatDatepickerModule,
     MatNativeDateModule,
-    BrowserAnimationsModule, 
+    BrowserAnimationsModule,
   ],
     declarations: [
         AppComponent,

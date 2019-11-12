@@ -1,87 +1,39 @@
 <div class="section-full bg-white">
     <div class="container">
         <div class="row">
-            <div class="col-md-3">
-                <div class="road-price">
-                    <form [formGroup]="candidatForm" (ngSubmit)="submitForm()">
-                        <div class="form-head bg-primary text-white">
-                            <h3 class="m-a0">Parcours scolaire </h3>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-12 col-sm-12">
-                                <div class="input-group">
-                                    <label>
-                                    <input type="text" formControlName="adress" placeholder="Votre Adresse" class="form-control" />
-                                  </label>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-12 col-sm-12">
-                                <div class="input-group">
-                                    <label>
-                                    <input type="text" formControlName="adress" placeholder="Votre Adresse" class="form-control" />
-                                  </label>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-12 col-sm-12">
-                                <div class="input-group">
-                                    <label>
-                                    <input type="text" formControlName="adress" placeholder="Votre Adresse" class="form-control" />
-                                  </label>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-12 col-sm-12">
-                                <div class="input-group">
-                                    <input type="text" formControlName="adress" placeholder="Votre Adresse" class="form-control" />
-                                </div>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-            </div>
-            <div class="col-md-6">
+            <div class="col-md-12">
                 <div class="road-price">
                     <form [formGroup]="candidatForm" (ngSubmit)="submitForm()">
                         <div class="form-head bg-primary text-white">
                             <h3 class="m-a0">Créer votre CV </h3>
                         </div>
+
+                        <!-- Section Personnelle -->
+                        <h4>Informations Personnel</h4>
                         <div class="row">
                             <div class="col-md-6 col-sm-6">
                                 <div class="input-group">
-                                    <label>
                                     <input type="text" formControlName="firstname" placeholder="Votre Nom" class="form-control" />
-                                  </label>
                                 </div>
                             </div>
                             <div class="col-md-6 col-sm-6">
                                 <div class="input-group">
-                                    <label>
                                     <input type="text" formControlName="lastname" placeholder="Votre prénom" class="form-control" />
-                                  </label>
                                 </div>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-md-6 col-sm-6">
                                 <div class="input-group">
-                                    <label>
                                     <input type="text" formControlName="email" placeholder="Votre E-mail" class="form-control" />
-                                  </label>
                                 </div>
                             </div>
                             <div class="col-md-6 col-sm-6">
                                 <div class="input-group">
-                                    <mat-form-field>
-                                        <label>
+                                    <mat-form-field class="example-full-width">
                                         <input matInput [matDatepicker]="picker" placeholder="Date de naisssance" formControlName="date_of_birth">
-                                      </label>
                                         <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-                                        <mat-datepicker #picker></mat-datepicker>
+                                        <mat-datepicker touchUi #picker></mat-datepicker>
                                     </mat-form-field>
                                 </div>
                             </div>
@@ -89,69 +41,116 @@
                         <div class="row">
                             <div class="col-md-6 col-sm-6">
                                 <div class="input-group">
-                                    <label>
                                     <input type="text" formControlName="town" placeholder="Votre ville" class="form-control" />
-                                  </label>
                                 </div>
                             </div>
                             <div class="col-md-6 col-sm-6">
                                 <div class="input-group">
-                                    <label>
                                     <input type="text" formControlName="zipcode" placeholder="Votre code postal" class="form-control" />
-                                  </label>
                                 </div>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-md-12 col-sm-12">
                                 <div class="input-group">
-                                    <label>
                                     <input type="text" formControlName="adress" placeholder="Votre Adresse" class="form-control" />
-                                  </label>
                                 </div>
                             </div>
                         </div>
+
+                        <!-- Section Langues -->
+                        <h4>Langues</h4>
+                        <div class="row">
+                            <div class="col-md-6 col-sm-6">
+                                <div class="input-group">
+                                    <input type="text" formControlName="firstname" placeholder="Langue" class="form-control" />
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-sm-6">
+                                <div class="input-group">
+                                    <input type="text" formControlName="lastname" placeholder="Niveau" class="form-control" />
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Section Permis -->
+                        <h4>Permis</h4>
+                        <div class="row">
+                            <div class="col-md-6 col-sm-6">
+                                <div class="input-group">
+                                    <input type="text" formControlName="email" placeholder="Nom du permis" class="form-control" />
+                                </div>
+                            </div>
+                            <!-- <div class="col-md-6 col-sm-6">
+                                <div class="input-group">
+                                    <mat-form-field class="example-full-width">
+                                        <input matInput [matDatepickerFilter]="myFilter" [matDatepicker]="picker" placeholder="Date d'obtention" formControlName="">
+                                        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                                        <mat-datepicker #picker></mat-datepicker>
+                                    </mat-form-field>
+                                </div>
+                            </div> -->
+                        </div>
+
+                        <!-- Section Scolaire -->
+                        <h4>Parcours Scolaire</h4>
+                        <div class="row">
+                            <div class="col-md-6 col-sm-6">
+                                <div class="input-group">
+                                    <input type="text" formControlName="email" placeholder="Nom de l'école" class="form-control" />
+                                </div>
+                            </div>
+                        </div>
+                        <!-- <div class="row">
+                            <div class="col-md-6 col-sm-6">
+                                <div class="input-group">
+                                    <input type="text" formControlName="email" placeholder="Diplome" class="form-control" />
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-sm-6">
+                                <div class="input-group">
+                                    <mat-form-field>
+                                        <input matInput [matDatepicker]="picker" placeholder="Date d'obtnetion" formControlName="">
+                                        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                                        <mat-datepicker #picker></mat-datepicker>
+                                    </mat-form-field>
+                                </div>
+                            </div>
+                        </div> -->
+
+                        <!-- Section Entreprises -->
+                        <h4>Experiences professionnelles</h4>
+                        <div class="row">
+                            <div class="col-md-6 col-sm-6">
+                                <div class="input-group">
+                                    <input type="text" formControlName="email" placeholder="Nom de l'entreprise" class="form-control" />
+                                </div>
+                            </div>
+                        </div>
+                        <!-- <div class="row">
+                            <div class="col-md-6 col-sm-6">
+                                <div class="input-group">
+                                    <mat-form-field>
+                                        <input matInput [matDatepicker]="picker" placeholder="Date d'entrée" formControlName="">
+                                        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                                        <mat-datepicker #picker startView="year" [startAt]="startDate"></mat-datepicker>
+                                    </mat-form-field>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-sm-6">
+                                <div class="input-group">
+                                    <mat-form-field>
+                                        <input matInput [matDatepicker]="picker" placeholder="Date de sortie" formControlName="">
+                                        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                                        <mat-datepicker #picker></mat-datepicker>
+                                    </mat-form-field>
+                                </div>
+                            </div>
+                        </div> -->
                         <div class="row">
                             <div class="col-md-12 col-sm-12">
                                 <div class="text-center">
                                     <button type="button" class="btn btn-primary" (click)="submitForm()" routerLink="/">Submit</button>
-                                </div>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="road-price">
-                    <form [formGroup]="candidatForm" (ngSubmit)="submitForm()">
-                        <div class="form-head bg-primary text-white">
-                            <h3 class="m-a0">Parcours scolaire </h3>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-12 col-sm-12">
-                                <div class="input-group">
-                                    <input type="text" formControlName="adress" placeholder="Votre Adresse" class="form-control" />
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-12 col-sm-12">
-                                <div class="input-group">
-                                    <input type="text" formControlName="adress" placeholder="Votre Adresse" class="form-control" />
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-12 col-sm-12">
-                                <div class="input-group">
-                                    <input type="text" formControlName="adress" placeholder="Votre Adresse" class="form-control" />
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-12 col-sm-12">
-                                <div class="input-group">
-                                    <input type="text" formControlName="adress" placeholder="Votre Adresse" class="form-control" />
                                 </div>
                             </div>
                         </div>

@@ -1,4 +1,4 @@
-<div class="col-md-3 col-sm-6 col-xs-6" *ngFor="let candidats of CandidatsList">
+<div class="col-md-3 col-sm-6 col-xs-6" *ngFor="let candidats of CandidatsList | paginate: { itemsPerPage: 8, currentPage: page }">
     <div class="dlab-box-bg m-b30 box-hover active">
         <div class="icon-bx-wraper center p-lr20 p-tb30">
             <div class="text-primary m-b20">
@@ -13,4 +13,7 @@
             <a class="site-button btn-block" [routerLink]="['candidats',candidats.id]">Profil Complet</a>
         </div>
     </div>
+</div>
+<div class="has-text-centered">
+    <pagination-controls (pageChange)="page = $event"></pagination-controls>
 </div>

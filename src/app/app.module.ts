@@ -63,7 +63,6 @@ import { EditCandidatComponent } from './_components/_edit/edit-candidat';
 
 // _layout
 import { HeaderComponent } from './_layout/header';
-import { FooterTopComponent } from './_layout/footer/footer-top';
 import { FooterComponent } from './_layout/footer';
 import { ExtranavMenuComponent } from './_layout/header/_header-component/extranav-menu';
 import { HeaderNavComponent } from './_layout/header/_header-component/header-nav/header-nav.component';
@@ -116,7 +115,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
         CandidatAddComponent,
         EditCandidatComponent,
         HeaderComponent,
-        FooterTopComponent,
         ExtranavMenuComponent,
         HeaderNavComponent,
         SchoolAddComponent,

@@ -29,10 +29,12 @@ export class EditCandidatComponent implements OnInit {
       this.updateCandidatForm = this.fb.group({
         firstname: [data.firstname],
         lastname: [data.lastname],
-        // adress: [data.adress],
-        // town: [data.town],
-        // zipcode: [data.zipcode],
-        // email: [data.email],
+        adress: [data.adress],
+        town: [data.town],
+        zipcode: [data.zipcode],
+        email: [data.email],
+        phone: [data.phone],
+        short_description: [data.short_description],
         // date_of_birth: [data.date_of_birth],
       })
     })
@@ -42,10 +44,12 @@ export class EditCandidatComponent implements OnInit {
     this.updateCandidatForm = this.fb.group({
       firstname: [''],
       lastname: [''],
-      // adress: [''],
-      // town: [''],
-      // zipcode: [''],
-      // email: [''],
+      adress: [''],
+      town: [''],
+      zipcode: [''],
+      email: [''],
+      phone: [''],
+      short_description: [''],
       // date_of_birth: [''],
     })
   }

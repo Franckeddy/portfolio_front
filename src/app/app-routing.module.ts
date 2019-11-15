@@ -12,11 +12,6 @@ import { AuthGuard } from './_helpers ';
 import { FourofourComponent } from './_models/fourofour';
 import { CandidatAddComponent } from './_components/_add/candidat-add/candidat-add.component';
 import { EditCandidatComponent } from './_components/_edit/edit-candidat/edit-candidat.component';
-import { LicenseListComponent } from './_components/_list/license-list/license-list.component';
-import { SchoolListComponent } from './_components/_list/school-list/school-list.component';
-import { ActivityAreaListComponent } from './_components/_list/activity-area-list/activity-area-list.component';
-import { CompanyListComponent } from './_components/_list/company-list/company-list.component';
-import { DiplomeListComponent } from './_components/_list/diplome-list/diplome-list.component';
 
 const routes: Routes = [
     { path: '', component: HomeComponent, canActivate: [AuthGuard] },
@@ -28,13 +23,6 @@ const routes: Routes = [
     { path: 'add-candidat', component: CandidatAddComponent },
     { path: 'edit-candidat/:id', component: EditCandidatComponent },
     { path: 'candidats/:id', component: CandidatListComponent },
-
-    { path: 'licence-list', component: LicenseListComponent },
-    { path: 'school-list', component: SchoolListComponent },
-    { path: 'activity-list', component: ActivityAreaListComponent },
-    { path: 'company-list', component: CompanyListComponent },
-    { path: 'diplome-list', component: DiplomeListComponent },
-
     // otherwise redirect to home
     { path: '**', redirectTo: '/not-found' }
 ];

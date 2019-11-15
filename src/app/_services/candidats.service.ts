@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable, throwError } from 'rxjs';
 import { Candidat } from '../_models';
-import { retry, catchError } from 'rxjs/operators';
+import { retry, catchError, tap } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
@@ -62,10 +62,10 @@ export class CandidatService {
   }
 
   // DELETE
-  DeleteCandidat(id: string){
+  DeleteCandidat(id: string): Observable<Candidat> {
     return this.http.delete<Candidat>(this.baseurl + '/' + id, this.httpOptions)
       .pipe(
-        retry(1),
+        tap(_ => console.log(`Song deleted: ${id}`)),
         catchError(this.errorHandl)
       )
   }

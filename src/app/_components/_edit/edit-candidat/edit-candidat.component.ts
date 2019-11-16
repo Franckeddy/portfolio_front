@@ -33,9 +33,13 @@ export class EditCandidatComponent implements OnInit {
         town: [data.town],
         zipcode: [data.zipcode],
         email: [data.email],
-        phone: [data.phone],
         short_description: [data.short_description],
-        // date_of_birth: [data.date_of_birth],
+        date_of_birth: [data.date_of_birth],
+
+        Langue: this.fb.group({
+          name: [data.langues],
+          level: [data.langues],
+        })
       })
     })
   }
@@ -48,9 +52,13 @@ export class EditCandidatComponent implements OnInit {
       town: [''],
       zipcode: [''],
       email: [''],
-      phone: [''],
       short_description: [''],
-      // date_of_birth: [''],
+      date_of_birth: [''],
+
+      Langue: this.fb.group({
+        name: [''],
+        level: ['']
+      })
     })
   }
 

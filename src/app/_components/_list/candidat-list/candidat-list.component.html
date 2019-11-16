@@ -8,7 +8,7 @@
             <p><strong>{{ candidat.short_description }}</strong></p>
         </div>
         <div class="row">
-            <div class="col-md-3 col-sm-3 m-b30">
+            <div class="col-md-6 col-sm-6 m-b30">
                 <div class="icon-bx-wraper bx-style-1 p-a30 center">
                     <div class="icon-xl text-primary m-b20"> <a href="#" class="icon-cell"><i class="fa fa-map-marker"></i></a> </div>
                     <div class="icon-content">
@@ -17,7 +17,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-3 col-sm-3 m-b30">
+            <div class="col-md-6 col-sm-6 m-b30">
                 <div class="icon-bx-wraper bx-style-1 p-a30 center">
                     <div class="icon-xl text-primary m-b20"> <a href="#" class="icon-cell"><i class="fa fa-envelope"></i></a> </div>
                     <div class="icon-content">
@@ -37,6 +37,6 @@
             </div>
         </div>
         <button type="button" class="btn btn-success" [routerLink]="['/edit-candidat/', candidat.id]">Edit</button>
-        <button type="button" class="btn btn-danger" (click)="deleteCandidat(candidat)">Remove</button>
+        <button type="button" class="btn btn-danger" (click)="deleteCandidat(candidat)" routerLink="/">Remove</button>
     </div>
 </div>

@@ -3,15 +3,17 @@
 // Le tableau Routes est transmis à la méthode RouterModule.forRoot() qui crée un module de routage avec toutes les routes d'application configurées et inclut également tous les fournisseurs de routeurs angulaires et les directives telles que <router-outlet></router-outlet> directive.
 
 import { Routes, RouterModule } from '@angular/router';
-import {CandidatListComponent} from './_components/_list/candidat-list';
 
 import { HomeComponent } from './home/home';
 import { LoginComponent } from './login/login';
 import { RegisterComponent } from './register/register';
 import { AuthGuard } from './_helpers ';
 import { FourofourComponent } from './_models/fourofour';
-import { CandidatAddComponent } from './_components/_add/candidat-add/candidat-add.component';
-import { EditCandidatComponent } from './_components/_edit/edit-candidat/edit-candidat.component';
+
+import {SingleCandidatComponent} from './_components/single-candidat';
+import {CandidatListComponent} from './_components/_list/candidat-list';
+import { CandidatAddComponent } from './_components/_add/candidat-add';
+import { EditCandidatComponent } from './_components/_edit/edit-candidat';
 
 const routes: Routes = [
     { path: '', component: HomeComponent, canActivate: [AuthGuard] },
@@ -19,6 +21,7 @@ const routes: Routes = [
     { path: 'register', component: RegisterComponent },
     { path: 'not-found', component: FourofourComponent },
 
+    { path: 'candidats-single', component: SingleCandidatComponent },
     { path: 'candidats-list', component: CandidatListComponent },
     { path: 'add-candidat', component: CandidatAddComponent },
     { path: 'edit-candidat/:id', component: EditCandidatComponent },

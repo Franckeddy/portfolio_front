@@ -20,14 +20,14 @@ export class CandidatService {
     headers: new HttpHeaders({
       'Content-Type': 'application/json',
       'Accept': 'application/json',
-      'Access-Control-Allow-Origin': 'http://localhost:82/api/candidats/',
+      'Access-Control-Allow-Origin': 'http://localhost:82/api/candidats',
       'Access-Control-Allow-Methods': 'GET, POST, PATCH, PUT, DELETE, OPTIONS',
     })
   };
 
   // POST
   CreateCandidat(data: any): Observable<Candidat> {
-    return this.http.post<Candidat>(this.baseurl + '/' , this.httpOptions)
+    return this.http.post<Candidat>(this.baseurl + '/' , JSON.stringify(data), this.httpOptions)
       .pipe(
         retry(1),
         catchError(this.errorHandl)
@@ -54,7 +54,7 @@ export class CandidatService {
 
   // PUT
   UpdateCandidat(id: string, data: any): Observable<Candidat> {
-    return this.http.put<Candidat>(this.baseurl + '/' + id, this.httpOptions)
+    return this.http.put<Candidat>(this.baseurl + '/' + id, JSON.stringify(data), this.httpOptions)
       .pipe(
         retry(1),
         catchError(this.errorHandl)
@@ -65,7 +65,7 @@ export class CandidatService {
   DeleteCandidat(id: string): Observable<Candidat> {
     return this.http.delete<Candidat>(this.baseurl + '/' + id, this.httpOptions)
       .pipe(
-        tap(_ => console.log(`Song deleted: ${id}`)),
+        tap(_ => console.log(`Candidat deleted: ${id}`)),
         catchError(this.errorHandl)
       )
   }

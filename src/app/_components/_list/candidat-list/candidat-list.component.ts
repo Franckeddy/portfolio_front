@@ -1,7 +1,7 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {CandidatService} from "../../../_services/candidats.service";
 import { ActivatedRoute, Router } from '@angular/router';
-import { Candidat } from '../../../_models/Candidat.model';
+import { Candidat } from '../../../_models';
 
 @Component({
   selector: 'app-candidat-list',
@@ -22,7 +22,7 @@ export class CandidatListComponent implements OnInit {
     this.id = this.route.snapshot.params['id'];
     this.CandidatService.GetCandidat(this.id)
       .subscribe((data: Candidat) => {
-        console.log(data)
+        console.log(data);
         this.candidat = data;
       }, error => console.log(error));
   }
@@ -40,14 +40,11 @@ export class CandidatListComponent implements OnInit {
     })
   }
 
-  deleteCandidat(candidat_name, i) {
-    if (window.confirm('Are you sure?')) {
-      this.CandidatService.DeleteCandidat(candidat_name._id)
-        .subscribe((res) => {
-          this.CandidatsList.splice(i, 1);
-        }
-        )
-    }
+  deleteCandidat(data) {
+    let index = this.CandidatsList.map(x => {return x.issue_name}).indexOf(data.issue_name);
+    return this.CandidatService.DeleteCandidat((data.id).subscribe(res => {
+      this.CandidatsList.splice(index, 1);
+      console.log('Candidat deleted!')
+    }))
   }
-
 }

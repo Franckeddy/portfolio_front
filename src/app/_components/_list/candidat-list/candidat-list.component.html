@@ -2,10 +2,10 @@
     <!-- Career -->
     <div class="container" *ngIf="candidat">
         <!-- Left part start -->
-        <div class="col-sm-8 col-md-8 col-lg-12 m-b30">
-            <h1 class="m-b20 m-t0">{{candidat.firstname}} {{candidat.lastname}}</h1>
-            <div class="dlab-separator bg-primary"></div>
-            <p><strong>{{ candidat.short_description }}</strong></p>
+      <div class="blog-post blog-single">
+        <div class="dlab-post-title ">
+          <h3 class="post-title"><a href="#">{{candidat.firstname}} {{candidat.lastname}}</a></h3>
+          <blockquote>{{ candidat.short_description }}</blockquote>
         </div>
         <div class="row">
             <div class="col-md-6 col-sm-6 m-b30">
@@ -26,17 +26,11 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-3 col-sm-3 m-b30">
-                <div class="icon-bx-wraper bx-style-1 p-a30 center">
-                    <div class="icon-xl text-primary m-b20"> <a href="#" class="icon-cell"><i class="fa fa-phone"></i></a> </div>
-                    <div class="icon-content">
-                        <h5 class="dlab-tilte text-uppercase">Phone</h5>
-                        <p>{{ candidat.phone }}</p>
-                    </div>
-                </div>
-            </div>
         </div>
-        <button type="button" class="btn btn-success" [routerLink]="['/edit-candidat/', candidat.id]">Edit</button>
-        <button type="button" class="btn btn-danger" (click)="deleteCandidat(candidat)" routerLink="/">Remove</button>
+        <div class="actions">
+          <button type="button" class="btn btn-success" [routerLink]="['/edit-candidat/', candidat.id]">Edit</button>
+          <button type="button" class="btn btn-danger" (click)="deleteCandidat(candidat)">Remove</button>
+        </div>
     </div>
+</div>
 </div>

@@ -65,7 +65,7 @@ export class EditCandidatComponent implements OnInit {
   submitForm(){
     let id = this.actRoute.snapshot.paramMap.get('id');
     this.bugService.UpdateCandidat(id, this.updateCandidatForm.value).subscribe(res => {
-      this.ngZone.run(() => this.router.navigateByUrl('/candidats-list'))
+      this.ngZone.run(() => this.router.navigateByUrl('/candidats-single'))
     })
   }
 

@@ -1,6 +1,10 @@
 .table-head {
-    display: flex;
-    .datas-candidats {
+  display: flex;
+   .datas-candidats {
         display: flex;
     }
+}
+
+.actions {
+  justify-content: space-between;
 }

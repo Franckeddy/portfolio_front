@@ -12,7 +12,7 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { APP_BASE_HREF } from '@angular/common';
 import {NgxPaginationModule} from 'ngx-pagination';
-import {MatDatepickerModule} from '@angular/material/datepicker'; 
+import {MatDatepickerModule} from '@angular/material/datepicker';
 
 // used to create fake backend
 import { fakeBackendProvider } from './_helpers ';
@@ -38,22 +38,9 @@ import { SingleCandidatComponent } from './_components/single-candidat';
 
 // _list
 import { CandidatListComponent } from './_components/_list/candidat-list';
-import { SchoolListComponent } from './_components/_list/school-list';
-import { DiplomeListComponent } from './_components/_list/diplome-list';
-import { LangueListComponent } from './_components/_list/langue-list';
-import { LicenseListComponent } from './_components/_list/license-list';
-import { FormationListComponent } from './_components/_list/formation-list';
-import { CompanyListComponent } from './_components/_list/company-list';
-import { ActivityAreaListComponent } from './_components/_list/activity-area-list';
 
 // _forms
 import { CandidatFormComponent } from './_forms/candidat-form';
-import { FormationFormComponent } from './_forms/formation-form';
-import { SchoolFormComponent } from './_forms/school-form';
-import { LangueFormComponent } from './_forms/langue-form';
-import { LicenseFormComponent } from './_forms/license-form';
-import { ActivityAreaFormComponent } from './_forms/activity-area-form';
-import { CompanyFormComponent } from './_forms/company-form';
 
 // _add
 import { CandidatAddComponent } from './_components/_add/candidat-add';
@@ -66,13 +53,8 @@ import { HeaderComponent } from './_layout/header';
 import { FooterComponent } from './_layout/footer';
 import { ExtranavMenuComponent } from './_layout/header/_header-component/extranav-menu';
 import { HeaderNavComponent } from './_layout/header/_header-component/header-nav/header-nav.component';
-import { SchoolAddComponent } from './_components/_add/school-add';
-import { FormationAddComponent } from './_components/_add/formation-add';
-import { LicenseAddComponent } from './_components/_add/license-add';
-import { CompanyAddComponent } from './_components/_add/company-add';
-import { AvtivityAddComponent } from './_components/_add/avtivity-add';
 import { MatNativeDateModule } from '@angular/material/core';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations'; 
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 @NgModule({
   imports: [
     BrowserModule,
@@ -99,29 +81,11 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
         CandidatFormComponent,
         SingleCandidatComponent,
         CandidatListComponent,
-        SchoolListComponent,
-        DiplomeListComponent,
-        LangueListComponent,
-        LicenseListComponent,
-        FormationListComponent,
-        CompanyListComponent,
-        ActivityAreaListComponent,
-        FormationFormComponent,
-        SchoolFormComponent,
-        LangueFormComponent,
-        LicenseFormComponent,
-        ActivityAreaFormComponent,
-        CompanyFormComponent,
         CandidatAddComponent,
         EditCandidatComponent,
         HeaderComponent,
         ExtranavMenuComponent,
         HeaderNavComponent,
-        SchoolAddComponent,
-        FormationAddComponent,
-        LicenseAddComponent,
-        CompanyAddComponent,
-        AvtivityAddComponent,
     ],
     providers: [
         { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },

@@ -4,7 +4,7 @@
         <!-- Left part start -->
       <div class="blog-post blog-single">
         <div class="dlab-post-title ">
-          <h3 class="post-title"><a href="#">{{candidat.firstname}} {{candidat.lastname}}</a></h3>
+          <h2 class="post-title">{{candidat.firstname}} {{candidat.lastname}}</h2>
           <blockquote>{{ candidat.short_description }}</blockquote>
         </div>
         <div class="section-head text-center head-1">
@@ -14,6 +14,16 @@
         </div>
         <div class="section-head text-center head-1">
           <h3 class="h3 text-uppercase">Formation</h3>
+          <div class="dlab-separator bg-gray-dark"></div>
+          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry has been the industry's standard dummy text ever since the been when an unknown printer.</p>
+        </div>
+        <div class="section-head text-center head-1">
+          <h3 class="h3 text-uppercase">Langues</h3>
+          <div class="dlab-separator bg-gray-dark"></div>
+          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry has been the industry's standard dummy text ever since the been when an unknown printer.</p>
+        </div>
+        <div class="section-head text-center head-1">
+          <h3 class="h3 text-uppercase">Permis</h3>
           <div class="dlab-separator bg-gray-dark"></div>
           <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry has been the industry's standard dummy text ever since the been when an unknown printer.</p>
         </div>
@@ -39,6 +49,9 @@
         </div>
         <div class="actions">
           <button type="button" class="btn btn-success" [routerLink]="['/edit-candidat/', candidat.id]">Edit</button>
+
+          <!--TODO redirect after pending-->
+
           <button type="button" class="btn btn-danger" (click)="deleteCandidat(candidat)">Remove</button>
         </div>
     </div>

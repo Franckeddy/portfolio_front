@@ -40,11 +40,17 @@ export class CandidatListComponent implements OnInit {
     })
   }
 
-  deleteCandidat(data) {
-    let index = this.CandidatsList.map(x => {return x.issue_name}).indexOf(data.issue_name);
-    return this.CandidatService.DeleteCandidat((data.id).subscribe(res => {
-      this.CandidatsList.splice(index, 1);
-      console.log('Candidat deleted!')
-    }))
+/*TODO redirect after pending
+  setTimeout(this.deleteCandidat, 10000);*/
+
+  deleteCandidat(id) {
+    if (window.confirm('Confirmez la suppression !')) {
+      this.CandidatService.DeleteCandidat(this.id)
+        .subscribe((res) => {
+          this.CandidatsList.splice(id, 1);
+            console.log('Candidat deleted!')
+          }
+        )
+    }
   }
 }

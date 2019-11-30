@@ -234,41 +234,6 @@ var CarDealer = function() {
         /*fix for IE7 and IE8 end */
     }
 
-    /* Equal Height ============ */
-    var equalHeight = function(container) {
-        if (equalHeight) {
-            equalHeight('#last-candidat');
-            console.log("equalHeight LOADED");
-        }
-
-        var currentTallest = 0,
-            currentRowStart = 0,
-            rowDivs = new Array(),
-            $el, topPosition = 0;
-
-        $(container).each(function() {
-            $el = $(this);
-            $($el).height('auto')
-            topPostion = $el.position().top;
-
-            if (currentRowStart != topPostion) {
-                for (currentDiv = 0; currentDiv < rowDivs.length; currentDiv++) {
-                    rowDivs[currentDiv].height(currentTallest);
-                }
-                rowDivs.length = 0; // empty the array
-                currentRowStart = topPostion;
-                currentTallest = $el.height();
-                rowDivs.push($el);
-            } else {
-                rowDivs.push($el);
-                currentTallest = (currentTallest < $el.height()) ? ($el.height()) : (currentTallest);
-            }
-            for (currentDiv = 0; currentDiv < rowDivs.length; currentDiv++) {
-                rowDivs[currentDiv].height(currentTallest);
-            }
-        });
-    }
-
     /* Footer Align ============ */
     var footerAlign = function() {
         'use strict';
@@ -520,7 +485,7 @@ var CarDealer = function() {
             dialog = modal.find('.modal-dialog');
         modal.css('display', 'block');
 
-        /* Dividing by two centers the modal exactly, but dividing by three 
+        /* Dividing by two centers the modal exactly, but dividing by three
          or four works better for larger screens.  */
         dialog.css("margin-top", Math.max(0, (jQuery(window).height() - dialog.height()) / 2));
     }
@@ -531,7 +496,6 @@ var CarDealer = function() {
         jQuery(window).on('resize', function() {
             jQuery('.modal:visible').each(reposition);
 
-            equalheight('.equal-wraper .equal-col');
             footerAlign();
         });
     }
@@ -607,7 +571,6 @@ var CarDealer = function() {
             masonryBox();
             handelBootstrapSelect();
             handelBootstrapTouchSpin();
-            equalHeight('.equal-wraper .equal-col');
 
         }
     }

@@ -10,3 +10,4 @@ export * from './License.model';
 export * from './School.model';
 export * from './ActivityArea.model';
 export * from './api.response';
+export * from './deserializable.model'

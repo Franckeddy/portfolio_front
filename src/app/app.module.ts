@@ -17,13 +17,6 @@ import {MatDatepickerModule} from '@angular/material/datepicker';
 // used to create fake backend
 import { fakeBackendProvider } from './_helpers ';
 import { CandidatService } from './_services/candidats.service';
-import { SchoolService } from './_services/school.service';
-import { LangueService } from './_services/langue.service';
-import { CompanyService } from './_services/company.service';
-import { FormationService } from './_services/formation.service';
-import { LicenseService } from './_services/license.service';
-import { ActivityService } from './_services/activity.service';
-import { DiplomeService } from './_services/diplome.service';
 
 import { appRoutingModule } from './app-routing.module';
 import { ErrorInterceptor } from './_helpers ';
@@ -92,13 +85,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
         { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true },
         { provide: APP_BASE_HREF, useValue: '/' },
         CandidatService,
-        SchoolService,
-        LangueService,
-        CompanyService,
-        FormationService,
-        LicenseService,
-        ActivityService,
-        DiplomeService,
 
         // provider used to create fake backend
         fakeBackendProvider

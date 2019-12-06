@@ -26,7 +26,6 @@ const routes: Routes = [
     { path: 'add-candidat', component: CandidatAddComponent },
     { path: 'edit-candidat/:id', component: EditCandidatComponent },
     { path: 'candidats/:id', component: CandidatListComponent },
-    // otherwise redirect to home
     { path: '**', redirectTo: '/not-found' }
 ];
 

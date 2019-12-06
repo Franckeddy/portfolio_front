@@ -17,15 +17,12 @@ export class Candidat implements Deserializable {
   licenses: License;
   schools: School;
   companies: Company;
-
   deserialize(input: any) {
     Object.assign(this, input);
-
       this.langues = new Langue().deserialize(input.langues);
       this.licenses = new License().deserialize(input.licenses);
       this.schools = new School().deserialize(input.schools);
       this.companies = new Company().deserialize(input.companies);
-
     return this;
   }
 }

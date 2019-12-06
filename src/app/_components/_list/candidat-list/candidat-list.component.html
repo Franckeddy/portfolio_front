@@ -1,31 +1,37 @@
 <div class="content-area">
-    <!-- Career -->
     <div class="container" *ngIf="candidat">
-        <!-- Left part start -->
       <div class="blog-post blog-single">
         <div class="dlab-post-title ">
           <h2 class="post-title">{{candidat.firstname}} {{candidat.lastname}}</h2>
           <blockquote>{{ candidat.short_description }}</blockquote>
         </div>
         <div class="section-head text-center head-1">
-          <h3 class="h3 text-uppercase">Experiences</h3>
-          <div class="dlab-separator bg-gray-dark"></div>
-          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry has been the industry's standard dummy text ever since the been when an unknown printer.</p>
-        </div>
-        <div class="section-head text-center head-1">
           <h3 class="h3 text-uppercase">Formation</h3>
           <div class="dlab-separator bg-gray-dark"></div>
-          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry has been the industry's standard dummy text ever since the been when an unknown printer.</p>
+          <p *ngFor="let school of candidat.schools">
+            {{ school.name }}
+          </p>
+        </div>
+        <div class="section-head text-center head-1">
+          <h3 class="h3 text-uppercase">Experiences</h3>
+          <div class="dlab-separator bg-gray-dark"></div>
+          <p *ngFor="let formation of candidat.companies">
+            {{ formation.name }}
+          </p>
         </div>
         <div class="section-head text-center head-1">
           <h3 class="h3 text-uppercase">Langues</h3>
           <div class="dlab-separator bg-gray-dark"></div>
-          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry has been the industry's standard dummy text ever since the been when an unknown printer.</p>
+          <p *ngFor="let langue of candidat.langues">
+            {{ langue.name }}
+          </p>
         </div>
         <div class="section-head text-center head-1">
           <h3 class="h3 text-uppercase">Permis</h3>
           <div class="dlab-separator bg-gray-dark"></div>
-          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry has been the industry's standard dummy text ever since the been when an unknown printer.</p>
+          <p *ngFor="let permis of candidat.licenses">
+            {{ permis.name }}
+          </p>
         </div>
         <div class="row">
             <div class="col-md-6 col-sm-6 m-b30">
@@ -54,6 +60,6 @@
 
           <button type="button" class="btn btn-danger" (click)="deleteCandidat(candidat)">Remove</button>
         </div>
+      </div>
     </div>
-</div>
 </div>

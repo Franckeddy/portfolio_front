@@ -26,9 +26,9 @@ export class CandidatAddComponent implements OnInit {
 
   addCandidat() {
     this.candidatForm = this.fb.group({
-      firstname: ['', [Validators.required]],
-      lastname: ['', [Validators.required]],
-      email: ['', [Validators.required, Validators.email]],
+      firstname: [''],
+      lastname: [''],
+      email: [''],
       adress: [''],
       town: [''],
       zipcode: [''],
@@ -41,25 +41,13 @@ export class CandidatAddComponent implements OnInit {
         name: [null, [Validators.required]],
         level: [null, [Validators.required]],
       })
-            // license: this._formBuilder.group({
-      //   name: [null, [Validators.required]],
-      //   level: [null, [Validators.required]],
-      // }),
-            // langue: this._formBuilder.group({
-      //   name: [null, [Validators.required]],
-      //   level: [null, [Validators.required]],
-      // }),
-            // langue: this._formBuilder.group({
-      //   name: [null, [Validators.required]],
-      //   level: [null, [Validators.required]],
-      // })
   })
   }
-  
+
   submitForm() {
     this.candidatService.CreateCandidat(this.candidatForm.value).subscribe(res => {
-      console.log('Candidat added!')
-      this.ngZone.run(() => this.router.navigateByUrl('/candidats-list'))
+      console.log('Candidat added!');
+      this.ngZone.run(() => this.router.navigateByUrl('/candidats/'))
     });
   }
 }

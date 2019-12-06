@@ -17,15 +17,17 @@ export class EditCandidatComponent implements OnInit {
     this.updateForm()
   }
 
+  // TODO rajouter les ArrayCollections
+
   constructor(
     private actRoute: ActivatedRoute,
-    public bugService: CandidatService,
+    public candidatService: CandidatService,
     public fb: FormBuilder,
     private ngZone: NgZone,
     private router: Router
   ) {
     let id = this.actRoute.snapshot.paramMap.get('id');
-    this.bugService.GetCandidat(id).subscribe((data) => {
+    this.candidatService.GetCandidat(id).subscribe((data) => {
       this.updateCandidatForm = this.fb.group({
         firstname: [data.firstname],
         lastname: [data.lastname],
@@ -35,11 +37,6 @@ export class EditCandidatComponent implements OnInit {
         email: [data.email],
         short_description: [data.short_description],
         date_of_birth: [data.date_of_birth],
-
-        Langue: this.fb.group({
-          name: [data.langues],
-          level: [data.langues],
-        })
       })
     })
   }
@@ -54,19 +51,13 @@ export class EditCandidatComponent implements OnInit {
       email: [''],
       short_description: [''],
       date_of_birth: [''],
-
-      Langue: this.fb.group({
-        name: [''],
-        level: ['']
-      })
     })
   }
 
   submitForm(){
     let id = this.actRoute.snapshot.paramMap.get('id');
-    this.bugService.UpdateCandidat(id, this.updateCandidatForm.value).subscribe(res => {
-      this.ngZone.run(() => this.router.navigateByUrl('/candidats-single'))
+    this.candidatService.UpdateCandidat(id, this.updateCandidatForm.value).subscribe(res => {
+      this.ngZone.run(() => this.router.navigateByUrl('/candidats/' + id))
     })
   }
-
 }

@@ -48,6 +48,9 @@ export class CandidatListComponent implements OnInit {
       this.CandidatService.DeleteCandidat(this.id)
         .subscribe((res) => {
           this.CandidatsList.splice(id, 1);
+
+// TODO redirection
+
             console.log('Candidat deleted!')
           }
         )

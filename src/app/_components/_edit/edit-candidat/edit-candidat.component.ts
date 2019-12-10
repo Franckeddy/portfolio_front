@@ -37,6 +37,19 @@ export class EditCandidatComponent implements OnInit {
         email: [data.email],
         short_description: [data.short_description],
         date_of_birth: [data.date_of_birth],
+        langues: this.fb.group({
+          name: [data.langues.name],
+          level: [data.langues.level]
+        }),
+        schools: this.fb.group({
+          name: [data.schools.name],
+        }),
+        licenses: this.fb.group({
+          name: [data.licenses.name],
+        }),
+        companies: this.fb.group({
+          name: [data.companies.name],
+        }),
       })
     })
   }
@@ -51,6 +64,19 @@ export class EditCandidatComponent implements OnInit {
       email: [''],
       short_description: [''],
       date_of_birth: [''],
+      langues: this.fb.group({
+        name: [''],
+        level: ['']
+      }),
+      schools: this.fb.group({
+        name: [''],
+      }),
+      licenses: this.fb.group({
+        name: [''],
+      }),
+      companies: this.fb.group({
+        name: [''],
+      }),
     })
   }
 

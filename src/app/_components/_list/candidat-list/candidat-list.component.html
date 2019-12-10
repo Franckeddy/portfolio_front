@@ -1,65 +1,66 @@
 <div class="content-area">
     <div class="container" *ngIf="candidat">
-      <div class="blog-post blog-single">
-        <div class="dlab-post-title ">
-          <h2 class="post-title">{{candidat.firstname}} {{candidat.lastname}}</h2>
-          <blockquote>{{ candidat.short_description }}</blockquote>
-        </div>
-        <div class="section-head text-center head-1">
-          <h3 class="h3 text-uppercase">Formation</h3>
-          <div class="dlab-separator bg-gray-dark"></div>
-          <p *ngFor="let school of candidat.schools">
-            {{ school.name }}
-          </p>
-        </div>
-        <div class="section-head text-center head-1">
-          <h3 class="h3 text-uppercase">Experiences</h3>
-          <div class="dlab-separator bg-gray-dark"></div>
-          <p *ngFor="let formation of candidat.companies">
-            {{ formation.name }}
-          </p>
-        </div>
-        <div class="section-head text-center head-1">
-          <h3 class="h3 text-uppercase">Langues</h3>
-          <div class="dlab-separator bg-gray-dark"></div>
-          <p *ngFor="let langue of candidat.langues">
-            {{ langue.name }}
-          </p>
-        </div>
-        <div class="section-head text-center head-1">
-          <h3 class="h3 text-uppercase">Permis</h3>
-          <div class="dlab-separator bg-gray-dark"></div>
-          <p *ngFor="let permis of candidat.licenses">
-            {{ permis.name }}
-          </p>
-        </div>
-        <div class="row">
-            <div class="col-md-6 col-sm-6 m-b30">
-                <div class="icon-bx-wraper bx-style-1 p-a30 center">
-                    <div class="icon-xl text-primary m-b20"> <a href="#" class="icon-cell"><i class="fa fa-map-marker"></i></a> </div>
-                    <div class="icon-content">
-                        <h5 class="dlab-tilte text-uppercase">Address</h5>
-                        <p>{{ candidat.adress }}, {{ candidat.zipcode }} {{ candidat.town }}</p>
+        <div class="blog-post blog-single">
+            <div class="dlab-post-title ">
+                <h2 class="post-title">{{candidat.firstname}} {{candidat.lastname}}</h2>
+                <span class="post-date" *ngIf="candidat.date_of_birth"> <i class="fa fa-calendar"></i><span>Date de Naissance: {{ candidat.date_of_birth }}</span> </span>
+                <blockquote>{{ candidat.short_description }}</blockquote>
+            </div>
+            <div class="section-head text-center head-1">
+                <h3 class="h4">Formation</h3>
+                <div class="dlab-separator bg-gray-dark"></div>
+                <p *ngFor="let school of candidat.schools">
+                    {{ school.name }}
+                </p>
+            </div>
+            <div class="section-head text-center head-1">
+                <h3 class="h4">Experiences</h3>
+                <div class="dlab-separator bg-gray-dark"></div>
+                <p *ngFor="let formation of candidat.companies">
+                    {{ formation.name }}
+                </p>
+            </div>
+            <div class="section-head text-center head-1">
+                <h3 class="h4">Langues</h3>
+                <div class="dlab-separator bg-gray-dark"></div>
+                <p *ngFor="let langue of candidat.langues">
+                    {{ langue.name }}, {{ langue.level}} niveau.
+                </p>
+            </div>
+            <div class="section-head text-center head-1">
+                <h3 class="h4">Permis</h3>
+                <div class="dlab-separator bg-gray-dark"></div>
+                <p *ngFor="let permis of candidat.licenses">
+                    {{ permis.name }}
+                </p>
+            </div>
+            <div class="row">
+                <div class="col-md-6 col-sm-6 m-b30">
+                    <div class="icon-bx-wraper bx-style-1 p-a30 center">
+                        <div class="icon-xl text-primary m-b20"> <a href="#" class="icon-cell"><i class="fa fa-map-marker"></i></a> </div>
+                        <div class="icon-content">
+                            <h5 class="dlab-tilte text-uppercase">Address</h5>
+                            <p>{{ candidat.adress }}, {{ candidat.zipcode }} {{ candidat.town }}</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-6 m-b30">
+                    <div class="icon-bx-wraper bx-style-1 p-a30 center">
+                        <div class="icon-xl text-primary m-b20"> <a href="#" class="icon-cell"><i class="fa fa-envelope"></i></a> </div>
+                        <div class="icon-content">
+                            <h5 class="dlab-tilte text-uppercase">Email</h5>
+                            <p>{{ candidat.email }}</p>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="col-md-6 col-sm-6 m-b30">
-                <div class="icon-bx-wraper bx-style-1 p-a30 center">
-                    <div class="icon-xl text-primary m-b20"> <a href="#" class="icon-cell"><i class="fa fa-envelope"></i></a> </div>
-                    <div class="icon-content">
-                        <h5 class="dlab-tilte text-uppercase">Email</h5>
-                        <p>{{ candidat.email }}</p>
-                    </div>
-                </div>
+            <div class="actions">
+                <button type="button" class="btn btn-success" [routerLink]="['/edit-candidat/', candidat.id]">Edit</button>
+
+                <!--TODO redirect after pending-->
+
+                <button type="button" class="btn btn-danger" (click)="deleteCandidat(candidat)">Remove</button>
             </div>
         </div>
-        <div class="actions">
-          <button type="button" class="btn btn-success" [routerLink]="['/edit-candidat/', candidat.id]">Edit</button>
-
-          <!--TODO redirect after pending-->
-
-          <button type="button" class="btn btn-danger" (click)="deleteCandidat(candidat)">Remove</button>
-        </div>
-      </div>
     </div>
 </div>

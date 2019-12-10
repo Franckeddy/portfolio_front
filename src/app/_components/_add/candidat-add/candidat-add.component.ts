@@ -33,14 +33,6 @@ export class CandidatAddComponent implements OnInit {
       town: [''],
       zipcode: [''],
       date_of_birth: [''],
-          langue: this.fb.group({
-        name: [null, [Validators.required]],
-        level: [null, [Validators.required]],
-      }),
-            school: this.fb.group({
-        name: [null, [Validators.required]],
-        level: [null, [Validators.required]],
-      })
   })
   }
 

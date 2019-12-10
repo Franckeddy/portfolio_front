@@ -5,6 +5,7 @@ import { School } from './School.model';
 import { Company } from './Company.model';
 
 export class Candidat implements Deserializable {
+  id: string;
   firstname: string;
   lastname: string;
   adress: string;

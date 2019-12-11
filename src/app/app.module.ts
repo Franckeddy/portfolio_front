@@ -46,7 +46,6 @@ import { HeaderComponent } from './_layout/header';
 import { FooterComponent } from './_layout/footer';
 import { ExtranavMenuComponent } from './_layout/header/_header-component/extranav-menu';
 import { HeaderNavComponent } from './_layout/header/_header-component/header-nav/header-nav.component';
-import { MatNativeDateModule } from '@angular/material/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 @NgModule({
   imports: [
@@ -60,7 +59,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     MatInputModule,
     FormsModule,
     MatDatepickerModule,
-    MatNativeDateModule,
     BrowserAnimationsModule,
   ],
     declarations: [
@@ -84,6 +82,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
         { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
         { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true },
         { provide: APP_BASE_HREF, useValue: '/' },
+        MatDatepickerModule,  
         CandidatService,
 
         // provider used to create fake backend

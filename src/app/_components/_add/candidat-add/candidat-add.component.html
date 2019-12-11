@@ -28,11 +28,7 @@
                             </div>
                             <div class="col-md-6 col-sm-6">
                                 <div class="input-group">
-                                    <mat-form-field class="example-full-width">
-                                        <input matInput [matDatepicker]="picker" placeholder="Date de naisssance" formControlName="date_of_birth">
-                                        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-                                        <mat-datepicker touchUi #picker></mat-datepicker>
-                                    </mat-form-field>
+                                    <input [ngModel]="date_of_birth | date:'dd-MM-yyyy'" formControlName="date_of_birth" type="date" />
                                 </div>
                             </div>
                         </div>

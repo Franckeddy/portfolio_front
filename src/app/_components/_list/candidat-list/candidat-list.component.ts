@@ -1,4 +1,4 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, Input, OnInit, NgZone} from '@angular/core';
 import {CandidatService} from "../../../_services/candidats.service";
 import { ActivatedRoute, Router } from '@angular/router';
 import { Candidat } from '../../../_models';
@@ -19,7 +19,7 @@ export class CandidatListComponent implements OnInit {
 
   ngOnInit() {
     this.loadCandidats();
-    this.id = this.route.snapshot.params['id'];
+    this.id = this.route.snapshot.params['id']; // onclick -> candidats{id}
     this.CandidatService.GetCandidat(this.id)
       .subscribe((data: Candidat) => {
         console.log(data);
@@ -29,6 +29,7 @@ export class CandidatListComponent implements OnInit {
 
   constructor(
     public CandidatService: CandidatService,
+    private ngZone: NgZone,
     private route: ActivatedRoute,
     private router: Router,
   ){ }
@@ -40,9 +41,6 @@ export class CandidatListComponent implements OnInit {
     })
   }
 
-/*TODO redirect after pending
-  setTimeout(this.deleteCandidat, 10000);*/
-
   deleteCandidat(id) {
     if (window.confirm('Confirmez la suppression !')) {
       this.CandidatService.DeleteCandidat(this.id)
@@ -51,7 +49,8 @@ export class CandidatListComponent implements OnInit {
 
 // TODO redirection
 
-            console.log('Candidat deleted!')
+            console.log('Candidat deleted!');
+            this.ngZone.run(() => this.router.navigateByUrl('/'))
           }
         )
     }

@@ -39,7 +39,7 @@ export class CandidatAddComponent implements OnInit {
   submitForm() {
     this.candidatService.CreateCandidat(this.candidatForm.value).subscribe(res => {
       console.log('Candidat added!');
-      this.ngZone.run(() => this.router.navigateByUrl('/candidats/'))
+      this.ngZone.run(() => this.router.navigateByUrl('/'))
     });
   }
 }

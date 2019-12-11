@@ -28,11 +28,7 @@
                             </div>
                             <div class="col-md-6 col-sm-6">
                                 <div class="input-group">
-                                    <mat-form-field class="example-full-width">
-                                        <input matInput [matDatepicker]="picker" placeholder="Date de naisssance" formControlName="date_of_birth">
-                                        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-                                        <mat-datepicker touchUi #picker></mat-datepicker>
-                                    </mat-form-field>
+                                    <input [ngModel]="startDate | date:'dd-MM-yyyy'" formControlName="date_of_birth" (ngModelChange)="startDate = $event" type="date" name="date_of_birth" />
                                 </div>
                             </div>
                         </div>
@@ -55,13 +51,13 @@
                                 </div>
                             </div>
                         </div>
-                      <div class="row">
-                        <div class="col-md-12 col-sm-12">
-                          <div class="input-group">
-                            <input type="text" formControlName="short_description" placeholder="Votre description" class="form-control" />
-                          </div>
+                        <div class="row">
+                            <div class="col-md-12 col-sm-12">
+                                <div class="input-group">
+                                    <input type="text" formControlName="short_description" placeholder="Votre description" class="form-control" />
+                                </div>
+                            </div>
                         </div>
-                      </div>
                         <h4>Langues</h4>
                         <h4>Permis</h4>
                         <h4>Parcours Scolaire</h4>

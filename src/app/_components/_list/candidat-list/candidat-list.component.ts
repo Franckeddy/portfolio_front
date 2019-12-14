@@ -10,9 +10,9 @@ import { Candidat } from '../../../_models';
 })
 export class CandidatListComponent implements OnInit {
 
-  @Input('data') candidats: string[] = [];
+  @Input('data') 
+  candidats: string[] = [];
   page: number = 1;
-
   CandidatsList: any = [];
   candidat: Candidat;
   id: string;

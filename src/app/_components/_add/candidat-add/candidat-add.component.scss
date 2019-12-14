@@ -1,0 +1,53 @@
+.Xs,
+.School,
+.Zs,
+.Cs,
+.Company,
+.langue,
+p {
+    padding: 0 10px;
+    margin: 10px;
+}
+
+input {
+    margin: 10px;
+}
+
+input[type="button"],
+p {
+    margin-top: 0px;
+}
+
+// .Xs {
+//     border: red solid 1px;
+//     background-color: #ff7f7f;
+// }
+.School,
+.Company,
+.Langue {
+    border: green solid 1px;
+    background-color: #7fbf7f;
+}
+
+// .Zs .Cs {
+//     border: blue solid 1px;
+//     background-color: #7f7fff;
+// }
+// input[value="Add X"] {
+//     background-color: #ff7f7f;
+// }
+// input[value="Add Y"] {
+//     background-color: #7fbf7f;
+// }
+// input[value="Add C"] {
+//     background-color: #7fbf7f;
+// }
+// input[value="Add Z"] {
+//     background-color: #7f7fff;
+// }
+// input[value="Add D"] {
+//     background-color: #7f7fff;
+// }
+#delete {
+    float: right;
+}

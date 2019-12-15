@@ -47,61 +47,73 @@ export class CandidatAddComponent implements OnInit {
       short_description: [''],
       // ---------------------------------------------------------------------
       'Langue': this.fb.array([
-        this.initL()
+        this.initLangue()
+      ]),
+      'License': this.fb.array([
+        this.initLicense()
       ]),
       'School': this.fb.array([
-        this.initY()
+        this.initSchool()
       ]),
       'Company': this.fb.array([
-        this.initC()
+        this.initCompany()
       ])
     });
   }
 
-  initY() {
+  initSchool() {
     return this.fb.group({
       //  ---------------------forms fields on y level ------------------------
-      'Y1': ['Y1', [Validators.required, Validators.pattern('[0-9]{3}')]],
-      'Y2': ['Y2', [Validators.required, Validators.pattern('[0-9]{3}')]],
+      name: ['', [Validators.required, Validators.pattern('[0-9]{3}')]],
       // ---------------------------------------------------------------------
-      'Zs': this.fb.array([
-        this.initZ()
+      'Diplome': this.fb.array([
+        this.initDiplome()
       ])
     })
   }
 
-  initZ() {
+  initDiplome() {
     return this.fb.group({
       //  ---------------------forms fields on z level ------------------------
-      'Z': ['Z', [Validators.required, Validators.pattern('[0-9]{3}')]],
+      name: ['', [Validators.required, Validators.pattern('[0-9]{3}')]],
+      date_obtention: ['']
       // ---------------------------------------------------------------------
     })
   }
 
-  initC() {
+  initCompany() {
     return this.fb.group({
       //  ---------------------forms fields on y level ------------------------
-      'C1': ['C1', [Validators.required, Validators.pattern('[0-9]{3}')]],
-      'C2': ['C2', [Validators.required, Validators.pattern('[0-9]{3}')]],
+      name: ['', [Validators.required, Validators.pattern('[0-9]{3}')]],
       // ---------------------------------------------------------------------
-      'Cs': this.fb.array([
-        this.initD()
+      'ActivityArea': this.fb.array([
+        this.initActivityArea()
       ])
     })
   }
 
-  initD() {
+  initActivityArea() {
     return this.fb.group({
       //  ---------------------forms fields on z level ------------------------
-      'D': ['D', [Validators.required, Validators.pattern('[0-9]{3}')]],
+      name: ['', [Validators.required, Validators.pattern('[0-9]{3}')]],
       // ---------------------------------------------------------------------
     })
   }
 
-  initL() {
+  initLangue() {
     return this.fb.group({
       //  ---------------------forms fields on z level ------------------------
-      'L1': ['L1', [Validators.required, Validators.pattern('[0-9]{3}')]],
+      name: ['', [Validators.required, Validators.pattern('[0-9]{3}')]],
+      level: ['']
+      // ---------------------------------------------------------------------
+    })
+  }
+
+  initLicense() {
+    return this.fb.group({
+      //  ---------------------forms fields on z level ------------------------
+      name: ['', [Validators.required, Validators.pattern('[0-9]{3}')]],
+      date_obtention: ['']
       // ---------------------------------------------------------------------
     })
   }
@@ -116,53 +128,63 @@ export class CandidatAddComponent implements OnInit {
   //   arrayControl.removeAt(index);
   // }
 
-  addL(ix: number) {
+  addLangue(ix: number) {
     const control = (<FormArray>this.candidatForm.controls['Candidat']).at(ix).get('Langue') as FormArray;
-    control.push(this.initL());
+    control.push(this.initLangue());
   }
 
-  delL(index: number) {
+  delLangue(index: number) {
     const arrayControl = (<FormArray>this.candidatForm.controls['Candidat']).at(index).get('Langue') as FormArray;
     arrayControl.removeAt(index);
   }
 
-  addY(ix: number) {
-    const control = (<FormArray>this.candidatForm.controls['Candidat']).at(ix).get('School') as FormArray;
-    control.push(this.initY());
+  addLicense(ix: number) {
+    const control = (<FormArray>this.candidatForm.controls['Candidat']).at(ix).get('License') as FormArray;
+    control.push(this.initLicense());
   }
 
-  delY(index: number) {
+  delLicense(index: number) {
+    const arrayControl = (<FormArray>this.candidatForm.controls['Candidat']).at(index).get('License') as FormArray;
+    arrayControl.removeAt(index);
+  }
+
+  addSchool(ix: number) {
+    const control = (<FormArray>this.candidatForm.controls['Candidat']).at(ix).get('School') as FormArray;
+    control.push(this.initSchool());
+  }
+
+  delSchool(index: number) {
     const arrayControl = (<FormArray>this.candidatForm.controls['Candidat']).at(index).get('School') as FormArray;
     arrayControl.removeAt(index);
   }
 
-  addZ(ix: number, iy: number) {
-    const control = ((<FormArray>this.candidatForm.controls['Candidat']).at(ix).get('School') as FormArray).at(iy).get('Zs') as FormArray;
-    control.push(this.initZ());
+  addDiplome(ix: number, iy: number) {
+    const control = ((<FormArray>this.candidatForm.controls['Candidat']).at(ix).get('School') as FormArray).at(iy).get('Diplome') as FormArray;
+    control.push(this.initDiplome());
   }
 
-  delZ(ix: number, iy: number): void {
-    const arrayControl = ((<FormArray>this.candidatForm.controls['Candidat']).at(ix).get('School') as FormArray).at(iy).get('Zs') as FormArray;
+  delDiplome(ix: number, iy: number): void {
+    const arrayControl = ((<FormArray>this.candidatForm.controls['Candidat']).at(ix).get('School') as FormArray).at(iy).get('Diplome') as FormArray;
     arrayControl.removeAt(ix);
   }
 
-  addC(ix: number) {
+  addCompany(ix: number) {
     const control = (<FormArray>this.candidatForm.controls['Candidat']).at(ix).get('Company') as FormArray;
-    control.push(this.initC());
+    control.push(this.initCompany());
   }
 
-  delC(index: number) {
+  delCompany(index: number) {
     const arrayControl = (<FormArray>this.candidatForm.controls['Candidat']).at(index).get('Company') as FormArray;
     arrayControl.removeAt(index);
   }
 
-  addD(ix: number, iy: number): void {
-    const control = ((<FormArray>this.candidatForm.controls['Candidat']).at(ix).get('Company') as FormArray).at(iy).get('Cs') as FormArray;
-    control.push(this.initD());
+  addActivityArea(ix: number, iy: number): void {
+    const control = ((<FormArray>this.candidatForm.controls['Candidat']).at(ix).get('Company') as FormArray).at(iy).get('ActivityArea') as FormArray;
+    control.push(this.initActivityArea());
   }
 
-  delD(ix: number, iy: number): void {
-    const arrayControl = ((<FormArray>this.candidatForm.controls['Candidat']).at(ix).get('Company') as FormArray).at(iy).get('Cs') as FormArray;
+  delActivityArea(ix: number, iy: number): void {
+    const arrayControl = ((<FormArray>this.candidatForm.controls['Candidat']).at(ix).get('Company') as FormArray).at(iy).get('ActivityArea') as FormArray;
     arrayControl.removeAt(ix);
   }
 
@@ -179,61 +201,62 @@ export class CandidatAddComponent implements OnInit {
       zipcode: '',
       email: '',
       // ---------------------------------------------------------------------
-      'Langue': this.SchoolErrors(),
+      'Langue': this.LangueErrors(),
+      'License': this.LicenseErrors(),
       'School': this.SchoolErrors(),
-      'Company': this.CompanyErrors()
+      'Company': this.CompanyErrors(),
     }]
   }
 
   SchoolErrors() {
     return [{
       //  ---------------------forms errors on y level ------------------------
-      Y1: '',
-      Y2: '',
+      name: '',
       // ----------------------------------------------------------------------
-      Zs: this.ZsErrors()
+      Diplome: this.DiplomeErrors()
     }]
   }
 
   CompanyErrors() {
     return [{
       //  ---------------------forms errors on y level ------------------------
-      C1: '',
-      C2: '',
+      name: '',
       // ----------------------------------------------------------------------
-      Cs: this.CsErrors()
+      ActivityArea: this.ActivityAreaErrors()
+    }]
+  }
+
+  DiplomeErrors() {
+    return [{
+      //  ---------------------forms errors on z level ------------------------
+      name: '',
+      date_obtention: ''
+      // ---------------------------------------------------------------------
+    }]
+  }
+
+  ActivityAreaErrors() {
+    return [{
+      //  ---------------------forms errors on z level ------------------------
+      name: ''
+      // ---------------------------------------------------------------------
     }]
   }
 
   LangueErrors() {
     return [{
-      //  ---------------------forms errors on y level ------------------------
-      L1: '',
-      // ----------------------------------------------------------------------
-      Ls: this.LsErrors()
-    }]
-  }
-
-  ZsErrors() {
-    return [{
       //  ---------------------forms errors on z level ------------------------
-      Z: ''
+      name: '',
+      level: ''
       // ---------------------------------------------------------------------
     }]
   }
 
-  CsErrors() {
+  LicenseErrors() {
     return [{
       //  ---------------------forms errors on z level ------------------------
-      C: ''
-      // ---------------------------------------------------------------------
-    }]
-  }
-
-  LsErrors() {
-    return [{
-      //  ---------------------forms errors on z level ------------------------
-      L: ''
+      name: '',
+      date_obtention: ''
       // ---------------------------------------------------------------------
     }]
   }
@@ -241,66 +264,70 @@ export class CandidatAddComponent implements OnInit {
   validationMessages = {
     Candidat: {
       firstname: {
-        required: 'X is required.',
-        pattern: 'X must be 3 characters long.'
+        required: 'firstname is required.',
+        pattern: 'firstname must be 3 characters long.'
       },
       lastname: {
-        required: 'X is required.',
-        pattern: 'X must be 3 characters long.'
+        required: 'lastname is required.',
+        pattern: 'lastname must be 3 characters long.'
       },
       town: {
-        required: 'X is required.',
-        pattern: 'X must be 3 characters long.'
+        required: 'town is required.',
+        pattern: 'town must be 3 characters long.'
       },
       zipcode: {
-        required: 'X is required.',
-        pattern: 'X must be 3 characters long.'
+        required: 'zipcode is required.',
+        pattern: 'zipcode must be 3 characters long.'
       },
       email: {
-        required: 'X is required.',
-        pattern: 'X must be 3 characters long.'
+        required: 'email is required.',
+        pattern: 'email must be 3 characters long.'
       },
       Langue: {
-        L1: {
-          required: 'L is required.',
-          pattern: 'L must be 3 characters long.'
+        name: {
+          required: 'name is required.',
+          pattern: 'name must be 3 characters long.'
         },
-        Ls: {
-          L: {
-            required: 'Z is required.',
-            pattern: 'Z must be 3 characters long.'
-          }
+        level: {
+          required: 'level is required.',
+          pattern: 'level must be 3 characters long.'
+        },
+      },
+      License: {
+        name: {
+          required: 'name is required.',
+          pattern: 'name must be 3 characters long.'
+        },
+        date_obtention: {
+          required: 'date_obtention is required.',
+          pattern: 'date_obtention must be 3 characters long.'
         }
       },
       School: {
-        Y1: {
-          required: 'Y1 is required.',
-          pattern: 'Y1 must be 3 characters long.'
+        name: {
+          required: 'name is required.',
+          pattern: 'name must be 3 characters long.'
         },
-        Y2: {
-          required: 'Y2 is required.',
-          pattern: 'Y2 must be 3 characters long.'
-        },
-        Zs: {
-          Z: {
-            required: 'Z is required.',
-            pattern: 'Z must be 3 characters long.'
+        Diplome: {
+          name: {
+            required: 'name is required.',
+            pattern: 'name must be 3 characters long.'
+          },
+          date_obtention: {
+            required: 'date_obtention is required.',
+            pattern: 'date_obtention must be 3 characters long.'
           }
         }
       },
       Company: {
-        C1: {
-          required: 'Y1 is required.',
-          pattern: 'Y1 must be 3 characters long.'
+        name: {
+          required: 'name is required.',
+          pattern: 'name must be 3 characters long.'
         },
-        C2: {
-          required: 'Y2 is required.',
-          pattern: 'Y2 must be 3 characters long.'
-        },
-        Cs: {
-          C: {
-            required: 'Z is required.',
-            pattern: 'Z must be 3 characters long.'
+        ActivityArea: {
+          name: {
+            required: 'name is required.',
+            pattern: 'name must be 3 characters long.'
           }
         }
       }
@@ -324,25 +351,25 @@ export class CandidatAddComponent implements OnInit {
       zipcode: '',
       email: '',
         School: [{
-          Y1: '',
-          Y2: '',
-          Zs: [{
-            Z: ''
+          name: '',
+          Diplome: [{
+            name: '',
+            date_obtention: ''
           }]
         }],
         Company: [{
-          C1: '',
-          C2: '',
-          Cs: [{
-            C: ''
+          name: '',
+          ActivityArea: [{
+            name: ''
           }]
         }],
         Langue: [{
-          Y1: '',
-          Y2: '',
-          Zs: [{
-            Z: ''
-          }]
+          name: '',
+          level: ''
+        }],
+        License: [{
+          name: '',
+          date_obtention: '',
         }],
       });
       let X = <FormGroup>CandidatA.at(x - 1);
@@ -360,6 +387,7 @@ export class CandidatAddComponent implements OnInit {
       }
       this.validateSchool(x);
       this.validateCompany(x);
+      //this.validateDiplome(x);
       x++;
     }
   }
@@ -371,10 +399,10 @@ export class CandidatAddComponent implements OnInit {
     let y = 1;
     while (y <= SchoolA.length) {
       this.formErrors.Candidat[x - 1].School.push({
-        Y1: '',
-        Y2: '',
-        Zs: [{
-          Z: ''
+        name: '',
+        Diplome: [{
+          name: '',
+          date_obtention: ''
         }]
       });
       let Y = <FormGroup>SchoolA.at(y - 1);
@@ -386,28 +414,29 @@ export class CandidatAddComponent implements OnInit {
           }
         }
       }
-      this.validateZs(x, y);
+      this.validateDiplome(x, y);
       y++;
     }
   }
 
-  validateZs(x, y) {
-    console.log('validateZs--');
-    let ZsA = ((<FormArray>this.candidatForm.controls['Candidat']).at(x - 1).get('School') as FormArray).at(y - 1).get('Zs') as FormArray;
-    this.formErrors.Candidat[x - 1].School[y - 1].Zs = [];
+  validateDiplome(x, y) {
+    console.log('validateDiplome--');
+    let DiplomeA = ((<FormArray>this.candidatForm.controls['Candidat']).at(x - 1).get('School') as FormArray).at(y - 1).get('Diplome') as FormArray;
+    this.formErrors.Candidat[x - 1].School[y - 1].Diplome = [];
     let z = 1;
-    while (z <= ZsA.length) {
-      this.formErrors.Candidat[x - 1].School[y - 1].Zs.push({
-        Z: ''
+    while (z <= DiplomeA.length) {
+      this.formErrors.Candidat[x - 1].School[y - 1].Diplome.push({
+        name: '',
+        date_obtention: ''
       });
-      let Z = <FormGroup>ZsA.at(z - 1);
+      let Z = <FormGroup>DiplomeA.at(z - 1);
       for (let field in Z.controls) {
         let input = Z.get(field);
         console.log('input--->');
         console.log(input);
         if (input.invalid && input.dirty) {
           for (let error in input.errors) {
-            this.formErrors.Candidat[x - 1].School[y - 1].Zs[z - 1][field] = this.validationMessages.Candidat.School.Zs[field][error];
+            this.formErrors.Candidat[x - 1].School[y - 1].Diplome[z - 1][field] = this.validationMessages.Candidat.School.Diplome[field][error];
           }
         }
       }
@@ -422,10 +451,9 @@ export class CandidatAddComponent implements OnInit {
     let y = 1;
     while (y <= CompanyA.length) {
       this.formErrors.Candidat[x - 1].Company.push({
-        C1: '',
-        C2: '',
-        Cs: [{
-          C: ''
+        name: '',
+        ActivityArea: [{
+          name: ''
         }]
       });
       let Y = <FormGroup>CompanyA.at(y - 1);
@@ -437,28 +465,28 @@ export class CandidatAddComponent implements OnInit {
           }
         }
       }
-      this.validateCs(x, y);
+      this.validateActivityArea(x, y);
       y++;
     }
   }
 
-  validateCs(x, y) {
-    console.log('validateCs--');
-    let CsA = ((<FormArray>this.candidatForm.controls['Candidat']).at(x - 1).get('Company') as FormArray).at(y - 1).get('Cs') as FormArray;
-    this.formErrors.Candidat[x - 1].Company[y - 1].Cs = [];
+  validateActivityArea(x, y) {
+    console.log('validateActivityArea--');
+    let ActivityAreaA = ((<FormArray>this.candidatForm.controls['Candidat']).at(x - 1).get('Company') as FormArray).at(y - 1).get('ActivityArea') as FormArray;
+    this.formErrors.Candidat[x - 1].Company[y - 1].ActivityArea = [];
     let z = 1;
-    while (z <= CsA.length) {
-      this.formErrors.Candidat[x - 1].Company[y - 1].Cs.push({
-        C: ''
+    while (z <= ActivityAreaA.length) {
+      this.formErrors.Candidat[x - 1].Company[y - 1].ActivityArea.push({
+        name: ''
       });
-      let C = <FormGroup>CsA.at(z - 1);
+      let C = <FormGroup>ActivityAreaA.at(z - 1);
       for (let field in C.controls) {
         let input = C.get(field);
         console.log('input--->');
         console.log(input);
         if (input.invalid && input.dirty) {
           for (let error in input.errors) {
-            this.formErrors.Candidat[x - 1].Company[y - 1].Cs[z - 1][field] = this.validationMessages.Candidat.Company.Cs[field][error];
+            this.formErrors.Candidat[x - 1].Company[y - 1].ActivityArea[z - 1][field] = this.validationMessages.Candidat.Company.ActivityArea[field][error];
           }
         }
       }
@@ -473,11 +501,8 @@ export class CandidatAddComponent implements OnInit {
     let y = 1;
     while (y <= LangueA.length) {
       this.formErrors.Candidat[x - 1].Langue.push({
-        Y1: '',
-        Y2: '',
-        Zs: [{
-          Z: ''
-        }]
+        name: '',
+        level: ''
       });
       let Y = <FormGroup>LangueA.at(y - 1);
       for (let field in Y.controls) {
@@ -488,32 +513,32 @@ export class CandidatAddComponent implements OnInit {
           }
         }
       }
-      this.validateCs(x, y);
+      this.validateLangue(x);
       y++;
     }
   }
 
-  validateLs(x, y) {
-    console.log('validateLs--');
-    let LsA = ((<FormArray>this.candidatForm.controls['Candidat']).at(x - 1).get('Langue') as FormArray).at(y - 1).get('Ls') as FormArray;
-    this.formErrors.Candidat[x - 1].Langue[y - 1].Zs = [];
-    let z = 1;
-    while (z <= LsA.length) {
-      this.formErrors.Candidat[x - 1].Langue[y - 1].Zs.push({
-        Z: ''
+  validateLicense(x: number) {
+    console.log('validateLicense');
+    let LicenseA = (<FormArray>this.candidatForm.controls['Candidat']).at(x - 1).get('License') as FormArray;
+    this.formErrors.Candidat[x - 1].License = [];
+    let y = 1;
+    while (y <= LicenseA.length) {
+      this.formErrors.Candidat[x - 1].License.push({
+        name: '',
+        date_obtention: '',
       });
-      let L = <FormGroup>LsA.at(z - 1);
-      for (let field in L.controls) {
-        let input = L.get(field);
-        console.log('input--->');
-        console.log(input);
+      let Y = <FormGroup>LicenseA.at(y - 1);
+      for (let field in Y.controls) {
+        let input = Y.get(field);
         if (input.invalid && input.dirty) {
           for (let error in input.errors) {
-            this.formErrors.Candidat[x - 1].Langue[y - 1].Zs[z - 1][field] = this.validationMessages.Candidat.Langue.Ls[field][error];
+            this.formErrors.Candidat[x - 1].License[y - 1][field] = this.validationMessages.Candidat.License[field][error];
           }
         }
       }
-      z++;
+      this.validateLicense(x);
+      y++;
     }
   }
 

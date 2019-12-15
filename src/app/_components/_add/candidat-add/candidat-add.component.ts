@@ -118,16 +118,6 @@ export class CandidatAddComponent implements OnInit {
     })
   }
 
-  // addX() {
-  //   const control = <FormArray>this.candidatForm.controls['Candidat'];
-  //   control.push(this.initX());
-  // }
-
-  // delX(index: number): void {
-  //   const arrayControl = <FormArray>this.candidatForm.controls['Candidat'];
-  //   arrayControl.removeAt(index);
-  // }
-
   addLangue(ix: number) {
     const control = (<FormArray>this.candidatForm.controls['Candidat']).at(ix).get('Langue') as FormArray;
     control.push(this.initLangue());

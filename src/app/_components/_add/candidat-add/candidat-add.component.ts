@@ -27,14 +27,14 @@ export class CandidatAddComponent implements OnInit {
   addCandidat() {
     this.candidatForm = this.fb.group({
       'Candidat': this.fb.array([
-        this.initX(),
+        this.initCandidat(),
       ])
     });
     this.candidatForm.valueChanges.subscribe(data => this.validateForm());
     this.validateForm();
   }
 
-  initX() {
+  initCandidat() {
     return this.fb.group({
       //  ---------------------forms fields on x level ------------------------
       firstname: ['', [Validators.required, Validators.pattern('[a-zA-Z0-9_]{3,16}')]],

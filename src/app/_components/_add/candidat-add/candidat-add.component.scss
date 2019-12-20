@@ -1,5 +1,5 @@
 .Candidat {
-    .diplome {
+    .formations {
         background-color: #dad8d8;
         margin-bottom: 10px;
     }
@@ -7,9 +7,9 @@
         background-color: #dad8d8;
         margin-bottom: 10px;
     }
-    .School,
-    .Company,
-    .langue,
+    .schools,
+    .companies,
+    .langues,
     p {
         padding: 0 10px;
         margin: 10px;
@@ -21,8 +21,8 @@
     p {
         margin-top: 0px;
     }
-    .School,
-    .Company {
+    .schools,
+    .companies {
         border: gray solid 1px;
     }
     #delete {

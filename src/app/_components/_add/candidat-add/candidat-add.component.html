@@ -65,12 +65,12 @@
                                     </div>
                                     <!-- Langue -->
                                     <div class="dlab-divider divider-4px  bg-black"><i class="icon-dot c-square"></i></div>
-                                    <div formArrayName="Langue" id="langue">
+                                    <div formArrayName="langues" id="langues">
                                         <div class="sort-title clearfix text-center">
                                             <h4>Langues</h4>
                                         </div>
-                                        <div *ngFor="let L of X['controls'].Langue['controls']; let iy=index">
-                                            <div formGroupName="{{iy}}" class="Langue">
+                                        <div *ngFor="let L of X['controls'].langues['controls']; let ic=index">
+                                            <div formGroupName="{{ic}}" class="langues">
                                                 <div class="row">
                                                     <div class="col-md-6 col-sm-6">
                                                         <div class="input-group">
@@ -80,7 +80,7 @@
                                                     <div class="col-md-6 col-sm-6">
                                                         <div class="input-group">
                                                             <input type="text" formControlName="level" placeholder="Niveau" class="form-control" />
-                                                            <p>{{ formErrors.Candidat[ix].Langue[iy].level }}</p>
+                                                            <p>{{ formErrors.Candidat[ix].langues[ic].level }}</p>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -92,12 +92,12 @@
                                     <!-- Langue End-->
                                     <!-- Permis -->
                                     <div class="dlab-divider divider-4px  bg-black"><i class="icon-dot c-square"></i></div>
-                                    <div formArrayName="License" id="License">
+                                    <div formArrayName="licenses" id="licenses">
                                         <div class="sort-title clearfix text-center">
                                             <h4>Permis</h4>
                                         </div>
-                                        <div *ngFor="let L of X['controls'].License['controls']; let iy=index">
-                                            <div formGroupName="{{iy}}" class="License">
+                                        <div *ngFor="let L of X['controls'].licenses['controls']; let id=index">
+                                            <div formGroupName="{{id}}" class="licenses">
                                                 <div class="row">
                                                     <div class="col-md-6 col-sm-6">
                                                         <div class="input-group">
@@ -108,7 +108,7 @@
                                                         <div class="input-group">
                                                             <span>Date d'obtention</span>
                                                             <input [ngModel]="date_obtention | date:'dd-MM-yyyy'" formControlName="date_obtention" type="date" />
-                                                            <p>{{ formErrors.Candidat[ix].License[iy].date_obtention }}</p>
+                                                            <p>{{ formErrors.Candidat[ix].licenses[id].date_obtention }}</p>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -120,49 +120,42 @@
                                     <!-- Permis End-->
                                     <!-- Parcours Scolaire -->
                                     <div class="dlab-divider divider-4px  bg-black"><i class="icon-dot c-square"></i></div>
-                                    <div formArrayName="School" id="schools">
+                                    <div formArrayName="schools" id="schools">
                                         <div class="sort-title clearfix text-center">
                                             <h4>Parcours Scolaire</h4>
                                         </div>
-                                        <div *ngFor="let Y of X['controls'].School['controls']; let iy=index">
-                                            <div formGroupName="{{iy}}" class="School">
+                                        <div *ngFor="let Y of X['controls'].schools['controls']; let iy=index">
+                                            <div formGroupName="{{iy}}" class="schools">
                                                 <div class="row">
                                                     <div class="col-md-6 col-sm-6">
                                                         <div class="input-group">
                                                             <input type="text" formControlName="name" placeholder="Nom de l'école" class="form-control" />
-                                                            <p> {{ formErrors.Candidat[ix].School[iy].name }}</p>
+                                                            <p> {{ formErrors.Candidat[ix].schools[iy].name }}</p>
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <!-- Diplome -->
+                                                <!-- Formation -->
                                                 <div class="dlab-divider divider-4px bg-gray-dark"><i class="icon-dot c-square"></i></div>
-                                                <div formArrayName="Diplome" class="diplome">
+                                                <div formArrayName="formations" class="formations">
                                                     <div class="sort-title clearfix text-center">
-                                                        <h5>Diplome</h5>
+                                                        <h5>Formation</h5>
                                                     </div>
-                                                    <div *ngFor="let Z of Y['controls'].Diplome['controls']; let iz=index">
-                                                        <div formGroupName="{{iz}}" class="Diplome">
+                                                    <div *ngFor="let Z of Y['controls'].formations['controls']; let iz=index">
+                                                        <div formGroupName="{{iz}}" class="formations">
                                                             <div class="row">
                                                                 <div class="col-md-6 col-sm-6">
                                                                     <div class="input-group">
-                                                                        <input type="text" formControlName="name" placeholder="Nom du diplome" class="form-control" />
-                                                                        <p>{{ formErrors.Candidat[ix].School[iy].Diplome[iz].name }}</p>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="col-md-6 col-sm-6">
-                                                                    <div class="input-group">
-                                                                        <span>Date d'obtention</span>
-                                                                        <input [ngModel]="date_obtention | date:'dd-MM-yyyy'" formControlName="date_obtention" type="date" />
-                                                                        <p>{{ formErrors.Candidat[ix].School[iy].Diplome[iz].date_obtention }}</p>
+                                                                        <input type="text" formControlName="name" placeholder="Nom de la formation" class="form-control" />
+                                                                        <p>{{ formErrors.Candidat[ix].schools[iy].formations[iz].name }}</p>
                                                                     </div>
                                                                 </div>
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <input class="site-button green m-r15" type="button" (click)="addDiplome(ix,iy)" value="Ajouter Diplome">
-                                                    <button class="site-button red m-r15" type="button" (click)="delDiplome(ix, iy)" id="delete">Supprimer</button>
+                                                    <input class="site-button green m-r15" type="button" (click)="addFormation(ix,iy)" value="Ajouter Formation">
+                                                    <button class="site-button red m-r15" type="button" (click)="delFormation(ix, iy)" id="delete">Supprimer</button>
                                                 </div>
-                                                <!-- Diplome End -->
+                                                <!-- Formation End -->
                                             </div>
                                         </div>
                                         <input class="site-button green m-r15" type="button" (click)="addSchool(ix)" value="Ajouter Ecole">
@@ -171,40 +164,40 @@
                                     <!-- Parcours Scolaire End-->
                                     <!-- Parcours Professionel -->
                                     <div class="dlab-divider divider-4px  bg-black"><i class="icon-dot c-square"></i></div>
-                                    <div formArrayName="Company">
+                                    <div formArrayName="companies">
                                         <div class="sort-title clearfix text-center">
                                             <h4>Parcours Professionel</h4>
                                         </div>
-                                        <div *ngFor="let C of X['controls'].Company['controls']; let iy=index">
-                                            <div formGroupName="{{iy}}" class="Company">
+                                        <div *ngFor="let C of X['controls'].companies['controls']; let ia=index">
+                                            <div formGroupName="{{ia}}" class="companies">
                                                 <div class="row">
                                                     <div class="col-md-6 col-sm-6">
                                                         <div class="input-group">
                                                             <input type="text" formControlName="name" placeholder="Nom Entreprise" class="form-control" />
-                                                            <p> {{ formErrors.Candidat[ix].Company[iy].name }}</p>
+                                                            <p> {{ formErrors.Candidat[ix].companies[ia].name }}</p>
                                                         </div>
                                                     </div>
                                                 </div>
                                                 <!-- activité -->
                                                 <div class="dlab-divider divider-4px bg-gray-dark"><i class="icon-dot c-square"></i></div>
-                                                <div formArrayName="ActivityArea" class="secteur">
+                                                <div formArrayName="activity_areas" class="secteur">
                                                     <div class="sort-title clearfix text-center">
                                                         <h5>Secteur d'activité</h5>
                                                     </div>
-                                                    <div *ngFor="let D of C['controls'].ActivityArea['controls']; let iz=index">
-                                                        <div formGroupName="{{iz}}" class="ActivityArea">
+                                                    <div *ngFor="let D of C['controls'].activity_areas['controls']; let ib=index">
+                                                        <div formGroupName="{{ib}}" class="activity_areas">
                                                             <div class="row">
                                                                 <div class="col-md-6 col-sm-6">
                                                                     <div class="input-group">
                                                                         <input type="text" formControlName="name" placeholder="Nom du Secteur" class="form-control" />
-                                                                        <p>{{ formErrors.Candidat[ix].Company[iy].ActivityArea[iz].name }}</p>
+                                                                        <p>{{ formErrors.Candidat[ix].companies[ia].activity_areas[ib].name }}</p>
                                                                     </div>
                                                                 </div>
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <input class="site-button green m-r15" type="button" (click)="addActivityArea(ix,iy)" value="Ajouter Secteur d'activité">
-                                                    <button class="site-button red m-r15" type="button" (click)="delActivityArea(ix, iy)" id="delete">Supprimer</button>
+                                                    <input class="site-button green m-r15" type="button" (click)="addActivityArea(ix,ia)" value="Ajouter Secteur d'activité">
+                                                    <button class="site-button red m-r15" type="button" (click)="delActivityArea(ix, ia)" id="delete">Supprimer</button>
                                                 </div>
                                                 <!-- activité End -->
                                             </div>

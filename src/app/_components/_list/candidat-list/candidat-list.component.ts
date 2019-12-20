@@ -41,14 +41,11 @@ export class CandidatListComponent implements OnInit {
     })
   }
 
-  deleteCandidat(id) {
+// TODO redirection
+  deleteCandidat() {
     if (window.confirm('Confirmez la suppression !')) {
       this.CandidatService.DeleteCandidat(this.id)
-        .subscribe((res) => {
-          this.CandidatsList.splice(id, 1);
-
-// TODO redirection
-
+        .subscribe(res => {
             console.log('Candidat deleted!');
             this.ngZone.run(() => this.router.navigateByUrl('/'))
           }

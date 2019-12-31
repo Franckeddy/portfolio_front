@@ -1,7 +1,7 @@
 import {Component, Input, OnInit, NgZone} from '@angular/core';
-import {CandidatService} from "../../../_services/candidats.service";
+import {CandidatService} from "../../../services/candidats.service";
 import { ActivatedRoute, Router } from '@angular/router';
-import { Candidat } from '../../../_models';
+import { Candidat } from '../../../models';
 
 @Component({
   selector: 'app-candidat-list',
@@ -10,7 +10,7 @@ import { Candidat } from '../../../_models';
 })
 export class CandidatListComponent implements OnInit {
 
-  @Input('data') 
+  @Input('data')
   candidats: string[] = [];
   page: number = 1;
   CandidatsList: any = [];

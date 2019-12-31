@@ -1,6 +1,6 @@
-// Le composant de connexion utilise le service d'authentification pour se connecter à l'application. 
+// Le composant de connexion utilise le service d'authentification pour se connecter à l'application.
 // Si l'utilisateur est déjà connecté, il est automatiquement redirigé vers la page d'accueil.
-// L'objet loginForm: FormGroup définit les contrôles et les validateurs du formulaire et est utilisé pour accéder aux données entrées dans le formulaire. 
+// L'objet loginForm: FormGroup définit les contrôles et les validateurs du formulaire et est utilisé pour accéder aux données entrées dans le formulaire.
 // FormGroup fait partie du module Angular Reactive Forms et est lié au modèle de connexion ci-dessus avec la directive [formGroup]="loginForm".
 
 import { Component, OnInit } from '@angular/core';
@@ -8,10 +8,10 @@ import { Router, ActivatedRoute } from '@angular/router';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { first } from 'rxjs/operators';
 
-import { AuthenticationService } from '../../_services/authentication.service';
-import { AlertService } from '../../_services/alert.service';
+import { AuthenticationService } from '../../services/authentication.service';
+import { AlertService } from '../../services/alert.service';
 
-@Component({ 
+@Component({
     templateUrl: 'login.component.html',
     styleUrls: ['login.component.scss']
 })

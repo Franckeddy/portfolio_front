@@ -15,37 +15,37 @@ import {NgxPaginationModule} from 'ngx-pagination';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 
 // used to create fake backend
-import { fakeBackendProvider } from './_helpers ';
-import { CandidatService } from './_services/candidats.service';
+import { fakeBackendProvider } from './helpers';
+import { CandidatService } from './services/candidats.service';
 
 import { appRoutingModule } from './app-routing.module';
-import { ErrorInterceptor } from './_helpers ';
-import { JwtInterceptor } from './_helpers ';
+import { ErrorInterceptor } from './helpers';
+import { JwtInterceptor } from './helpers';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home';
 import { LoginComponent } from './login/login';
 import { RegisterComponent } from './register/register';
-import { AlertComponent } from './_components/alert';
-import { FourofourComponent } from './_models/fourofour';
-import { SingleCandidatComponent } from './_components/single-candidat';
+import { AlertComponent } from './components/alert';
+import { FourofourComponent } from './models/fourofour';
+import { SingleCandidatComponent } from './components/single-candidat';
 
 // _list
-import { CandidatListComponent } from './_components/_list/candidat-list';
+import { CandidatListComponent } from './components/_list/candidat-list';
 
-// _forms
-import { CandidatFormComponent } from './_forms/candidat-form';
+// forms
+import { CandidatFormComponent } from './forms/candidat-form';
 
 // _add
-import { CandidatAddComponent } from './_components/_add/candidat-add';
+import { CandidatAddComponent } from './components/_add/candidat-add';
 
 // _edit
-import { EditCandidatComponent } from './_components/_edit/edit-candidat';
+import { EditCandidatComponent } from './components/_edit/edit-candidat';
 
-// _layout
-import { HeaderComponent } from './_layout/header';
-import { FooterComponent } from './_layout/footer';
-import { ExtranavMenuComponent } from './_layout/header/_header-component/extranav-menu';
-import { HeaderNavComponent } from './_layout/header/_header-component/header-nav/header-nav.component';
+// layout
+import { HeaderComponent } from './layout/header';
+import { FooterComponent } from './layout/footer';
+import { ExtranavMenuComponent } from './layout/header/_header-component/extranav-menu';
+import { HeaderNavComponent } from './layout/header/_header-component/header-nav/header-nav.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 @NgModule({
   imports: [
@@ -82,7 +82,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
         { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
         { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true },
         { provide: APP_BASE_HREF, useValue: '/' },
-        MatDatepickerModule,  
+        MatDatepickerModule,
         CandidatService,
 
         // provider used to create fake backend

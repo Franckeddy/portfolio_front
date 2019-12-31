@@ -9,9 +9,9 @@ import { Router } from '@angular/router';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { first } from 'rxjs/operators';
 
-import { UserService } from '../../services/user.service';
-import { AuthenticationService } from '../../services/authentication.service';
-import { AlertService } from '../../services/alert.service';
+import { UserService } from '../../../services/user.service';
+import { AuthenticationService } from '../../../services/authentication.service';
+import { AlertService } from '../../../services/alert.service';
 
 @Component({
     templateUrl: 'register.component.html'

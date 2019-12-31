@@ -22,9 +22,9 @@ import { appRoutingModule } from './app-routing.module';
 import { ErrorInterceptor } from './helpers';
 import { JwtInterceptor } from './helpers';
 import { AppComponent } from './app.component';
-import { HomeComponent } from './home/home';
-import { LoginComponent } from './login/login';
-import { RegisterComponent } from './register/register';
+import { HomeComponent } from './components/home/home';
+import { LoginComponent } from './components/login/login';
+import { RegisterComponent } from './components/register/register';
 import { AlertComponent } from './components/alert';
 import { FourofourComponent } from './models/fourofour';
 import { SingleCandidatComponent } from './components/single-candidat';
@@ -33,7 +33,7 @@ import { SingleCandidatComponent } from './components/single-candidat';
 import { CandidatListComponent } from './components/_list/candidat-list';
 
 // forms
-import { CandidatFormComponent } from './forms/candidat-form';
+import { CandidatFormComponent } from './components/forms/candidat-form';
 
 // _add
 import { CandidatAddComponent } from './components/_add/candidat-add';
@@ -42,10 +42,10 @@ import { CandidatAddComponent } from './components/_add/candidat-add';
 import { EditCandidatComponent } from './components/_edit/edit-candidat';
 
 // layout
-import { HeaderComponent } from './layout/header';
-import { FooterComponent } from './layout/footer';
-import { ExtranavMenuComponent } from './layout/header/_header-component/extranav-menu';
-import { HeaderNavComponent } from './layout/header/_header-component/header-nav/header-nav.component';
+import { HeaderComponent } from './components/layout/header';
+import { FooterComponent } from './components/layout/footer';
+import { ExtranavMenuComponent } from './components/layout/header/_header-component/extranav-menu';
+import { HeaderNavComponent } from './components/layout/header/_header-component/header-nav/header-nav.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 @NgModule({
   imports: [

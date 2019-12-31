@@ -4,9 +4,9 @@
 
 import { Routes, RouterModule } from '@angular/router';
 
-import { HomeComponent } from './home/home';
-import { LoginComponent } from './login/login';
-import { RegisterComponent } from './register/register';
+import { HomeComponent } from './components/home/home';
+import { LoginComponent } from './components/login/login';
+import { RegisterComponent } from './components/register/register';
 import { AuthGuard } from './helpers';
 import { FourofourComponent } from './models/fourofour';
 

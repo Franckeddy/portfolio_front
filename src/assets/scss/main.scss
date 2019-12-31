@@ -1,17 +1,17 @@
 // components
 @import'../../app/app.component';
 @import '../../app/components/alert/alert.component';
-@import'../../app/home/home/home.component';
-@import'../../app/login/login/login.component';
-@import'../../app/register/register/register.component';
+@import '../../app/components/home/home/home.component';
+@import '../../app/components/login/login/login.component';
+@import '../../app/components/register/register/register.component';
 @import '../../app/components/alert/alert.component';
-@import '../../app/layout/footer/footer.component';
+@import '../../app/components/layout/footer/footer.component';
 @import '../../app/components/single-candidat/single-candidat.component';
-@import '../../app/layout/header/header.component';
+@import '../../app/components/layout/header/header.component';
 // models
 @import '../../app/models/fourofour/fourofour.component';
 // forms
-@import '../../app/forms/candidat-form/candidat-form.component';
+@import '../../app/components/forms/candidat-form/candidat-form.component';
 // lists
 @import '../../app/components/_list/candidat-list/candidat-list.component';
 @import '../../app/components/_list/candidat-list/candidat-list.component';

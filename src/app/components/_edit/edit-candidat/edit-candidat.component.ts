@@ -1,6 +1,6 @@
 import { Component, OnInit, NgZone } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { CandidatService } from 'src/app/_services/candidats.service';
+import { CandidatService } from 'src/app/services/candidats.service';
 import { FormBuilder, FormGroup } from '@angular/forms';
 
 @Component({

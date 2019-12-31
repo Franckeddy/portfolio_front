@@ -1,12 +1,12 @@
-// Le composant home contient la logique permettant d'afficher l'utilisateur actuel, 
+// Le composant home contient la logique permettant d'afficher l'utilisateur actuel,
 // d'afficher une liste de tous les utilisateurs et de supprimer des utilisateurs.
 
 import { Component, OnInit } from '@angular/core';
 import { first } from 'rxjs/operators';
 
-import { User } from '../../_models';
-import { UserService } from '../../_services/user.service';
-import { AuthenticationService } from '../../_services/authentication.service';
+import { User } from '../../models';
+import { UserService } from '../../services/user.service';
+import { AuthenticationService } from '../../services/authentication.service';
 
 @Component({
     templateUrl: 'home.component.html',

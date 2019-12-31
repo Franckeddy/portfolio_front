@@ -1,10 +1,10 @@
-// La garde d'authentification est utilisée pour empêcher les utilisateurs non authentifiés d'accéder aux itinéraires restreints. 
+// La garde d'authentification est utilisée pour empêcher les utilisateurs non authentifiés d'accéder aux itinéraires restreints.
 // Dans cet exemple, elle est utilisée dans app.routing.ts pour protéger l'itinéraire de la page d'accueil.
 
 import { Injectable } from '@angular/core';
 import { Router, CanActivate, ActivatedRouteSnapshot, RouterStateSnapshot } from '@angular/router';
 
-import { AuthenticationService } from '../_services/authentication.service';
+import { AuthenticationService } from '../services/authentication.service';
 
 @Injectable({ providedIn: 'root' })
 export class AuthGuard implements CanActivate {

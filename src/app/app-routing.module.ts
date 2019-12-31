@@ -7,13 +7,13 @@ import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './home/home';
 import { LoginComponent } from './login/login';
 import { RegisterComponent } from './register/register';
-import { AuthGuard } from './_helpers ';
-import { FourofourComponent } from './_models/fourofour';
+import { AuthGuard } from './helpers';
+import { FourofourComponent } from './models/fourofour';
 
-import {SingleCandidatComponent} from './_components/single-candidat';
-import {CandidatListComponent} from './_components/_list/candidat-list';
-import { CandidatAddComponent } from './_components/_add/candidat-add';
-import { EditCandidatComponent } from './_components/_edit/edit-candidat';
+import {SingleCandidatComponent} from './components/single-candidat';
+import {CandidatListComponent} from './components/_list/candidat-list';
+import { CandidatAddComponent } from './components/_add/candidat-add';
+import { EditCandidatComponent } from './components/_edit/edit-candidat';
 
 const routes: Routes = [
     { path: '', component: HomeComponent, canActivate: [AuthGuard] },

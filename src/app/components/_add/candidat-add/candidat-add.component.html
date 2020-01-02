@@ -9,7 +9,7 @@
                         </div>
                         <div formArrayName="candidat">
                             <div *ngFor="let X of candidatForm['controls'].candidat['controls']; let ix=index;">
-                                <div formGroupName="{{ix}}" class="Candidat">
+                                <div formGroupName="{{ix}}" class="candidat">
                                     <div class="sort-title clearfix text-center">
                                         <h4>Informations Personnelles</h4>
                                     </div>
@@ -222,6 +222,6 @@
         </div>
     </div>
 </div>
-
+<!-- 
 <h5>Valeurs de l'objet candidat</h5>
-<pre style="font-size:15px">{{ candidatForm.value | json }}</pre>
+<pre style="font-size:15px">{{ candidatForm.value | json }}</pre> -->

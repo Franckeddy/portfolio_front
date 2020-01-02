@@ -46,10 +46,10 @@
                 </div>
                 <div class="col-md-6 col-sm-6 m-b30">
                     <div class="icon-bx-wraper bx-style-1 p-a30 center">
-                        <div class="icon-xl text-primary m-b20"> <a href="#" class="icon-cell"><i class="fa fa-envelope"></i></a> </div>
+                        <div class="icon-xl text-primary m-b20"> <a href="mailto:{{ candidat.email }}" class="icon-cell" target="_blank"><i class="fa fa-envelope"></i></a> </div>
                         <div class="icon-content">
                             <h5 class="dlab-tilte text-uppercase">Email</h5>
-                            <p>{{ candidat.email }}</p>
+                            <a href="mailto:{{ candidat.email }}" target="_blank">{{ candidat.email }}</a>
                         </div>
                     </div>
                 </div>

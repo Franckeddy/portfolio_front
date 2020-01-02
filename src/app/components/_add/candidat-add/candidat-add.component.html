@@ -3,12 +3,12 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="road-price">
-                    <form [formGroup]="candidatForm" (ngSubmit)="submitForm()">
+                    <form [formGroup]="candidatForm" (ngSubmit)="submitForm()" novalidate>
                         <div class="form-head bg-primary text-white">
                             <h3 class="m-a0">Créer votre CV </h3>
                         </div>
-                        <div formArrayName="Candidat">
-                            <div *ngFor="let X of candidatForm['controls'].Candidat['controls']; let ix=index;">
+                        <div formArrayName="candidat">
+                            <div *ngFor="let X of candidatForm['controls'].candidat['controls']; let ix=index;">
                                 <div formGroupName="{{ix}}" class="Candidat">
                                     <div class="sort-title clearfix text-center">
                                         <h4>Informations Personnelles</h4>
@@ -80,7 +80,7 @@
                                                     <div class="col-md-6 col-sm-6">
                                                         <div class="input-group">
                                                             <input type="text" formControlName="level" placeholder="Niveau" class="form-control" />
-                                                            <p>{{ formErrors.Candidat[ix].langues[ic].level }}</p>
+                                                            <p>{{ formErrors.candidat[ix].langues[ic].level }}</p>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -108,7 +108,7 @@
                                                         <div class="input-group">
                                                             <span>Date d'obtention</span>
                                                             <input [ngModel]="date_obtention | date:'dd-MM-yyyy'" formControlName="date_obtention" type="date" />
-                                                            <p>{{ formErrors.Candidat[ix].licenses[id].date_obtention }}</p>
+                                                            <p>{{ formErrors.candidat[ix].licenses[id].date_obtention }}</p>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -130,7 +130,7 @@
                                                     <div class="col-md-6 col-sm-6">
                                                         <div class="input-group">
                                                             <input type="text" formControlName="name" placeholder="Nom de l'école" class="form-control" />
-                                                            <p> {{ formErrors.Candidat[ix].schools[iy].name }}</p>
+                                                            <p> {{ formErrors.candidat[ix].schools[iy].name }}</p>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -146,7 +146,7 @@
                                                                 <div class="col-md-6 col-sm-6">
                                                                     <div class="input-group">
                                                                         <input type="text" formControlName="name" placeholder="Nom de la formation" class="form-control" />
-                                                                        <p>{{ formErrors.Candidat[ix].schools[iy].formations[iz].name }}</p>
+                                                                        <p>{{ formErrors.candidat[ix].schools[iy].formations[iz].name }}</p>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -174,7 +174,7 @@
                                                     <div class="col-md-6 col-sm-6">
                                                         <div class="input-group">
                                                             <input type="text" formControlName="name" placeholder="Nom Entreprise" class="form-control" />
-                                                            <p> {{ formErrors.Candidat[ix].companies[ia].name }}</p>
+                                                            <p> {{ formErrors.candidat[ix].companies[ia].name }}</p>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -190,7 +190,7 @@
                                                                 <div class="col-md-6 col-sm-6">
                                                                     <div class="input-group">
                                                                         <input type="text" formControlName="name" placeholder="Nom du Secteur" class="form-control" />
-                                                                        <p>{{ formErrors.Candidat[ix].companies[ia].activity_areas[ib].name }}</p>
+                                                                        <p>{{ formErrors.candidat[ix].companies[ia].activity_areas[ib].name }}</p>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -223,5 +223,5 @@
     </div>
 </div>
 
-<h5>Field Values</h5>
+<h5>Valeurs de l'objet candidat</h5>
 <pre style="font-size:15px">{{ candidatForm.value | json }}</pre>

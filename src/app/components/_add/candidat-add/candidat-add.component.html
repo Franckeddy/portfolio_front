@@ -33,7 +33,7 @@
                                         </div>
                                         <div class="col-md-6 col-sm-6">
                                             <div class="input-group">
-                                                <input formControlName="date_of_birth" type="date" />
+                                              <input [ngModel]="date_of_birth | date:'dd-MM-yyyy'" formControlName="date_of_birth" type="date" />
                                             </div>
                                         </div>
                                     </div>
@@ -87,7 +87,7 @@
                                             </div>
                                         </div>
                                         <input class="site-button green m-r15" type="button" (click)="addLangue(ix)" value="Ajouter Langue">
-                                        <button class="site-button red m-r15" type="button" (click)="delLangue(ix)" id="delete">Supprimer</button>
+                                        <button class="site-button red m-r15 delete" type="button" (click)="delLangue(ix)">Supprimer</button>
                                     </div>
                                     <!-- Langue End-->
                                     <!-- Permis -->
@@ -107,7 +107,7 @@
                                                     <div class="col-md-6 col-sm-6">
                                                         <div class="input-group">
                                                             <span>Date d'obtention</span>
-                                                            <input formControlName="date_obtention" type="date" />
+                                                          <input [ngModel]="date_obtention | date:'dd-MM-yyyy'" formControlName="date_obtention" type="date" />
                                                             <p>{{ formErrors.candidat[ix].licenses[id].date_obtention }}</p>
                                                         </div>
                                                     </div>
@@ -115,7 +115,7 @@
                                             </div>
                                         </div>
                                         <input class="site-button green m-r15" type="button" (click)="addLicense(ix)" value="Ajouter un Permis">
-                                        <button class="site-button red m-r15" type="button" (click)="delLicense(ix)" id="delete">Supprimer</button>
+                                        <button class="site-button red m-r15 delete" type="button" (click)="delLicense(ix)">Supprimer</button>
                                     </div>
                                     <!-- Permis End-->
                                     <!-- Parcours Scolaire -->
@@ -153,13 +153,13 @@
                                                         </div>
                                                     </div>
                                                     <input class="site-button green m-r15" type="button" (click)="addFormation(ix,iy)" value="Ajouter Formation">
-                                                    <button class="site-button red m-r15" type="button" (click)="delFormation(ix, iy)" id="delete">Supprimer</button>
+                                                    <button class="site-button red m-r15 delete" type="button" (click)="delFormation(ix, iy)">Supprimer</button>
                                                 </div>
                                                 <!-- Formation End -->
                                             </div>
                                         </div>
                                         <input class="site-button green m-r15" type="button" (click)="addSchool(ix)" value="Ajouter Ecole">
-                                        <button class="site-button red m-r15" type="button" (click)="delSchool(ix)" id="delete">Supprimer</button>
+                                        <button class="site-button red m-r15 delete" type="button" (click)="delSchool(ix)">Supprimer</button>
                                     </div>
                                     <!-- Parcours Scolaire End-->
                                     <!-- Parcours Professionel -->
@@ -197,13 +197,13 @@
                                                         </div>
                                                     </div>
                                                     <input class="site-button green m-r15" type="button" (click)="addActivityArea(ix,ia)" value="Ajouter Secteur d'activité">
-                                                    <button class="site-button red m-r15" type="button" (click)="delActivityArea(ix, ia)" id="delete">Supprimer</button>
+                                                    <button class="site-button red m-r15 delete" type="button" (click)="delActivityArea(ix, ia)">Supprimer</button>
                                                 </div>
                                                 <!-- activité End -->
                                             </div>
                                         </div>
                                         <input class="site-button green m-r15" type="button" (click)="addCompany(ix)" value="Ajouter Entreprise">
-                                        <button class="site-button red m-r15" type="button" (click)="delCompany(ix)" id="delete">Supprimer</button>
+                                        <button class="site-button red m-r15 delete" type="button" (click)="delCompany(ix)">Supprimer</button>
                                     </div>
                                     <!-- Parcours Professionel End-->
                                 </div>
@@ -222,6 +222,6 @@
         </div>
     </div>
 </div>
-<!-- 
+<!--
 <h5>Valeurs de l'objet candidat</h5>
 <pre style="font-size:15px">{{ candidatForm.value | json }}</pre> -->

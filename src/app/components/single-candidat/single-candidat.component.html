@@ -6,7 +6,7 @@
             </div>
             <div class="icon-content">
                 <h4 class="dlab-tilte text-uppercase">{{candidats.lastname}} {{candidats.firstname}}</h4>
-                <p>{{candidats.short_description}}</p>
+                <p>{{candidats.short_description | slice:0:30 }}{{ candidats.short_description.length > 30 ? '...' : ''}}</p>
             </div>
         </div>
         <div class="icon-box-btn text-center">

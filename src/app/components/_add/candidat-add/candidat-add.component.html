@@ -33,7 +33,8 @@
                                         </div>
                                         <div class="col-md-6 col-sm-6">
                                             <div class="input-group">
-                                              <input [ngModel]="date_of_birth | date:'dd-MM-yyyy'" formControlName="date_of_birth" type="date" />
+                                                <span>Date de naissance</span>
+                                                <input [ngModel]="date_of_birth | date:'Y-m-d'" formControlName="date_of_birth" type="date | date:'Y-m-d'" placeholder="année-mois-jour" />
                                             </div>
                                         </div>
                                     </div>
@@ -107,8 +108,7 @@
                                                     <div class="col-md-6 col-sm-6">
                                                         <div class="input-group">
                                                             <span>Date d'obtention</span>
-                                                          <input [ngModel]="date_obtention | date:'dd-MM-yyyy'" formControlName="date_obtention" type="date" />
-                                                            <p>{{ formErrors.candidat[ix].licenses[id].date_obtention }}</p>
+                                                            <input [ngModel]="date_obtention | date:'Y-m-d'" formControlName="date_obtention" type="date | date:'Y-m-d'" placeholder="année-mois-jour" />
                                                         </div>
                                                     </div>
                                                 </div>

@@ -23,9 +23,11 @@
             <div class="section-head text-center head-1">
                 <h3 class="h4">Langues</h3>
                 <div class="dlab-separator bg-gray-dark"></div>
+              <div *ngIf="candidat.langues">
                 <p *ngFor="let langue of candidat.langues">
                     {{ langue.name }}, {{ langue.level}} niveau.
                 </p>
+              </div>
             </div>
             <div class="section-head text-center head-1">
                 <h3 class="h4">Permis</h3>

@@ -1,7 +1,7 @@
-import {Component, NgZone, OnInit} from '@angular/core';
-import {FormBuilder, FormGroup, Validators, FormArray} from '@angular/forms';
-import {Router} from '@angular/router';
-import {CandidatService} from '../../../services/candidats.service';
+import { Component, NgZone, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, Validators, FormArray } from '@angular/forms';
+import { Router } from '@angular/router';
+import { CandidatService } from '../../../services/candidats.service';
 
 @Component({
   selector: 'app-candidat-add',
@@ -22,13 +22,13 @@ export class CandidatAddComponent implements OnInit {
     private ngZone: NgZone,
     private router: Router,
     public candidatService: CandidatService
-  ){ }
+  ) { }
 
   addCandidat() {
     this.candidatForm = this.fb.group({
       'candidat': this.fb.array([
         this.initCandidat(),
-      ])
+      ]),
     });
     this.candidatForm.valueChanges.subscribe(data => this.validateForm());
     this.validateForm();
@@ -47,38 +47,38 @@ export class CandidatAddComponent implements OnInit {
       short_description: [''],
       // ---------------------------------------------------------------------
       langues: this.fb.array([
-        this.initLangue()
+        this.initLangue(),
       ]),
       licenses: this.fb.array([
-        this.initLicense()
+        this.initLicense(),
       ]),
       schools: this.fb.array([
-        this.initSchool()
+        this.initSchool(),
       ]),
       companies: this.fb.array([
-        this.initCompany()
-      ])
+        this.initCompany(),
+      ]),
     });
   }
 
-  initSchool() {
+  public initSchool() {
     return this.fb.group({
       //  ---------------------forms fields on y level ------------------------
       name: [''],
       // ---------------------------------------------------------------------
       formations: this.fb.array([
-        this.initFormation()
-      ])
-    })
+        this.initFormation(),
+      ]),
+    });
   }
 
   initFormation() {
     return this.fb.group({
       //  ---------------------forms fields on z level ------------------------
       name: [''],
-      date_obtention: ['']
+      date_obtention: [''],
       // ---------------------------------------------------------------------
-    })
+    });
   }
 
   initCompany() {
@@ -97,86 +97,86 @@ export class CandidatAddComponent implements OnInit {
       //  ---------------------forms fields on b level ------------------------
       name: [''],
       // ---------------------------------------------------------------------
-    })
+    });
   }
 
   initLangue() {
     return this.fb.group({
       //  ---------------------forms fields on c level ------------------------
       name: [''],
-      level: ['']
+      level: [''],
       // ---------------------------------------------------------------------
-    })
+    });
   }
 
   initLicense() {
     return this.fb.group({
       //  ---------------------forms fields on d level ------------------------
       name: [''],
-      date_obtention: ['']
+      date_obtention: [''],
       // ---------------------------------------------------------------------
-    })
+    });
   }
 
   // TODO level attribut à implémenter
 
   addLangue(ix: number) {
-    const control = (<FormArray>this.candidatForm.controls['candidat']).at(ix).get('langues') as FormArray;
+    const control = (this.candidatForm.controls['candidat'] as FormArray).at(ix).get('langues') as FormArray;
     control.push(this.initLangue());
   }
 
   delLangue(index: number) {
-    const arrayControl = (<FormArray>this.candidatForm.controls['candidat']).at(index).get('langues') as FormArray;
+    const arrayControl = (this.candidatForm.controls['candidat'] as FormArray).at(index).get('langues') as FormArray;
     arrayControl.removeAt(index);
   }
 
   addLicense(ix: number) {
-    const control = (<FormArray>this.candidatForm.controls['candidat']).at(ix).get('licenses') as FormArray;
+    const control = (this.candidatForm.controls['candidat'] as FormArray).at(ix).get('licenses') as FormArray;
     control.push(this.initLicense());
   }
 
   delLicense(index: number) {
-    const arrayControl = (<FormArray>this.candidatForm.controls['candidat']).at(index).get('licenses') as FormArray;
+    const arrayControl = (this.candidatForm.controls['candidat'] as FormArray).at(index).get('licenses') as FormArray;
     arrayControl.removeAt(index);
   }
 
   addSchool(ix: number) {
-    const control = (<FormArray>this.candidatForm.controls['candidat']).at(ix).get('schools') as FormArray;
+    const control = (this.candidatForm.controls['candidat'] as FormArray).at(ix).get('schools') as FormArray;
     control.push(this.initSchool());
   }
 
   delSchool(index: number) {
-    const arrayControl = (<FormArray>this.candidatForm.controls['candidat']).at(index).get('schools') as FormArray;
+    const arrayControl = (this.candidatForm.controls['candidat'] as FormArray).at(index).get('schools') as FormArray;
     arrayControl.removeAt(index);
   }
 
   addFormation(ix: number, iy: number) {
-    const control = ((<FormArray>this.candidatForm.controls['candidat']).at(ix).get('schools') as FormArray).at(iy).get('formations') as FormArray;
+    const control = ((this.candidatForm.controls['candidat'] as FormArray).at(ix).get('schools') as FormArray).at(iy).get('formations') as FormArray;
     control.push(this.initFormation());
   }
 
   delFormation(ix: number, iy: number): void {
-    const arrayControl = ((<FormArray>this.candidatForm.controls['candidat']).at(ix).get('schools') as FormArray).at(iy).get('formations') as FormArray;
+    const arrayControl = ((this.candidatForm.controls['candidat'] as FormArray).at(ix).get('schools') as FormArray).at(iy).get('formations') as FormArray;
     arrayControl.removeAt(ix);
   }
 
   addCompany(ix: number) {
-    const control = (<FormArray>this.candidatForm.controls['candidat']).at(ix).get('companies') as FormArray;
+    const control = (this.candidatForm.controls['candidat'] as FormArray).at(ix).get('companies') as FormArray;
     control.push(this.initCompany());
   }
 
   delCompany(index: number) {
-    const arrayControl = (<FormArray>this.candidatForm.controls['candidat']).at(index).get('companies') as FormArray;
+    const arrayControl = (this.candidatForm.controls['candidat'] as FormArray).at(index).get('companies') as FormArray;
     arrayControl.removeAt(index);
   }
 
   addActivityArea(ix: number, ia: number): void {
-    const control = ((<FormArray>this.candidatForm.controls['candidat']).at(ix).get('companies') as FormArray).at(ia).get('activity_areas') as FormArray;
+    const control = ((this.candidatForm.controls['candidat'] as FormArray).at(ix).get('companies') as FormArray).at(ia).get('activity_areas') as FormArray;
     control.push(this.initActivityArea());
   }
 
   delActivityArea(ix: number, ia: number): void {
-    const arrayControl = ((<FormArray>this.candidatForm.controls['candidat']).at(ix).get('companies') as FormArray).at(ia).get('activity_areas') as FormArray;
+    const arrayControl = ((this.candidatForm.controls['candidat'] as FormArray).at(ix).get('companies') as FormArray).at(ia).get('activity_areas') as FormArray;
     arrayControl.removeAt(ix);
   }
 
@@ -197,7 +197,7 @@ export class CandidatAddComponent implements OnInit {
       licenses: this.LicenseErrors(),
       schools: this.SchoolErrors(),
       companies: this.CompanyErrors(),
-    }]
+    }];
   }
 
   SchoolErrors() {
@@ -206,7 +206,7 @@ export class CandidatAddComponent implements OnInit {
       name: '',
       // ----------------------------------------------------------------------
       formations: this.FormationErrors()
-    }]
+    }];
   }
 
   CompanyErrors() {
@@ -215,7 +215,7 @@ export class CandidatAddComponent implements OnInit {
       name: '',
       // ----------------------------------------------------------------------
       activity_areas: this.ActivityAreaErrors()
-    }]
+    }];
   }
 
   FormationErrors() {
@@ -223,33 +223,33 @@ export class CandidatAddComponent implements OnInit {
       //  ---------------------forms errors on z level ------------------------
       name: '',
       // ---------------------------------------------------------------------
-    }]
+    }];
   }
 
   ActivityAreaErrors() {
     return [{
       //  ---------------------forms errors on b level ------------------------
-      name: ''
+      name: '',
       // ---------------------------------------------------------------------
-    }]
+    }];
   }
 
   LangueErrors() {
     return [{
       //  ---------------------forms errors on c level ------------------------
       name: '',
-      level: ''
+      level: '',
       // ---------------------------------------------------------------------
-    }]
+    }];
   }
 
   LicenseErrors() {
     return [{
       //  ---------------------forms errors on d level ------------------------
       name: '',
-      date_obtention: ''
+      date_obtention: '',
       // ---------------------------------------------------------------------
-    }]
+    }];
   }
 
   validationMessages = {
@@ -326,32 +326,32 @@ export class CandidatAddComponent implements OnInit {
     this.validateCandidat();
   }
   validateCandidat() {
-    let CandidatA = <FormArray>this.candidatForm['controls'].candidat;
+    let CandidatA = this.candidatForm['controls'].candidat as FormArray;
     console.log('validateCandidat');
     this.formErrors.candidat = [];
     let x = 1;
     while (x <= CandidatA.length) {
       this.formErrors.candidat.push({
-      firstname: '',
-      lastname: '',
-      town: '',
-      zipcode: '',
-      email: '',
-      schools: [{
+        firstname: '',
+        lastname: '',
+        town: '',
+        zipcode: '',
+        email: '',
+        schools: [{
           name: '',
           formations: [{
             name: '',
-          }]
+          }],
         }],
         companies: [{
           name: '',
           activity_areas: [{
-            name: ''
-          }]
+            name: '',
+          }],
         }],
         langues: [{
           name: '',
-          level: ''
+          level: '',
         }],
         licenses: [{
           name: '',
@@ -373,14 +373,13 @@ export class CandidatAddComponent implements OnInit {
       }
       this.validateSchool(x);
       this.validateCompany(x);
-      //this.validateFormation(x);
       x++;
     }
   }
 
   validateSchool(x: number) {
     console.log('validateSchool');
-    let SchoolA = (<FormArray>this.candidatForm.controls['candidat']).at(x - 1).get('schools') as FormArray;
+    let SchoolA = (this.candidatForm.controls['candidat'] as FormArray).at(x - 1).get('schools') as FormArray;
     this.formErrors.candidat[x - 1].schools = [];
     let y = 1;
     while (y <= SchoolA.length) {
@@ -388,7 +387,7 @@ export class CandidatAddComponent implements OnInit {
         name: '',
         formations: [{
           name: '',
-        }]
+        }],
       });
       let Y = <FormGroup>SchoolA.at(y - 1);
       for (let field in Y.controls) {
@@ -406,7 +405,7 @@ export class CandidatAddComponent implements OnInit {
 
   validateFormation(x: number, y: number) {
     console.log('validateFormation--');
-    let FormationA = ((<FormArray>this.candidatForm.controls['candidat']).at(x - 1).get('schools') as FormArray).at(y - 1).get('formations') as FormArray;
+    let FormationA = ((this.candidatForm.controls['candidat'] as FormArray).at(x - 1).get('schools') as FormArray).at(y - 1).get('formations') as FormArray;
     this.formErrors.candidat[x - 1].schools[y - 1].formations = [];
     let z = 1;
     while (z <= FormationA.length) {
@@ -430,15 +429,15 @@ export class CandidatAddComponent implements OnInit {
 
   validateCompany(x: number) {
     console.log('validateCompany');
-    let CompanyA = (<FormArray>this.candidatForm.controls['candidat']).at(x - 1).get('companies') as FormArray;
+    let CompanyA = (this.candidatForm.controls['candidat'] as FormArray).at(x - 1).get('companies') as FormArray;
     this.formErrors.candidat[x - 1].companies = [];
     let a = 1;
     while (a <= CompanyA.length) {
       this.formErrors.candidat[x - 1].companies.push({
         name: '',
         activity_areas: [{
-          name: ''
-        }]
+          name: '',
+        }],
       });
       let A = <FormGroup>CompanyA.at(a - 1);
       for (let field in A.controls) {
@@ -456,12 +455,12 @@ export class CandidatAddComponent implements OnInit {
 
   validateActivityArea(x: number, y: number) {
     console.log('validateActivityArea--');
-    let ActivityAreaA = ((<FormArray>this.candidatForm.controls['candidat']).at(x - 1).get('companies') as FormArray).at(y - 1).get('activity_areas') as FormArray;
+    let ActivityAreaA = ((this.candidatForm.controls['candidat'] as FormArray).at(x - 1).get('companies') as FormArray).at(y - 1).get('activity_areas') as FormArray;
     this.formErrors.candidat[x - 1].companies[y - 1].activity_areas = [];
     let b = 1;
     while (b <= ActivityAreaA.length) {
       this.formErrors.candidat[x - 1].companies[y - 1].activity_areas.push({
-        name: ''
+        name: '',
       });
       let C = <FormGroup>ActivityAreaA.at(b - 1);
       for (let field in C.controls) {
@@ -480,13 +479,13 @@ export class CandidatAddComponent implements OnInit {
 
   validateLangue(x: number) {
     console.log('validateLangue');
-    let LangueA = (<FormArray>this.candidatForm.controls['candidat']).at(x - 1).get('langues') as FormArray;
+    let LangueA = (this.candidatForm.controls['candidat'] as FormArray).at(x - 1).get('langues') as FormArray;
     this.formErrors.candidat[x - 1].langues = [];
     let c = 1;
     while (c <= LangueA.length) {
       this.formErrors.candidat[x - 1].langues.push({
         name: '',
-        level: ''
+        level: '',
       });
       let C = <FormGroup>LangueA.at(c - 1);
       for (let field in C.controls) {
@@ -504,7 +503,7 @@ export class CandidatAddComponent implements OnInit {
 
   validateLicense(x: number) {
     console.log('validateLicense');
-    let LicenseA = (<FormArray>this.candidatForm.controls['candidat']).at(x - 1).get('licenses') as FormArray;
+    let LicenseA = (this.candidatForm.controls['candidat'] as FormArray).at(x - 1).get('licenses') as FormArray;
     this.formErrors.candidat[x - 1].licenses = [];
     let d = 1;
     while (d <= LicenseA.length) {
@@ -529,7 +528,7 @@ export class CandidatAddComponent implements OnInit {
   submitForm() {
     this.candidatService.CreateCandidat(this.candidatForm.value).subscribe(res => {
       console.log('Candidat added!');
-      this.ngZone.run(() => this.router.navigateByUrl('/'))
+      this.ngZone.run(() => this.router.navigateByUrl('/'));
     });
   }
 }

@@ -104,7 +104,6 @@ export class CandidatAddComponent implements OnInit {
     return this.fb.group({
       //  ---------------------forms fields on c level ------------------------
       name: [''],
-      level: [''],
       // ---------------------------------------------------------------------
     });
   }
@@ -238,7 +237,6 @@ export class CandidatAddComponent implements OnInit {
     return [{
       //  ---------------------forms errors on c level ------------------------
       name: '',
-      level: '',
       // ---------------------------------------------------------------------
     }];
   }
@@ -278,10 +276,6 @@ export class CandidatAddComponent implements OnInit {
         name: {
           required: 'name is required.',
           pattern: 'name must be 3 characters long.'
-        },
-        level: {
-          required: 'level is required.',
-          pattern: 'level must be 3 characters long.'
         },
       },
       licenses: {
@@ -351,7 +345,6 @@ export class CandidatAddComponent implements OnInit {
         }],
         langues: [{
           name: '',
-          level: '',
         }],
         licenses: [{
           name: '',
@@ -485,7 +478,6 @@ export class CandidatAddComponent implements OnInit {
     while (c <= LangueA.length) {
       this.formErrors.candidat[x - 1].langues.push({
         name: '',
-        level: '',
       });
       let C = <FormGroup>LangueA.at(c - 1);
       for (let field in C.controls) {

@@ -26,12 +26,6 @@
                                     <input type="text" formControlName="email" placeholder="Votre E-mail" class="form-control" />
                                 </div>
                             </div>
-                            <div class="col-md-6 col-sm-6">
-                                <div class="input-group">
-                                    <!-- bind sur la valeur [] (on peu bind sur l'event -> ())-->
-                                  <input [ngModel]="startDate | date:'dd-MM-yyyy'" formControlName="date_of_birth" (ngModelChange)="startDate = $event" type="date" name="date_of_birth" />
-                                </div>
-                            </div>
                         </div>
                         <div class="row">
                             <div class="col-md-12 col-sm-12">
